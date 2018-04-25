@@ -85,7 +85,7 @@ https://en.wikipedia.org/wiki/Linus_Torvalds
 ##### 如何學習linux指令參數
 
 
-##### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
+### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
 
 >* 使用winodws底下的[putty](https://www.putty.org/)安全連線
 >* 使用linux底下的ssh
@@ -93,4 +93,11 @@ https://en.wikipedia.org/wiki/Linus_Torvalds
 ssh lab@IP -p2220
 ```
 
+顯示檔案內容: cat flag.txt
+顯示別的目錄底下的檔案內容:cat /etc/passwd
+
 [認識SSH加密網路協定]https://en.wikipedia.org/wiki/Secure_Shell)
+
+[更多說明](https://www.ssh.com/ssh/command/)
+
+### 
