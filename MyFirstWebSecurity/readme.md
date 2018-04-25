@@ -1,6 +1,7 @@
 # MyFirstWebSecurity(我的第一堂網站安全課)
 
->* 基礎入門課程HappyHackingDay
+>* 基礎入門課程
+>* HappyHackingDay網站安全體驗營
 >* 3小時課程為主(可動態調整2-4小時)
 
 課程內容:本課程將帶領學生完成底下實測
