@@ -8,7 +8,7 @@
 >* HTTP協定的基礎實測與分析
 >* 熟悉網站安全測試工具:developer Tools, Curl與Burpsuite
   (若有時間可示範OWASP Mantra或HackingBar)
->* 完成Web-CTF101的六題題目
+>* 完成Web-CTF101的題目
 
 ## Web-CTF101
 ```
