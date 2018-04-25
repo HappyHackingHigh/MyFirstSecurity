@@ -101,29 +101,22 @@ Document steganography文件隱寫術==>[steg]隱寫術STEG(必)
 ABCTF 2016 : ceasar-salad-10{凱薩密碼破解|使用線上工具} ：凱薩密碼與暴力破解法
 Pico CTF 2014 : Substitution頻率分析
 [可略過]EKOPARTY CTF 2015: SCYTCRYPTO{密碼棒}
-
-
-
 ```
-[編碼][一定要講] 只要講實測不要講理論
-    base 64 + Ascii  + morse code
 
-[crypto]
+#### [編碼][一定要講] 只要講實測可以解單說明觀念
+```
+base 64 + Ascii  + morse code
+```
+#### 逆向:前三題
 
+#### web[有時間再講]
+```
+web 
+Robots.txt
 
-
-
-
-web[有時間再講]
-    web + Robots.txt
-    底下解題需用linux比較方便但會多花時間
-    curl-1/curl-2
-    Burp Suite-1/2:會花許多時間{建議不講}
-    
-逆向[最後再看看要不要講]:前三題
-
-
-
+底下解題需用linux比較方便但會多花時間
+curl-1/curl-2
+```
 
 
 # B.Linux快速上手(透過解CTF題目熟悉linux指令)
