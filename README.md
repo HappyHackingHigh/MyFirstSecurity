@@ -50,7 +50,7 @@
 >* [選項1]使用python求解古典密碼學的破密分析題
 >* [選項2]使用python求解affine ciphers
 
-## MyFirstSystemSecurityF我的第一堂系統安全與滲透測試(2-小時)
+## MyFirstSystemSecurityF我的第一堂系統安全與滲透測試(3-4小時)
 
 >* 須熟悉linux基本指令{上過LINUX入門即可}
 >* 若學生沒學過,可先示範練習linux指令
