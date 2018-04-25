@@ -175,6 +175,4 @@ ssh lab@IP -p2220
 
 ### 依序解題
 
-### Linux作業
-
-完成[overthewire/Bandit](http://overthewire.org/wargames/bandit/)的練習
+### Linux作業:完成[overthewire/Bandit](http://overthewire.org/wargames/bandit/)的練習
