@@ -160,7 +160,7 @@ curl-1/curl-2
 ### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
 
 >* 使用winodws底下的[putty](https://www.putty.org/)安全連線
->* 使用linux底下的ssh
+>* 使用linux底下的ssh指令
 ```
 ssh lab@IP -p2220
 ```
