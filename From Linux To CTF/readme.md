@@ -93,4 +93,4 @@ https://en.wikipedia.org/wiki/Linus_Torvalds
 ssh lab@IP -p2220
 ```
 
-[認識SSH加密網路協定]（https://en.wikipedia.org/wiki/Secure_Shell)
+[認識SSH加密網路協定]https://en.wikipedia.org/wiki/Secure_Shell)
