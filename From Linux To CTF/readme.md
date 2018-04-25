@@ -11,7 +11,7 @@
 上完課後同學就正式開始你的linux學習之路(記得持續學習並完成作業)
 ```
 
-# 來去搶旗了!!!CTF(Capture the flag)搶旗大賽
+# Ａ來去搶旗了!!!CTF(Capture the flag)搶旗大賽
 ```
 請同學先登入CTF平台註冊後即可解題
 ```
@@ -74,7 +74,10 @@ Hitcon世界級資安競賽在臺灣
 [市民時報](http://citytimes.tw/Newsletter/News.aspx?Iinfo=4&iNumber=24761)
 
 
-# Linux快速上手(透過解CTF題目熟悉linux指令)
+## 實戰CTF(Capture the flag)搶旗大賽
+
+
+# B.Linux快速上手(透過解CTF題目熟悉linux指令)
 ```
 請同學先登入CTF平台註冊後即可解題
 ```
