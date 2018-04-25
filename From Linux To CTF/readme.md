@@ -72,3 +72,21 @@ Hitcon世界級資安競賽在臺灣
 [中時電子報:全球搶資安人才 教部首辦CTF搶旗賽扎根](http://www.chinatimes.com/realtimenews/20180219000650-260405)
 
 [市民時報](http://citytimes.tw/Newsletter/News.aspx?Iinfo=4&iNumber=24761)
+
+
+# Linux快速上手(透過解CTF題目熟悉linux指令)
+```
+請同學先登入CTF平台註冊後即可解題
+```
+
+https://en.wikipedia.org/wiki/Linus_Torvalds
+
+
+##### 如何學習linux指令參數
+
+
+##### 開打了!第一題使用SSH指令安全連線到測試環境
+
+使用winodws底下的[putty](https://www.putty.org/)安全連線
+
+SSH是一個加密網路協定（https://en.wikipedia.org/wiki/Secure_Shell
