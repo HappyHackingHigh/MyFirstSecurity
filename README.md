@@ -25,10 +25,18 @@
 課程內容:本課程將帶領學生完成底下實測
 >* HTTP協定的基礎實測與分析
 >* 熟悉網站安全測試工具:developer Tools, Curl與Burpsuite
-  (若有時間可示範OWASP Mantra或HackingBar)
+
 >* 完成Web-CTF101的題目
- 
+>* [選項1]
+
 ## MyFirstNetworkSecurity我的第一堂網路安全分析
+
+
+課程內容:本課程將帶領學生完成底下實測
+>* TCP/IP協定的基礎實測與分析
+>* 熟悉網路分析測試工具:wireshark
+  (若有時間可示範networkminer或tshark)
+>* 完成CTF的題目
 
 ## MyFirstcryptanalysis我的第一堂破密分析(2-6小時)
 
@@ -45,3 +53,14 @@
 規劃中
 
 ## MyFirstSystemSecurityF我的第一堂系統安全與滲透測試
+
+須熟悉linux基本指令{上過LINUX入門即可}
+
+課程內容:
+>*  lab1:登入Kali Linux{預設帳密: root/toor}
+>* lab2:Nmap 服務掃描實測
+>* lab3:Nmap NSE單一漏洞掃描實測
+滲透測試
+>* lab4:使用metasploit進行Windows 滲透測試
+>* lab5:使用Metepreter指令操控遠端被入侵的Windows 
+>* lab6:Windows的net指令與防護技術
