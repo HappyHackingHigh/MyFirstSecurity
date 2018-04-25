@@ -16,10 +16,24 @@
 >* 上完課後同學就正式開始你的linux學習之路(記得持續學習並完成作業)
 
 ## MyFirstWebSecurity我的第一堂網站安全(2-4小時)
+
+課程內容:本課程將帶領學生完成底下實測
+>* HTTP協定的基礎實測與分析
+>* 熟悉網站安全測試工具:developer Tools, Curl與Burpsuite
+  (若有時間可示範OWASP Mantra或HackingBar)
+>* 完成Web-CTF101的題目
  
 ## MyFirstNetworkSecurity我的第一堂網路安全分析
 
 ## MyFirstcryptanalysis我的第一堂破密分析
+
+課程內容:本課程將帶領學生完成底下實測
+>* 古典密碼學的破密分析:brute-force(暴力破解法)與Frequency analysis(頻率分析法)
+>* 凱薩密碼+substitution ciphers 
+>* 熟悉線上破密分析的使用技術
+>* 完成CTF的題目
+>* [選項1]使用python求解古典密碼學的破密分析題
+>* [選項2]使用python求解affine ciphers
 
 ## MyFirstSteganography我的第一堂隱寫術分析
 
