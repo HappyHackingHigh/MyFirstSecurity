@@ -11,7 +11,15 @@
 上完課後同學就正式開始你的linux學習之路(記得持續學習並完成作業)
 ```
 
+
+# 資安宣言與講師|計畫介紹(<=10分鐘)
+
+由講師直接show網址{不要特意給學生網址,不然就會有學生不專心}
+http://map.norsecorp.com
+
 # Ａ來去搶旗了!!!CTF(Capture the flag)搶旗大賽
+
+CTF介紹(<=10分鐘):先請學生登入CTF平台註冊再快速講解CTF介紹
 ```
 請同學先登入CTF平台註冊後即可解題
 ```
@@ -74,40 +82,37 @@ Hitcon世界級資安競賽在臺灣
 [市民時報](http://citytimes.tw/Newsletter/News.aspx?Iinfo=4&iNumber=24761)
 
 
-## 實戰CTF(Capture the flag)搶旗大賽
+## 實戰CTF(Capture the flag)搶旗大賽(1小時左右)
 ```
 解題順序請講師自行調整
+特別留意是否要用Linux解題|會多花點時間
+先講簡單題
 ```
 
 #### 隱藏術：你知道word如何藏機密嗎??
 
-#### 你的第一堂破密分析：凱薩密碼與暴力破解法
+Document steganography文件隱寫術==>[steg]隱寫術STEG(必)
+
+相關說明：
+[steganography隱寫術](https://en.wikipedia.org/wiki/Steganography)
+
+#### 你的第一堂破密分析
+```
+ABCTF 2016 : ceasar-salad-10{凱薩密碼破解|使用線上工具} ：凱薩密碼與暴力破解法
+Pico CTF 2014 : Substitution頻率分析
+[可略過]EKOPARTY CTF 2015: SCYTCRYPTO{密碼棒}
 
 
-FromLinuxtoCTF上課順序
 
-[1]資安宣言與講師|計畫介紹(<=10分鐘)
-
-由講師直接show網址{不要特意給學生網址,不然就會有學生不專心}
-http://map.norsecorp.com
-
-[2]CTF介紹(<=10分鐘)
-先請學生登入CTF平台註冊
-再快速講解CTF介紹
-
-[3]CTF實戰(1小時){特別留意是否要用Linux解題|會多花點時間}
-先講簡單題
-
+```
 [編碼][一定要講] 只要講實測不要講理論
     base 64 + Ascii  + morse code
 
 [crypto]
-ABCTF 2016 : ceasar-salad-10{凱薩密碼破解|使用線上工具} 
-Pico CTF 2014 : Substitution頻率分析
-EKOPARTY CTF 2015: SCYTCRYPTO{密碼棒}
 
-[steg]隱寫術
-STEG(必)
+
+
+
 
 web[有時間再講]
     web + Robots.txt
@@ -168,11 +173,12 @@ ssh lab@IP -p2220
 ```
 
 顯示檔案內容: cat flag.txt
+
 顯示別的目錄底下的檔案內容:cat /etc/passwd
 
 [認識SSH加密網路協定]https://en.wikipedia.org/wiki/Secure_Shell)
 
-[更多說明](https://www.ssh.com/ssh/command/)
+[更多ssh指令說明](https://www.ssh.com/ssh/command/)
 
 ### 依序解題
 
