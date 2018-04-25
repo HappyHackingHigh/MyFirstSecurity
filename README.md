@@ -40,7 +40,7 @@
 >* [選項3]ssl分析與CTF解題
 >* [選項4]網路攻擊封包分析與CTF解題
 
-## MyFirstcryptanalysis我的第一堂破密分析(2-6小時)
+## MyFirstCryptanalysis我的第一堂破密分析(2-6小時)
 
 課程內容:本課程將帶領學生完成底下實測
 >* 古典密碼學的破密分析:brute-force(暴力破解法)與Frequency analysis(頻率分析法)
