@@ -85,8 +85,12 @@ https://en.wikipedia.org/wiki/Linus_Torvalds
 ##### 如何學習linux指令參數
 
 
-##### 開打了!第一題使用SSH指令安全連線到測試環境
+##### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
 
-使用winodws底下的[putty](https://www.putty.org/)安全連線
+>* 使用winodws底下的[putty](https://www.putty.org/)安全連線
+>* 使用linux底下的ssh
+```
+ssh lab@IP -p2220
+```
 
-SSH是一個加密網路協定（https://en.wikipedia.org/wiki/Secure_Shell
+[認識SSH加密網路協定]（https://en.wikipedia.org/wiki/Secure_Shell)
