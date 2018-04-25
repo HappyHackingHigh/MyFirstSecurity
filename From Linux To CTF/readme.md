@@ -146,9 +146,16 @@ web[有時間再講]
 >* 使用man
 >* 使用下列試看看　　
 
-指令 -h, 指令 --h, 指令　-help, 指令　--help
+指令 -h, 指令 --h, 指令　-help, 指令 --help
 
 ##### 如何學習linux指令參數{範例(小考)}
+
+下列指定有何功能??
+>* ls -al
+>* ls -Al
+>* ls -lh
+>* ls -R
+>* ls -ltr
 
 [解答](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/)
 
@@ -167,4 +174,8 @@ ssh lab@IP -p2220
 
 [更多說明](https://www.ssh.com/ssh/command/)
 
-### 
+### 依序解題
+
+### Linux作業
+
+完成[overthewire/Bandit](http://overthewire.org/wargames/bandit/)的練習
