@@ -54,7 +54,9 @@
 
 ## MyFirstSystemSecurityF我的第一堂系統安全與滲透測試
 
-須熟悉linux基本指令{上過LINUX入門即可}
+>* 須熟悉linux基本指令{上過LINUX入門即可}
+>* 若學生沒學過,可先示範練習linux指令
+>* 教學環境:需安裝virtual BOX,硬體設備:最好有8GB記憶體
 
 課程內容:
 >*  lab1:登入Kali Linux{預設帳密: root/toor}
