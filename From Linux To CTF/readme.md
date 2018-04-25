@@ -75,6 +75,50 @@ Hitcon世界級資安競賽在臺灣
 
 
 ## 實戰CTF(Capture the flag)搶旗大賽
+```
+解題順序請講師自行調整
+```
+
+#### 隱藏術：你知道word如何藏機密嗎??
+
+#### 你的第一堂破密分析：凱薩密碼與暴力破解法
+
+
+FromLinuxtoCTF上課順序
+
+[1]資安宣言與講師|計畫介紹(<=10分鐘)
+
+由講師直接show網址{不要特意給學生網址,不然就會有學生不專心}
+http://map.norsecorp.com
+
+[2]CTF介紹(<=10分鐘)
+先請學生登入CTF平台註冊
+再快速講解CTF介紹
+
+[3]CTF實戰(1小時){特別留意是否要用Linux解題|會多花點時間}
+先講簡單題
+
+[編碼][一定要講] 只要講實測不要講理論
+    base 64 + Ascii  + morse code
+
+[crypto]
+ABCTF 2016 : ceasar-salad-10{凱薩密碼破解|使用線上工具} 
+Pico CTF 2014 : Substitution頻率分析
+EKOPARTY CTF 2015: SCYTCRYPTO{密碼棒}
+
+[steg]隱寫術
+STEG(必)
+
+web[有時間再講]
+    web + Robots.txt
+    底下解題需用linux比較方便但會多花時間
+    curl-1/curl-2
+    Burp Suite-1/2:會花許多時間{建議不講}
+    
+逆向[最後再看看要不要講]:前三題
+
+
+
 
 
 # B.Linux快速上手(透過解CTF題目熟悉linux指令)
@@ -82,11 +126,31 @@ Hitcon世界級資安競賽在臺灣
 請同學先登入CTF平台註冊後即可解題
 ```
 
-https://en.wikipedia.org/wiki/Linus_Torvalds
+### 重點1:linux創造者(https://en.wikipedia.org/wiki/Linus_Torvalds)
 
+### 重點2:核心(kernel)與發行版本(dictributions)
+
+### 重點3:Shell
+
+### 重點4:目錄架構
+
+### 重點5:學習Linux指令
+
+>* lab 1:簡單指令pwd / cd /cat 實作
+>* lab2:指令參數ls  vs ls -AL  vs ls -al
+>* lab3:pipeline與redirect 與grep指令練習
 
 ##### 如何學習linux指令參數
 
+>* 上網google: linux ls, linux cd,....
+>* 使用man
+>* 使用下列試看看　　
+
+指令 -h, 指令 --h, 指令　-help, 指令　--help
+
+##### 如何學習linux指令參數{範例(小考)}
+
+[解答](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/)
 
 ### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
 
