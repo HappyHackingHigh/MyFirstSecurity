@@ -25,18 +25,20 @@
 課程內容:本課程將帶領學生完成底下實測
 >* HTTP協定的基礎實測與分析
 >* 熟悉網站安全測試工具:developer Tools, Curl與Burpsuite
-
 >* 完成Web-CTF101的題目
->* [選項1]
+>* [選項1]使用OWASP Mantra求解Web-CTF題目
+>* [選項1]使用HackingBar求解Web-CTF題目
 
-## MyFirstNetworkSecurity我的第一堂網路安全分析
-
+## MyFirstNetworkSecurity我的第一堂網路安全分析(3-6小時)
 
 課程內容:本課程將帶領學生完成底下實測
 >* TCP/IP協定的基礎實測與分析
 >* 熟悉網路分析測試工具:wireshark
-  (若有時間可示範networkminer或tshark)
 >* 完成CTF的題目
+>* [選項1]若有時間可示範networkminer求解CTF
+>* [選項2]使用tshark求解CTF
+>* [選項3]ssl分析與CTF解題
+>* [選項4]網路攻擊封包分析與CTF解題
 
 ## MyFirstcryptanalysis我的第一堂破密分析(2-6小時)
 
