@@ -48,8 +48,21 @@ https://zh.wikipedia.org/wiki/Robots.txt
 ## B.1.HTTP協定(1): Http request and response
 
 ```
+Hypertext Transfer Protocol (HTTP) https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
+客戶端送出Http request給伺服器
+client ====> Http request  =====> server
 
+伺服器回應Http responses給客戶端
+client <==== Http responses <===== server
+
+資料傳送的狀態碼:HTTP status codes
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+Http request header fields的各個欄位
+ttps://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields
+
+Response header fields的各個欄位
 
 ```
 ### B.2.Curl::强大的http命令行工具
@@ -78,12 +91,12 @@ curl -X OPTIONS -v 'http://35.194.128.89:2004/index.php'
 curl -X GETFLAG -v 'http://35.194.128.89:2004/index.php'
 
 ```
-### B.2.2.使用Curl解Web-CTF101/flashing redirect
+### web-4:使用Curl解Web-CTF101/flashing redirect
 
 
 ### C.burp suite
 
-### C.1.使用burp suite:HTTP封包攔截與竄改session
+### web-5:使用burp suite:HTTP封包攔截與竄改session
 
 
 # 下一階段學習：Web hacking and exploitations
