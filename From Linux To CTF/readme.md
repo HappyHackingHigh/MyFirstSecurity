@@ -212,12 +212,12 @@ gcc -o hello.asm -S hello.c (編譯成組合語言)
 #!/usr/bin/ruby -w
 # -*- coding: UTF-8 -*-
  
-puts "你好，嘉義高中！";
+puts "你好，帥哥+美女！";
 ```
 ```
 #!/usr/bin/ruby
  
-H = Hash["a" => 100, "b" => 200]
+H = Hash["a" => 1001, "b" => 2300]
  
 puts "#{H['a']}"
 puts "#{H['b']}"
