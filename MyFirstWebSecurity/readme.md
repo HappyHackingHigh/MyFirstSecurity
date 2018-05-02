@@ -63,8 +63,14 @@ Http request header fields的各個欄位
 ttps://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields
 
 Response header fields的各個欄位
-
+https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields
 ```
+
+作業:查出Http request header fields的Authorization欄位,說明其意義
+
+作業:查出Response header fields的WWW-Authenticate欄位,說明其意義
+
+
 ### B.2.Curl::强大的http命令行工具
 
 >* https://en.wikipedia.org/wiki/CURL
@@ -75,6 +81,8 @@ https://www.tutorialspoint.com/unix_commands/curl.htm
 >* 更多訊息  請參閱Everything curl https://ec.haxx.se/
 
 ### B.2.1.使用Curl測試HTTP協定[HTTP方法]==>解Web-CTF101/New Http Methond
+
+>* HTTP方法(method):客戶端與伺服器溝通的方法(資料傳送的方法)
 >* HTTP方法(method):https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
 >* 根據HTTP標準，HTTP請求可以使用多種請求方法。
