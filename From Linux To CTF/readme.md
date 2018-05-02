@@ -176,3 +176,49 @@ ssh lab@IP -p2220
 ### 依序解題
 
 ### Linux作業:完成[overthewire/Bandit](http://overthewire.org/wargames/bandit/)的練習
+
+# NEXT! Linux平台上的程式設計
+
+### C 程式設計 ==> gcc
+
+gcc -o hello.exe hello.c (可以使用windows的副檔名,但他是linux執行檔) 
+
+gcc -o hello.exe hello.c -g
+
+gcc -o hello.asm -S hello.c (編譯成組合語言)
+
+### C++ 程式設計 ==> g++
+
+### Java程式設計 ==> javac/java
+
+>* 編譯==>javac xxx.java  ==> 產生xxx.class
+>* 執行==>java xxx
+
+### Python程式設計 ==> python xxx.py
+
+>* 使用互動的shell ===> python
+>* 執行程式===> python XXX.py
+
+### ruby程式設計 ==>  xxx.py
+
+>* 安裝 ===> sudo apt-get install ruby-full 
+>* 使用互動的shell ===> irb
+>* https://www.ruby-lang.org/zh_tw/documentation/quickstart/
+>* rvm -v
+>* 列出已知的 ruby 版本:===> rvm list known
+>* 執行程式===>ruby test.rb
+
+```
+#!/usr/bin/ruby -w
+# -*- coding: UTF-8 -*-
+ 
+puts "你好，嘉義高中！";
+```
+```
+#!/usr/bin/ruby
+ 
+H = Hash["a" => 100, "b" => 200]
+ 
+puts "#{H['a']}"
+puts "#{H['b']}"
+```
