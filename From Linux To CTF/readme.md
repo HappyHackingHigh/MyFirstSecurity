@@ -219,9 +219,23 @@ int main()
     }
 }
 ```
-
-
+```
+C Primer Plus 中文版 第六版
+http://books.gotop.com.tw/v_ACL040100
+```
 ### C++ 程式設計 ==> g++
+```
+C++程式設計導論 (第三版)
+Introduction to Programming with C++, 3rd Edition 
+作者： Y. Daniel Liang
+http://books.gotop.com.tw/v_ACL039500
+```
+```
+C++ Primer (5th Edition) 5th Edition[最新版](大陸有簡體翻譯書)
+by Stanley B. Lippman  (Author), Josée Lajoie (Author), Barbara E. Moo (Author)
+
+C++ Primer 4/e中文版(舊版+絕版) 翻譯者：侯捷  碁峰出版社  出版日期：2008/01/24
+```
 
 ### Java程式設計 ==> javac/java
 
