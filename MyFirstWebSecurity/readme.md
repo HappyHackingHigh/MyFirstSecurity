@@ -102,7 +102,9 @@ curl -X GETFLAG -v 'http://35.194.128.89:2004/index.php'
 ### web-4:使用Curl解Web-CTF101/flashing redirect
 
 
-### C.burp suite
+## C.web debugging proxy之burp suite(ZAP,fiddler)
+
+https://en.wikipedia.org/wiki/Burp_suite
 
 ### web-5:使用burp suite:HTTP封包攔截與竄改session
 
