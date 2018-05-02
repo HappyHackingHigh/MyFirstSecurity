@@ -52,13 +52,34 @@ https://zh.wikipedia.org/wiki/Robots.txt
 
 
 ```
-### B.2.Curl
+### B.2.Curl::强大的http命令行工具
 
-### B.2.1.使用Curl測試HTTP協定
+>* https://en.wikipedia.org/wiki/CURL
+>* 使用 Curl::Curl command
+```
+https://www.tutorialspoint.com/unix_commands/curl.htm
+```
+>* 更多訊息  請參閱Everything curl https://ec.haxx.se/
 
+### B.2.1.使用Curl測試HTTP協定[HTTP方法]==>解Web-CTF101/New Http Methond
+>* HTTP方法(method):https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
+
+>* 根據HTTP標準，HTTP請求可以使用多種請求方法。
+>* HTTP1.0定義了三種請求方法： GET, POST 和 HEAD方法。
+>* HTTP1.1新增了五種請求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
+
+```
+curl -X GET -v 'http://35.194.128.89:2004/index.php'
+
+curl -X POST -v 'http://35.194.128.89:2004/index.php'
+
+curl -X OPTIONS -v 'http://35.194.128.89:2004/index.php'
+
+curl -X GETFLAG -v 'http://35.194.128.89:2004/index.php'
+
+```
 ### B.2.2.使用Curl解Web-CTF101/flashing redirect
 
-### B.2.3.使用Curl測試HTTP方法==>解Web-CTF101/New Http Methond
 
 ### C.burp suite
 
@@ -74,7 +95,6 @@ https://www.owasp.org/index.php/Top_10-2017_Top_10
 
 ```
 A1:2017-Injection
-
 A2:2017-Broken Authentication
 
 A3:2017-Sensitive Data Exposure
@@ -95,8 +115,12 @@ A9:2017-Using Components with Known Vulnerabilities
 A10:2017-Insufficient Logging&Monitoring{新增}
 ```
 
-### D.先體驗一下：A1:2017-Injection
+### D.先體驗一下：web-6:LFI
+```
+index.php?page=../../../../../../../../../flag
+```
 
+### A1:2017-Injection
 ```
 單單Injection的各種面向就可以講兩天：
 SQL injection(SQLi)
@@ -105,11 +129,10 @@ Command injection(cmdi)
 XPATH injection
 LDAP injection
 
-現在先體驗看看什麼是SQL injection
 ```
-### D.1.我的第一次SQL Injection
+### A1-1.我的第一次SQL Injection
 
-### D.2.我的第一次Command Injection
+### A1-2.我的第一次Command Injection
 
 # 想要學習更多,記得一定要報上｛網站安全研習營｝的課
 
