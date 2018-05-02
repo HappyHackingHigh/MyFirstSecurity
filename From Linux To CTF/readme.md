@@ -181,11 +181,45 @@ ssh lab@IP -p2220
 
 ### C 程式設計 ==> gcc
 
-gcc -o hello.exe hello.c (可以使用windows的副檔名,但他是linux執行檔) 
+>* 檢查系統上是否安裝了gcc 及gcc版本  ===> gcc -v
 
-gcc -o hello.exe hello.c -g
+>* 使用gedit/nana/vim編輯程式 ===> gedit hell.c
 
-gcc -o hello.asm -S hello.c (編譯成組合語言)
+>* gcc -o hello.exe hello.c (可以使用windows的副檔名,但他是linux執行檔) 
+
+>* gcc -o hello.exe hello.c -g
+
+>* gcc -o hello.asm -S hello.c (編譯成組合語言)
+
+```
+#include <stdio.h>
+
+int main()
+{
+    int a=5;
+    //printf("input integer number: ");
+    //scanf("%d",&a);
+    switch(a)
+    {
+        case 1:printf("Monday\n");printf("BreakallCTF{Can you see me wahahahahaha}\n");
+        break;
+        case 2:printf("Tuesday\n");
+        break;
+        case 3:printf("Wednesday\n");
+        break;
+        case 4:printf("Thursday\n");
+        break;
+        case 5:printf("Friday\n");
+        break;
+        case 6:printf("Saturday\n");
+        break;
+        case 7:printf("Sunday\n");
+        break;
+        default:printf("error\n");
+    }
+}
+```
+
 
 ### C++ 程式設計 ==> g++
 
