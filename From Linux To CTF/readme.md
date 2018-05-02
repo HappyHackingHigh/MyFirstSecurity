@@ -29,6 +29,7 @@ CTF介紹(<=10分鐘):先請學生登入CTF平台註冊再快速講解CTF介紹
 認識CTF(Capture the flag)搶旗大賽
 >* [李倫銓(2015.10.24)什麼是駭客 CTF 競賽？](https://www.bnext.com.tw/article/37765/BN-2015-10-24-182518-77)
 >* [一次看懂CTF資安攻防賽(2016)](https://www.ithome.com.tw/news/102969)
+>* [HITCON CTF 2016導覽](https://www.slideshare.net/HITCONGIRLS/hitcon-ctf-2016)
 >* [你要學的可多了?!](https://github.com/apsdehal/awesome-ctf)
 
 CTF(Capture the flag)搶旗大賽必看
