@@ -158,6 +158,31 @@ curl-1/curl-2
 
 [解答](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/)
 
+##### linux指令
+```
+http://www.oga.ntou.edu.tw/computer/2012/06/06/linux-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/
+ cat，顯示檔內容。
+
+ cd，改變目錄路徑。
+
+ cp，複製檔。
+
+ find，查找文件。
+
+ grep，搜索、過濾資訊。
+
+ ls，列出目錄資訊。
+
+ more，分頁顯示。
+
+ rm，刪除檔或目錄。
+
+ vi，調用vi文字編輯器。
+
+ who，顯示登錄使用者資訊。
+
+ 2. chmod—-改變一個或多個檔的存取模式(mode)
+ ```
 ### 開打了!linux-1:第一題使用SSH指令安全連線到測試環境
 
 >* 使用winodws底下的[putty](https://www.putty.org/)安全連線
