@@ -2,7 +2,7 @@
 
 ##### 上課演練平台:上課公布
 
-##### 活動公告
+## 活動公告
 
 請多多按讚一下
 
@@ -10,7 +10,7 @@
 
 [bomboofox交大網路安全策進會](https://www.facebook.com/NCTUCSC/)
 
-##### 問卷調查
+## 問卷調查
 
 [上午場問卷](http://tinyurl.com/y9z4m2hr)
 
