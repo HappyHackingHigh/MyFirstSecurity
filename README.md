@@ -16,7 +16,7 @@
 
 [下午場問卷](http://tinyurl.com/y9fv5fdb)
 
-
+https://play.plaidctf.com/scoreboard
 
 # MyFirstSecurity我的第一資安學習課程
 
