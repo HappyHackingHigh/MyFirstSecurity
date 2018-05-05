@@ -1,7 +1,7 @@
 
-[上午場問卷](https://tinyurl.com/yao6gcvw)
+[上午場問卷]()
 
-[下午場問卷](https://tinyurl.com/ycofotl6)
+[下午場問卷]()
 
 # MyFirstSecurity我的第一資安學習課程
 
