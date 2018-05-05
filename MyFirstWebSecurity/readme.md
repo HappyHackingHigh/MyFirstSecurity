@@ -80,6 +80,69 @@ https://www.tutorialspoint.com/unix_commands/curl.htm
 ```
 >* 更多訊息  請參閱Everything curl https://ec.haxx.se/
 
+```
+curl -X get -v http://120.114.62.89:3001/index.php
+```
+```
+curl -X get -v http://120.114.62.89:3001/index.php
+Note: Unnecessary use of -X or --request, GET is already inferred.
+*   Trying 120.114.62.89...
+* Connected to 120.114.62.89 (120.114.62.89) port 3001 (#0)
+> get /index.php HTTP/1.1
+> Host: 120.114.62.89:3001
+> User-Agent: curl/7.47.0
+> Accept: */*
+> 
+< HTTP/1.1 501 Not Implemented
+< Date: Sat, 05 May 2018 05:39:42 GMT
+< Server: Apache/2.4.7 (Ubuntu)
+< X-Powered-By: PHP/5.5.9-1ubuntu4.22
+< Content-Length: 199
+< Connection: close
+< Content-Type: text/html
+< 
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>501 Not Implemented</title>
+</head><body>
+<h1>Not Implemented</h1>
+<p>get to /index.php not supported.<br />
+</p>
+* Closing connection 0
+```
+
+## Http request
+```
+> get /index.php HTTP/1.1
+> Host: 120.114.62.89:3001
+> User-Agent: curl/7.47.0
+> Accept: */*
+```
+```
+get /index.php HTTP/1.1
+
+get:Http的八種方法之一
+HTTP/1.1:使用的HTTP版本
+```
+## Http response
+```
+< HTTP/1.1 501 Not Implemented
+< Date: Sat, 05 May 2018 05:39:42 GMT
+< Server: Apache/2.4.7 (Ubuntu)
+< X-Powered-By: PHP/5.5.9-1ubuntu4.22
+< Content-Length: 199
+< Connection: close
+< Content-Type: text/html
+< 
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>501 Not Implemented</title>
+</head><body>
+<h1>Not Implemented</h1>
+<p>get to /index.php not supported.<br />
+</p>
+* Closing connection 0
+```
 ### B.2.1.使用Curl測試HTTP協定[HTTP方法]==>解Web-CTF101/New Http Methond
 
 >* HTTP方法(method):客戶端與伺服器溝通的方法(資料傳送的方法)
