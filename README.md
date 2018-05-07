@@ -12,9 +12,9 @@
 
 ## 問卷調查
 
-[上午場問卷](http://tinyurl.com/y9z4m2hr)
+[上午場問卷](http://tinyurl.com/y7dkbc5)
 
-[下午場問卷](http://tinyurl.com/y9fv5fdb)
+[下午場問卷]
 
 https://play.plaidctf.com/scoreboard
 
