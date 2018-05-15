@@ -50,7 +50,7 @@ CTF(Capture the flag)搶旗大賽必看
 >* [2015年DEF CON23 CTF: 第四名](https://www.ithome.com.tw/news/97998)
 >* [2014年DEF CON22 CTF: 第二名](https://www.ithome.com.tw/news/90031)
 
-Hitcon世界級資安競賽在臺灣
+Hitcon:世界級資安競賽在臺灣
 
 >* [第三屆2017年12月](https://www.ithome.com.tw/news/119379)
 >* [第二屆2016年12月](https://www.ithome.com.tw/news/110013)
