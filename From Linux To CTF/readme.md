@@ -210,7 +210,7 @@ ssh lab@IP -p2220
 
 >* 檢查系統上是否安裝了gcc 及gcc版本  ===> gcc -v
 
->* 使用gedit/nana/vim編輯程式 ===> gedit hell.c
+>* 使用gedit/nan/vim編輯程式 ===> gedit hell.c
 
 >* gcc -o hello.exe hello.c (可以使用windows的副檔名,但他是linux執行檔) 
 
