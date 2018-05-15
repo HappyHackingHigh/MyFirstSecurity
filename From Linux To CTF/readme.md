@@ -44,6 +44,7 @@ CTF(Capture the flag)搶旗大賽必看
 有些網站沒有上線,請參考世界著名的CTF(Capture the flag)搶旗大賽的超連結
 
 世界駭客大賽DEFCON CTF台灣戰記
+>* [2018年DEF CON26 CTF: 8月決戰](https://www.ithome.com.tw/news/123119)
 >* [2017年DEF CON25 CTF: 第二名](https://www.ithome.com.tw/news/115940)
 >* [2016年DEF CON24 CTF: 第四名]()
 >* [2015年DEF CON23 CTF: 第四名](https://www.ithome.com.tw/news/97998)
