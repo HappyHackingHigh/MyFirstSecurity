@@ -21,9 +21,9 @@
 
 ## 問卷調查
 
-[上午場問卷]
+[上午場問卷](https:/tinyurl.com/ycdcoudr)
 
-[下午場問卷](https://tinyurl.com/y92v3o6o)
+[下午場問卷]
 
 https://play.plaidctf.com/scoreboard
 
