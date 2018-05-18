@@ -21,9 +21,9 @@
 
 ## 問卷調查
 
-# [上午場問卷]===> https:/tinyurl.com/ycdcoudr
+[上午場問卷]
 
-[下午場問卷]
+# [下午場問卷]===> https://tinyurl.com/ycqd8hbc
 
 
 # [提升資安專業技術 為人生贏取幸福]相關新聞
