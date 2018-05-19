@@ -9,6 +9,8 @@
 
 ### [演練平台](http://120.114.102.164)
 
+>* 原始碼在/var/www/html/bWAPP
+
 ### [OWASP TOP 10漏洞(OWASP Top 10 2017)](https://www.owasp.org/index.php/Top_10-2017_Top_10)
 
 ```
@@ -43,11 +45,66 @@ A10:2017-Insufficient Logging&Monitoring{新增}
 ## A1 - Injection [2017_A1]
 
 ##### HTML Injection - Reflected (GET)
+
 ```
 在First name:及Last name:欄位都輸入下列
 
 <a href=http://www.google.com>谷歌行腳</a>
 ```
+>* 原始碼htmli_get.php 
+
+```
+include("security.php");
+include("security_level_check.php");
+include("functions_external.php");
+include("selections.php");
+
+function htmli($data)
+{
+         
+    switch($_COOKIE["security_level"])
+    {
+        
+        case "0" : 
+            
+            $data = no_check($data);            
+            break;
+        
+        case "1" :
+            
+            $data = xss_check_1($data);
+            break;
+        
+        case "2" :            
+                       
+            $data = xss_check_3($data);            
+            break;
+        
+        default : 
+            
+            $data = no_check($data);            
+            break;   
+
+    }       
+
+    return $data;
+
+}
+```
+```
+  <form action="<?php echo($_SERVER["SCRIPT_NAME"]);?>" method="GET">
+
+        <p><label for="firstname">First name:</label><br />
+        <input type="text" id="firstname" name="firstname"></p>
+
+        <p><label for="lastname">Last name:</label><br />
+        <input type="text" id="lastname" name="lastname"></p>
+
+        <button type="submit" name="form" value="submit">Go</button>  
+
+    </form>
+```
+
 
 ```
 HTML Injection - Reflected (POST)
