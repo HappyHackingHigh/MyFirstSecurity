@@ -72,10 +72,10 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 <?php 
 
 if( isset( $_POST[ 'Submit' ]  ) ) { 
-    // Get input 
+    // 使用$_REQUEST來接收輸入的IP(完全沒有驗證使用者輸入的資料) 
     $target = $_REQUEST[ 'ip' ]; 
 
-    // Determine OS and execute the ping command. 
+    // 決定作業系統並執行相對應的ping指令 OS and execute the ping command. 
     if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
         // Windows 
         $cmd = shell_exec( 'ping  ' . $target ); 
@@ -90,7 +90,7 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 } 
 
 ?> 
-
+```
 
 ### Medium
 
