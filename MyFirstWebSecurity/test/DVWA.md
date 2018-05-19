@@ -115,7 +115,20 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 # XSS（Reflected）（反射型跨站腳本）
 
 ### Low
+```
+步驟一:登錄DVWA
 
+步驟二:選擇安全級別
+將dvwa-security-裏面的安全級別調到最低級別
+
+步驟三:選擇XSS(Reflected)題目頁面
+
+步驟四:進行攻擊測試
+輸入測試腳本<script>alert(\xss\)</script>點擊提交
+
+==>成果畫面:瀏覽器會彈出“\xss\”
+由於此處存在反射性XSS漏洞瀏覽器會彈出“\xss\”
+```
 ### Medium
 
 ### High
