@@ -41,99 +41,105 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 
 # Command Injection（命令行注入）
 
-## Low
+### Low
 
-## Medium
+### Medium
 
-## High
+### High
 
-## Impossible
+### Impossible
 
-# Command Injection（命令行注入）
 
 # SQL Injection（SQL注入）
 
 # SQL Injection（Blind）（SQL盲注）
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # Brute Force（暴力（破解））
 
-## Low
+### Low
 
-## Medium
+### Medium
 
-## High
+### High
 
-## Impossible
+### Impossible
 
 # Insecure CAPTCHA（不安全的驗證碼)
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # File Inclusion（文件包含）
 >* Local file Inclusion(LFI)
 >* Remote file Inclusion(RFL)
 
-## Low
+### Low
 
-## Medium
+### Medium
 
-## High
+### High
 
-## Impossible
+### Impossible
 
 # File Upload（文件上傳）
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # XSS（Reflected）（反射型跨站腳本）
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # XSS（Stored）（存儲型跨站腳本）。
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # XSS(DOM)
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
 
 # CSRF（跨站請求偽造）
-## Low
 
-## Medium
+### Low
 
-## High
+### Medium
 
-## Impossible
+### High
+
+### Impossible
