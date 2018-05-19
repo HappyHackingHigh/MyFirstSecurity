@@ -6,8 +6,7 @@
 >* [Ubuntu_16.04_32bit](http://120.114.62.41/ova/Ubuntu_16.04_32bit_CTF_2018.2.ova)
 >* [Ubuntu_16.04_64bit](http://120.114.62.41/ova/Ubuntu_16.04_64bit_CTF_2018.2.ova)
 >* 帳號:ksu/密碼:ksulab8
-
-[使用手冊](Ubuntu 16.04_Vulnerability-images使用手冊.pptx)
+>* [使用手冊](Ubuntu 16.04_Vulnerability-images使用手冊.pptx)
 
 ##### 滲透測試用的linux(可以依照你的環境選擇下載)
 >* [kali_2018.1_32bit](http://120.114.62.41/ova/kali_2018.1_32bit.ova)
