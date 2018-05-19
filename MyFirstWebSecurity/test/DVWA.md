@@ -52,6 +52,14 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 
 # SQL Injection（SQL注入）
 
+### Low
+
+### Medium
+
+### High
+
+### Impossible
+
 # SQL Injection（Blind）（SQL盲注）
 
 ### Low
