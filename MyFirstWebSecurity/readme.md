@@ -6,11 +6,12 @@
 
 課程內容:本課程將帶領學生完成底下實測
 >* HTTP協定的基礎實測與分析
->* 熟悉網站安全測試工具:developer Tools, Curl與Burpsuite
+>* 熟悉網站安全測試工具的使用:developer Tools, Curl與Burpsuite
   (若有時間可示範OWASP Mantra或HackingBar)
 >* 完成Web-CTF101的題目
 
 ##### [上課演練平台:國網cdx-正式平台:](http://140.110.112.31)
+##### [上課演練平台:其他平台:]
 
 ## Web-CTF101
 ```
