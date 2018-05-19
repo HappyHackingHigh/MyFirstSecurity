@@ -66,36 +66,7 @@ step 3: 輸入127.0.0.1 ; cat /etc/passwd | tee /tmp/passwd ==> 點擊提交
 ```
 關鍵程式碼解析
 
-客戶端(使用者端)程式分析
-```
-................
 
-
-	<div class="vulnerable_code_area">
-		<form action="#" method="POST" >
-			<h3>Change your password:</h3>
-			<br />
-
-			<input type="hidden" name="step" value="1" />
-			New password:<br />
-			<input type="password" AUTOCOMPLETE="off" name="password_new"><br />
-			Confirm new password:<br />
-			<input type="password" AUTOCOMPLETE="off" name="password_conf"><br />
-
-			
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-		<br /> <div class='g-recaptcha' data-theme='dark' data-sitekey='6Ldg-VcUAAAAAEHnHni9V92-gquni6bFKSHJ5YQM'></div>
-	
-			<br />
-
-			<input type="submit" value="Change" name="Change">
-		</form>
-		<pre><br />The CAPTCHA was incorrect. Please try again.</pre>
-	</div>
- 
- ................
-```
-伺服器端程式分析
 ```
 <?php 
 
@@ -181,6 +152,37 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 攻擊測試步驟::使用burpsuite攔截封包將step=1修改為step=2,即可略過CAPTCHA驗證
 ```
 關鍵程式碼分析
+
+客戶端(使用者端)程式分析
+```
+................
+
+
+	<div class="vulnerable_code_area">
+		<form action="#" method="POST" >
+			<h3>Change your password:</h3>
+			<br />
+
+			<input type="hidden" name="step" value="1" />
+			New password:<br />
+			<input type="password" AUTOCOMPLETE="off" name="password_new"><br />
+			Confirm new password:<br />
+			<input type="password" AUTOCOMPLETE="off" name="password_conf"><br />
+
+			
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<br /> <div class='g-recaptcha' data-theme='dark' data-sitekey='6Ldg-VcUAAAAAEHnHni9V92-gquni6bFKSHJ5YQM'></div>
+	
+			<br />
+
+			<input type="submit" value="Change" name="Change">
+		</form>
+		<pre><br />The CAPTCHA was incorrect. Please try again.</pre>
+	</div>
+ 
+ ................
+```
+伺服器端程式分析
 ```
 <?php 
 
