@@ -124,15 +124,258 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 # Brute Force（暴力（破解））
 
 ### Low
+使用Sqli就可以成功
+```
+在Username欄位填入admin' or '1'='1
+即可成功
+```
+成功畫面顯示
+```
+Welcome to the password protected area admin' or '1'='1
+```
 
+關鍵程式碼解析
+```
+<?php
+
+if( isset( $_GET[ 'Login' ] ) ) {
+    // Get username
+    $user = $_GET[ 'username' ];
+
+    // Get password
+    $pass = $_GET[ 'password' ];
+    $pass = md5( $pass );
+
+    // Check the database
+    $query  = "SELECT * FROM `users` WHERE user = '$user' AND password = '$pass';";
+    $result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
+
+    if( $result && mysqli_num_rows( $result ) == 1 ) {
+        // Get users details
+        $row    = mysqli_fetch_assoc( $result );
+        $avatar = $row["avatar"];
+
+        // Login successful
+        echo "<p>Welcome to the password protected area {$user}</p>";
+        echo "<img src=\"{$avatar}\" />";
+    }
+    else {
+        // Login failed
+        echo "<pre><br />Username and/or password incorrect.</pre>";
+    }
+
+    ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+}
+
+?> 
+```
 ### Medium
 
+關鍵程式碼解析
+```
+<?php
+
+if( isset( $_GET[ 'Login' ] ) ) {
+    // Sanitise username input
+    $user = $_GET[ 'username' ];
+    $user = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $user ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+
+    // Sanitise password input
+    $pass = $_GET[ 'password' ];
+    $pass = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $pass ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+    $pass = md5( $pass );
+
+    // Check the database
+    $query  = "SELECT * FROM `users` WHERE user = '$user' AND password = '$pass';";
+    $result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
+
+    if( $result && mysqli_num_rows( $result ) == 1 ) {
+        // Get users details
+        $row    = mysqli_fetch_assoc( $result );
+        $avatar = $row["avatar"];
+
+        // Login successful
+        echo "<p>Welcome to the password protected area {$user}</p>";
+        echo "<img src=\"{$avatar}\" />";
+    }
+    else {
+        // Login failed
+        sleep( 2 );
+        echo "<pre><br />Username and/or password incorrect.</pre>";
+    }
+
+    ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+}
+
+?> 
+```
+
+第一次攻擊測試:使用Sqli
+```
+在Username欄位填入admin' or '1'='1
+```
+失敗畫面顯示
+```
+Username and/or password incorrect.
+```
+第二次攻擊測試:
+
 ### High
+
+>* High等級的程式碼加入了Token，可以防預CSRF攻擊，同時也增加了暴力破解的難度
+
+關鍵程式碼解析
+```
+<?php
+
+if( isset( $_GET[ 'Login' ] ) ) {
+    // Check Anti-CSRF token
+    checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' );
+
+    // Sanitise username input
+    $user = $_GET[ 'username' ];
+    $user = stripslashes( $user );
+    $user = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $user ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+
+    // Sanitise password input
+    $pass = $_GET[ 'password' ];
+    $pass = stripslashes( $pass );
+    $pass = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $pass ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+    $pass = md5( $pass );
+
+    // Check database
+    $query  = "SELECT * FROM `users` WHERE user = '$user' AND password = '$pass';";
+    $result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
+
+    if( $result && mysqli_num_rows( $result ) == 1 ) {
+        // Get users details
+        $row    = mysqli_fetch_assoc( $result );
+        $avatar = $row["avatar"];
+
+        // Login successful
+        echo "<p>Welcome to the password protected area {$user}</p>";
+        echo "<img src=\"{$avatar}\" />";
+    }
+    else {
+        // Login failed
+        sleep( rand( 0, 3 ) );
+        echo "<pre><br />Username and/or password incorrect.</pre>";
+    }
+
+    ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+}
+
+// Generate Anti-CSRF token
+generateSessionToken();
+
+?> 
+```
+
+攻擊測試:
 ```
 https://github.com/g0tmi1k/boot2root-scripts/blob/master/dvwa-bruteforce-high-http-get.py
 ```
 
-### Impossible
+### Impossible==>你能攻擊此程式嗎?
+
+```
+<?php
+
+if( isset( $_POST[ 'Login' ] ) ) {
+    // Check Anti-CSRF token
+    checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' );
+
+    // Sanitise username input
+    $user = $_POST[ 'username' ];
+    $user = stripslashes( $user );
+    $user = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $user ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+
+    // Sanitise password input
+    $pass = $_POST[ 'password' ];
+    $pass = stripslashes( $pass );
+    $pass = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $pass ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
+    $pass = md5( $pass );
+
+    // Default values
+    $total_failed_login = 3;
+    $lockout_time       = 15;
+    $account_locked     = false;
+
+    // Check the database (Check user information)
+    $data = $db->prepare( 'SELECT failed_login, last_login FROM users WHERE user = (:user) LIMIT 1;' );
+    $data->bindParam( ':user', $user, PDO::PARAM_STR );
+    $data->execute();
+    $row = $data->fetch();
+
+    // Check to see if the user has been locked out.
+    if( ( $data->rowCount() == 1 ) && ( $row[ 'failed_login' ] >= $total_failed_login ) )  {
+        // User locked out.  Note, using this method would allow for user enumeration!
+        //echo "<pre><br />This account has been locked due to too many incorrect logins.</pre>";
+
+        // Calculate when the user would be allowed to login again
+        $last_login = $row[ 'last_login' ];
+        $last_login = strtotime( $last_login );
+        $timeout    = strtotime( "{$last_login} +{$lockout_time} minutes" );
+        $timenow    = strtotime( "now" );
+
+        // Check to see if enough time has passed, if it hasn't locked the account
+        if( $timenow > $timeout )
+            $account_locked = true;
+    }
+
+    // Check the database (if username matches the password)
+    $data = $db->prepare( 'SELECT * FROM users WHERE user = (:user) AND password = (:password) LIMIT 1;' );
+    $data->bindParam( ':user', $user, PDO::PARAM_STR);
+    $data->bindParam( ':password', $pass, PDO::PARAM_STR );
+    $data->execute();
+    $row = $data->fetch();
+
+    // If its a valid login...
+    if( ( $data->rowCount() == 1 ) && ( $account_locked == false ) ) {
+        // Get users details
+        $avatar       = $row[ 'avatar' ];
+        $failed_login = $row[ 'failed_login' ];
+        $last_login   = $row[ 'last_login' ];
+
+        // Login successful
+        echo "<p>Welcome to the password protected area <em>{$user}</em></p>";
+        echo "<img src=\"{$avatar}\" />";
+
+        // Had the account been locked out since last login?
+        if( $failed_login >= $total_failed_login ) {
+            echo "<p><em>Warning</em>: Someone might of been brute forcing your account.</p>";
+            echo "<p>Number of login attempts: <em>{$failed_login}</em>.<br />Last login attempt was at: <em>${last_login}</em>.</p>";
+        }
+
+        // Reset bad login count
+        $data = $db->prepare( 'UPDATE users SET failed_login = "0" WHERE user = (:user) LIMIT 1;' );
+        $data->bindParam( ':user', $user, PDO::PARAM_STR );
+        $data->execute();
+    }
+    else {
+        // Login failed
+        sleep( rand( 2, 4 ) );
+
+        // Give the user some feedback
+        echo "<pre><br />Username and/or password incorrect.<br /><br/>Alternative, the account has been locked because of too many failed logins.<br />If this is the case, <em>please try again in {$lockout_time} minutes</em>.</pre>";
+
+        // Update bad login count
+        $data = $db->prepare( 'UPDATE users SET failed_login = (failed_login + 1) WHERE user = (:user) LIMIT 1;' );
+        $data->bindParam( ':user', $user, PDO::PARAM_STR );
+        $data->execute();
+    }
+
+    // Set the last login time
+    $data = $db->prepare( 'UPDATE users SET last_login = now() WHERE user = (:user) LIMIT 1;' );
+    $data->bindParam( ':user', $user, PDO::PARAM_STR );
+    $data->execute();
+}
+
+// Generate Anti-CSRF token
+generateSessionToken();
+
+?> 
+```
 
 # Insecure CAPTCHA（不安全的驗證碼)
 
