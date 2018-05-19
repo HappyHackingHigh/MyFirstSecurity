@@ -128,6 +128,9 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 ### Medium
 
 ### High
+```
+https://github.com/g0tmi1k/boot2root-scripts/blob/master/dvwa-bruteforce-high-http-get.py
+```
 
 ### Impossible
 
