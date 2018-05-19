@@ -65,3 +65,5 @@ Step 5:打開瀏覽器進行測試
 
 # 實戰owasp juice shop
 
+>* [參考解答Pwning OWASP Juice Shop](https://leanpub.com/juice-shop)
+
