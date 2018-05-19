@@ -116,6 +116,8 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 ### Low
 
 ### Medium
+```
+```
 
 ### High
 
