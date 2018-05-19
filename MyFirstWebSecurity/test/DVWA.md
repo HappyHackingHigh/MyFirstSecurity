@@ -145,9 +145,10 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 
 >* 測試環境說明:
 ### Low
-```
+
+
 一般測試步驟::<span style="color:blue">輸入驗證碼才可修改密碼</span>
-```
+
 ```
 攻擊測試步驟::使用burpsuite攔截封包將step=1修改為step=2,即可略過CAPTCHA驗證
 ```
