@@ -80,6 +80,8 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 
 ?> 
 ```
+>* PHP 預先定義的變數(Predefined Variables)$_REQUEST
+
 ### Medium
 
 ### High
