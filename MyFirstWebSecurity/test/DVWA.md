@@ -33,7 +33,7 @@ A10:2017-Insufficient Logging&Monitoring{新增}
 >* File Upload（文件上傳）
 
 >* XSS（Reflected）（反射型跨站腳本）
->* XSS（Stored）（存儲型跨站腳本）。
+>* XSS（Stored）（存儲型跨站腳本）
 >* XSS(DOM)
 >* CSRF（跨站請求偽造）
 
