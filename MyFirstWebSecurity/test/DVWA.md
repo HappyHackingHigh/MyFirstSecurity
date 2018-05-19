@@ -746,8 +746,14 @@ generateSessionToken();
 
 ```
 # File Inclusion（文件包含）
->* Local file Inclusion(LFI)
->* Remote file Inclusion(RFL)
+
+
+>* File Inclusion[檔案包含]:當伺服器開啟allow_url_include選項時，就可通過php的某些特性函數[include()，require()和include_once()，require_once()]利用url去動態包含文件
+
+[File inclusion vulnerability](https://en.wikipedia.org/wiki/File_inclusion_vulnerability)
+>* 如果沒有對檔案來源進行嚴格審查，就會導致任意檔案讀取或者任意命令執行。
+>* 分為本地檔包含漏洞(Local file Inclusion(LFI))與遠端檔包含漏洞(Remote file Inclusion(RFL))
+>* 遠端檔包含漏洞是因為開啟了php配置中的allow_url_fopen選項（選項開啟之後，伺服器允許包含一個遠端的檔）。
 
 ### Low
 
