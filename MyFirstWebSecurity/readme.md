@@ -10,6 +10,8 @@
   (若有時間可示範OWASP Mantra或HackingBar)
 >* 完成Web-CTF101的題目
 
+##### [上課演練平台:國網cdx-正式平台:](http://140.110.112.31)
+
 ## Web-CTF101
 ```
 請同學先登入網站註冊並實際看看Web-CTF101的題目
@@ -74,7 +76,7 @@ https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields
 ### B.2.Curl::强大的http命令行工具
 
 >* https://en.wikipedia.org/wiki/CURL
->* 使用 Curl::Curl command
+>* 使用 Curl command
 ```
 https://www.tutorialspoint.com/unix_commands/curl.htm
 ```
