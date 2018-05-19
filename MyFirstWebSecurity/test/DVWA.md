@@ -53,6 +53,44 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 # SQL Injection（SQL注入）
 
 ### Low
+```
+步驟一:登錄DVWA
+
+步驟二:選擇安全級別
+將dvwa-security-裏面的安全級別調到最低級別
+
+步驟三:選擇XSS(Reflected)題目頁面
+
+步驟四:進行攻擊測試
+輸入測試腳本<script>alert(\xss\)</script>點擊提交
+
+==>成果畫面:瀏覽器會彈出“\xss\”
+由於此處存在反射性XSS漏洞瀏覽器會彈出“\xss\”
+```
+關鍵程式碼解析
+```
+<?php 
+
+if( isset( $_POST[ 'Submit' ]  ) ) { 
+    // Get input 
+    $target = $_REQUEST[ 'ip' ]; 
+
+    // Determine OS and execute the ping command. 
+    if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
+        // Windows 
+        $cmd = shell_exec( 'ping  ' . $target ); 
+    } 
+    else { 
+        // *nix 
+        $cmd = shell_exec( 'ping  -c 4 ' . $target ); 
+    } 
+
+    // Feedback for the end user 
+    echo "<pre>{$cmd}</pre>"; 
+} 
+
+?> 
+
 
 ### Medium
 
