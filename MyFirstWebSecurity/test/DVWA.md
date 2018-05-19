@@ -22,7 +22,7 @@ A9:2017-Using Components with Known Vulnerabilities
 A10:2017-Insufficient Logging&Monitoring{新增}
 ```
 
-# DVWA漏洞模組(尚未涵蓋2017年版TOP 10)
+# DVWA漏洞模組(未涵蓋2017年版TOP 10)
 
 >* Command Injection（命令行注入）
 >* SQL Injection（SQL注入）
