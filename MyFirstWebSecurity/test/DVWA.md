@@ -5,7 +5,7 @@ DVWA（Damn Vulnerable Web Application）是一個用來進行安全脆弱性鑒
 
 ### [演練平台](http://120.114.102.164)
 
-### [OWASP TOP 10漏洞OWASP Top 10 2017](https://www.owasp.org/index.php/Top_10-2017_Top_10)
+### [OWASP TOP 10漏洞(OWASP Top 10 2017)](https://www.owasp.org/index.php/Top_10-2017_Top_10)
 
 ```
 A1:2017-Injection
