@@ -775,6 +775,34 @@ http://192.168.1.250/DVWA/vulnerabilities/fi/? page=http://www.google.com
 >* 不肖客自己先植入惡意程式在國外網站
 >* 在攻擊有RFI 漏洞並用來讀取別台機器上的惡意程式
 
+客戶端程式分析
+```
+<div class="body_padded">
+	<h1>Vulnerability: File Inclusion</h1>
+
+	
+
+	<div class="vulnerable_code_area">
+		[<em><a href="?page=file1.php">file1.php</a></em>] - [<em><a href="?page=file2.php">file2.php</a></em>] - [<em><a href="?page=file3.php">file3.php</a></em>]
+	</div>
+
+	<h2>More Information</h2>
+	<ul>
+		<li><a href="https://en.wikipedia.org/wiki/Remote_File_Inclusion" target="_blank">https://en.wikipedia.org/wiki/Remote_File_Inclusion</a></li>
+		<li><a href="https://www.owasp.org/index.php/Top_10_2007-A3" target="_blank">https://www.owasp.org/index.php/Top_10_2007-A3</a></li>
+	</ul>
+</div>
+
+```
+伺服器漏洞程式分析
+```
+<?php 
+
+// The page we wish to display 
+$file = $_GET[ 'page' ]; 
+//伺服器端對page參數沒有做任何的過濾跟檢查
+?> 
+```
 
 ### Medium
 ***
