@@ -42,17 +42,6 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible。
 # Command Injection（命令行注入）
 
 ### Low
-
-### Medium
-
-### High
-
-### Impossible
-
-
-# SQL Injection（SQL注入）
-
-### Low
 ```
 步驟一:登錄DVWA
 
@@ -91,6 +80,17 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 
 ?> 
 ```
+### Medium
+
+### High
+
+### Impossible
+
+
+# SQL Injection（SQL注入）
+
+### Low
+
 
 ### Medium
 
