@@ -170,9 +170,45 @@ curl -X GETFLAG -v 'http://35.194.128.89:2004/index.php'
 
 ## C.web debugging proxy之burp suite(ZAP,fiddler)
 
-https://en.wikipedia.org/wiki/Burp_suite
+>* https://en.wikipedia.org/wiki/Burp_suite
+>* kali linux 2018.1已經安裝burp suite free edition
+>* Ubuntu linux 16.04 LTS 64-bit預設沒有安裝==>需自行安裝
+>* https://portswigger.net/burp/communitydownload
+```
+下載burpsuite_community_linux_v1_7_33.sh
 
+chmod +x burpsuite_community_linux_v1_7_33.sh
+
+執行安裝==> ./burpsuite_community_linux_v1_7_33.sh
+```
 ### web-5:使用burp suite:HTTP封包攔截與竄改session
+```
+你知道如何使用非管理者身分在設計不良的網站取得管理者權限登入嗎?
+本題任務是請你完成上述使命?
+提示1: 你知道如何攔截並修改封包嗎?
+提示2: 你可以使用Burp Suite等工具
+
+請連結以下網址進行解題:
+http://140.110.112.31:2005/
+```
+
+使用Ubuntu 16.04預建的Mozilla/firefox
+
+Connection settings to use a proxy can be set in Firefox Preferences as follows:
+
+    Click the menu button and choose Preferences. about:preferences ==>
+    In the General panel, go to the Network Proxy section.
+    Click Settings…. The Connection Settings dialog will open.
+
+>* No proxy: Choose this if you don't want to use a proxy.
+>* Auto-detect proxy settings for this network: Choose this if you want Firefox to automatically detect the proxy settings for your network.
+>* Use system proxy settings: Choose this if you want to use the proxy settings configured for your operating system.
+>* Manual proxy configuration: Choose this if you have a list of one or more proxy servers. Ask your system administrator for the configuration information. Each proxy requires a hostname and a port number.
+        If the same proxy name and port number are used for all protocols, check Use this proxy server for all protocols.
+>* No Proxy For: List of hostnames or IP addresses that will not be proxied. Use <local> to bypass proxying for all hostnames which do not contain periods. 
+>* Automatic proxy configuration URL: Choose this if you have a proxy configuration (.pac) file. Enter the URL and click okay to save changes and load the proxy configuration.
+>* Reload: The reload button will load the currently available proxy configuration. 
+
 
 
 
