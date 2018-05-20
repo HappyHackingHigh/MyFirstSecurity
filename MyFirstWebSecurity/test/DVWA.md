@@ -139,8 +139,103 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 ```
 ### High
 
-### Impossible
+更完整的黑名單(blacklist)過濾
+```
+<?php 
 
+if( isset( $_POST[ 'Submit' ]  ) ) { 
+    // Get input 
+    $target = trim($_REQUEST[ 'ip' ]); 
+
+    // Set blacklist 
+    $substitutions = array( 
+        '&'  => '', 
+        ';'  => '', 
+        '| ' => '', 
+        '-'  => '', 
+        '$'  => '', 
+        '('  => '', 
+        ')'  => '', 
+        '`'  => '', 
+        '||' => '', 
+    ); 
+
+    // Remove any of the charactars in the array (blacklist). 
+    $target = str_replace( array_keys( $substitutions ), $substitutions, $target ); 
+
+    // Determine OS and execute the ping command. 
+    if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
+        // Windows 
+        $cmd = shell_exec( 'ping  ' . $target ); 
+    } 
+    else { 
+        // *nix 
+        $cmd = shell_exec( 'ping  -c 4 ' . $target ); 
+    } 
+
+    // Feedback for the end user 
+    echo "<pre>{$cmd}</pre>"; 
+} 
+
+?> 
+```
+攻擊1==>繞過黑名單(blacklist)過==>使用 | ==>殘念
+
+```
+127.0.0.1| cat /etc/passwd
+```
+攻擊2==>繞過黑名單(blacklist)過==>使用 | ==>部分有用
+```
+127.0.0.1|ls
+```
+
+
+### Impossible<<至高無上防禦工法>>
+
+更嚴謹的防禦==>這下打不進去了吧!==>若你打得進去我請你吃年肉麵
+```
+<?php 
+
+if( isset( $_POST[ 'Submit' ]  ) ) { 
+    // Check Anti-CSRF token 
+    checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' ); 
+
+    // Get input 
+    $target = $_REQUEST[ 'ip' ]; 
+    $target = stripslashes( $target ); 
+
+    // Split the IP into 4 octects 
+    $octet = explode( ".", $target ); 
+
+    // Check IF each octet is an integer 
+    if( ( is_numeric( $octet[0] ) ) && ( is_numeric( $octet[1] ) ) && ( is_numeric( $octet[2] ) ) && ( is_numeric( $octet[3] ) ) && ( sizeof( $octet ) == 4 ) ) { 
+        // If all 4 octets are int's put the IP back together. 
+        $target = $octet[0] . '.' . $octet[1] . '.' . $octet[2] . '.' . $octet[3]; 
+
+        // Determine OS and execute the ping command. 
+        if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
+            // Windows 
+            $cmd = shell_exec( 'ping  ' . $target ); 
+        } 
+        else { 
+            // *nix 
+            $cmd = shell_exec( 'ping  -c 4 ' . $target ); 
+        } 
+
+        // Feedback for the end user 
+        echo "<pre>{$cmd}</pre>"; 
+    } 
+    else { 
+        // Ops. Let the user name theres a mistake 
+        echo '<pre>ERROR: You have entered an invalid IP.</pre>'; 
+    } 
+} 
+
+// Generate Anti-CSRF token 
+generateSessionToken(); 
+
+?> 
+```
 
 # SQL Injection（SQL注入）
 
