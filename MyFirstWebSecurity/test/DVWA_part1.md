@@ -15,7 +15,7 @@ A4:2017-XML External Entities (XXE){新增}
 A5:2017-Broken Access Control
 A6:2017-Security Misconfiguration
 A7:2017-Cross-Site Scripting (XSS)
-A8:2017-Insecure DeserializationP{新增}
+A8:2017-Insecure Deserialization{新增}
 Insecure deserialization often leads to remote code execution.
 
 A9:2017-Using Components with Known Vulnerabilities
