@@ -13,7 +13,7 @@
 ##### [上課演練平台:國網cdx-正式平台:](http://140.110.112.31)
 ##### [上課演練平台:其他平台:]
 
-## Web-CTF101
+## <<搶旗大賽實戰>> Web101-CTF
 ```
 請同學先登入網站註冊並實際看看Web101-CTF的題目
 ```
@@ -34,9 +34,13 @@ Auditing, performance metrics, and best practices for Progressive Web App
 https://github.com/GoogleChrome/lighthouse
 ```
 
-### A1_1:使用{developer Tools開發者工具}來查看網站應用程式的原始碼Web-CTF101
+### <<搶旗大賽實戰>>Web101/Web-1:source code
 
-### A1_2:使用{developer Tools開發者工具}來解HITCON2017的Visual Acuity
+使用{developer Tools開發者工具}來查看網站應用程式的原始碼
+
+### <<搶旗大賽實戰>>
+
+使用{developer Tools開發者工具}來解HITCON2017的Visual Acuity
 
 http://ctf2017.hitcon.org/
 
@@ -46,7 +50,8 @@ http://ctf2017.hitcon.org/
 https://zh.wikipedia.org/wiki/Robots.txt
 ```
 
-### A2_1:解Web-CTF101那題robots.txt
+### <<搶旗大賽實戰>>Web101/web-2:Robots.txt
+
 
 # B.1.HTTP協定(1): Http request and response
 
@@ -144,7 +149,7 @@ HTTP/1.1:使用的HTTP版本
 * Closing connection 0
 ```
 
-### web-3:Curl-1
+### <<搶旗大賽實戰>>Web101/web-3:Curl-1
 
 step1:先用瀏覽器看看
 ```
@@ -275,7 +280,7 @@ curl -X GET -v 'http://35.194.128.89:2004/index.php'
 curl -X POST -v 'http://35.194.128.89:2004/index.php'
 curl -X OPTIONS -v 'http://35.194.128.89:2004/index.php'
 ```
-# web-4:HTTP method 100
+# <<搶旗大賽實戰>>Web101/web-4:HTTP method 100
 
 curl -X GET -v http://140.110.112.31:3001/index.php
 
@@ -408,7 +413,9 @@ Connection settings to use a proxy can be set in Firefox Preferences as follows:
 >* Reload: The reload button will load the currently available proxy configuration. 
 ```
 
-### web-:使用burp suite:HTTP封包攔截與竄改session
+### <<搶旗大賽實戰>>Web101/Web-6:Burp Suite
+
+web-:使用burp suite:HTTP封包攔截與竄改session
 ```
 你知道如何使用非管理者身分在設計不良的網站取得管理者權限登入嗎?
 本題任務是請你完成上述使命?
