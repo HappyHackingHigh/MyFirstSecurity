@@ -41,14 +41,14 @@ https://github.com/GoogleChrome/lighthouse
 http://ctf2017.hitcon.org/
 
 
-### A2:認識robots.txt
+## A2:認識robots.txt
 ```
 https://zh.wikipedia.org/wiki/Robots.txt
 ```
 
 ### A2_1:解Web-CTF101那題robots.txt
 
-## B.1.HTTP協定(1): Http request and response
+# B.1.HTTP協定(1): Http request and response
 
 ```
 Hypertext Transfer Protocol (HTTP) https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
@@ -74,7 +74,7 @@ https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields
 作業:查出Response header fields的WWW-Authenticate欄位,說明其意義
 
 
-### B.2.Curl::强大的http命令行工具
+## B.2.Curl::强大的http命令行工具
 
 >* https://en.wikipedia.org/wiki/CURL
 >* [使用 Curl command](https://www.tutorialspoint.com/unix_commands/curl.htm)
