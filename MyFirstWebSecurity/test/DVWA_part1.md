@@ -27,8 +27,10 @@ A10:2017-Insufficient Logging&Monitoring{新增}
 >* Command Injection（命令行注入）
 >* SQL Injection（SQL注入）
 >* SQL Injection（Blind）（SQL盲注）
+
 >* Brute Force（暴力（破解））
 >* Insecure CAPTCHA（不安全的驗證碼)
+
 >* File Inclusion（文件包含）
 >* File Upload（文件上傳）
 
