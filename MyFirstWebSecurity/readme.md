@@ -85,10 +85,41 @@ https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields
 >* [使用 Curl command](https://www.tutorialspoint.com/unix_commands/curl.htm)
 >* 更多訊息  請參閱Everything curl https://ec.haxx.se/
 
-範例
+作業:分析與說明curl -v www.google.com的執行畫面
+```
+* Rebuilt URL to: www.google.com/
+*   Trying 172.217.160.100...
+* Connected to www.google.com (172.217.160.100) port 80 (#0)
+> GET / HTTP/1.1
+> Host: www.google.com
+> User-Agent: curl/7.47.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Date: Sun, 20 May 2018 08:36:32 GMT
+< Expires: -1
+< Cache-Control: private, max-age=0
+< Content-Type: text/html; charset=ISO-8859-1
+< P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+< Server: gws
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< Set-Cookie: 1P_JAR=2018-05-20-08; expires=Tue, 19-Jun-2018 08:36:32 GMT; path=/; domain=.google.com
+< Set-Cookie: NID=130=EccO9YHyMDYfaJyPrwGDogsHf-xRjCSS9D38sfkXyhsD7ceeUoZ5TlInN7nCJfBuloMT20KzcfKN-ARd0u1YLzATmvfxF1R1sDgwMPSz7GcbQf34aVW221xBpgKFnGd8; expires=Mon, 19-Nov-2018 08:36:32 GMT; path=/; domain=.google.com; HttpOnly
+< Accept-Ranges: none
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+< 
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="zh-TW"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+................略...........................
+```
+
+
+範例:
 ```
 curl -X get -v http://120.114.62.89:3001/index.php
 ```
+
 執行畫面
 ```
 Note: Unnecessary use of -X or --request, GET is already inferred.
