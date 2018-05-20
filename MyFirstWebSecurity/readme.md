@@ -181,19 +181,10 @@ chmod +x burpsuite_community_linux_v1_7_33.sh
 
 執行安裝==> ./burpsuite_community_linux_v1_7_33.sh
 ```
-### web-5:使用burp suite:HTTP封包攔截與竄改session
+
+>* 設定瀏覽器==>使用Ubuntu 16.04預建的Mozilla/firefox
+>* 參看圖片的設定畫面
 ```
-你知道如何使用非管理者身分在設計不良的網站取得管理者權限登入嗎?
-本題任務是請你完成上述使命?
-提示1: 你知道如何攔截並修改封包嗎?
-提示2: 你可以使用Burp Suite等工具
-
-請連結以下網址進行解題:
-http://140.110.112.31:2005/
-```
-
-使用Ubuntu 16.04預建的Mozilla/firefox
-
 Connection settings to use a proxy can be set in Firefox Preferences as follows:
 
     Click the menu button and choose Preferences. about:preferences ==>
@@ -208,7 +199,29 @@ Connection settings to use a proxy can be set in Firefox Preferences as follows:
 >* No Proxy For: List of hostnames or IP addresses that will not be proxied. Use <local> to bypass proxying for all hostnames which do not contain periods. 
 >* Automatic proxy configuration URL: Choose this if you have a proxy configuration (.pac) file. Enter the URL and click okay to save changes and load the proxy configuration.
 >* Reload: The reload button will load the currently available proxy configuration. 
+```
 
+### web-:使用burp suite:HTTP封包攔截與竄改session
+```
+你知道如何使用非管理者身分在設計不良的網站取得管理者權限登入嗎?
+本題任務是請你完成上述使命?
+提示1: 你知道如何攔截並修改封包嗎?
+提示2: 你可以使用Burp Suite等工具
 
+請連結以下網址進行解題:
+http://140.110.112.31:2005/
+```
+設定好攔截準備
 
+Step1:先使用任意帳密登入並觀察瀏覽器畫面  test/123456
+
+Step2:(使用Burpsuite攔截)再次使用任意帳密登入並觀察瀏覽器畫面  test/123456
+
+仔細觀察header的欄位及送出的資料
+
+Step3:(使用Burpsuite攔截)再次使用任意帳密登入 test/123456
+
+Step4:修改Burpsuite攔截的封包:將guest 改成admin
+
+Step5:forward(送出)修改過的封包並觀察瀏覽器畫面 ==>你就會看到答案
 
