@@ -28,13 +28,34 @@ gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
 
 ## JAVA程式的編譯與逆向(反編譯)
 
-CTF實戰
+>* jad
+
+##### CTF實戰:angstromCTF 2016 : java-is-the-best-50
+
+##### CTF實戰:ABCTF 2016 : java-madness-50
+
+##### Android程式的編譯與逆向(反編譯)[下學期]
+>* [jadx:Dex to Java decompiler](https://github.com/skylot/jadx)
 
 ## Python程式的編譯與逆向(反編譯)
 
+>* [Freeze](https://wiki.python.org/moin/Freeze)
 >* uncompyle6 
 
+
 ##### CTF實戰:alexctf-2017/reverse-engineering/re4-unvm-me-250
+
+##### CTF實戰:ABCTF 2016 : frozen-recursion-250
+
+##### CTF實戰:HITCON CTF 2016 : handcrafted-pyc-50
+
+##### CTF實戰:CSAW CTF 2014: eggshells(要修改)
+
+### Javacript deobfuscation
+
+>* http://jsbeautifier.org/
+
+##### CTF實戰:ABCTF 2016 : js-pls-80
 
 ## Linux 執行檔(ELF)分析
 >* file
@@ -183,6 +204,8 @@ echo "source ~/peda/peda.py" >> ~/.gdbinit
 ### 強化你的gdb之pwndbg[PWN課程教] (https://github.com/pwndbg/pwndbg)
 
 # IDA pro技術與實戰CTF
+
+##### CTF實戰:CSAW CTF 2014: csaw2013reversing2.exe
 
 # 逆向工程
 >* http://reversing.kr/
