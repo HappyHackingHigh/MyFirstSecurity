@@ -181,7 +181,7 @@ echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 # NEXT(加入資安實務導師培訓制度學習更多技術)
 
-### [Windows PE/PE+執行檔分析](https://en.wikipedia.org/wiki/Portable_Executable)
+### [Windows PE/PE+執行檔分析](https://en.wikipedia.org/wiki/Portable_Executable)[線上課程2018年底上線]
 
 ### [radara 2技術與實戰:從reversing 到 PWN](https://github.com/radare/radare2)
 
