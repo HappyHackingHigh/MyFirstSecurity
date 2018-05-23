@@ -34,7 +34,17 @@ CTF實戰
 
 ## Linux 執行檔(ELF)分析
 
-## 高階程式開發技術之函式庫(Library):靜態鏈結 vs動態鏈結[線上課程]
+#### More Linux Binary Tools
+>* objcopy
+>* nm
+>* addr2line:
+>* strip
+>* Runtime Analysis Tools:strace 
+>* 
+>* 
+>* 
+
+## 高階程式開發技術之函式庫(Library):靜態鏈結 vs動態鏈結[線上課程2018年底上線]
 
 ### 函式庫(Library):重用(reuse)的觀念
 
@@ -93,7 +103,7 @@ https://software.intel.com/en-us/articles/intel-sdm
 
 ## 從機械指令(machine code)到組合語言(Assembly code)
 
-# 我的第一堂組合語言[線上課程]
+# 我的第一堂組合語言[線上課程2018年底上線]
 
 ### NASM:Windows 和 Linux 皆可
 ### MASM:Windows
@@ -167,7 +177,7 @@ echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 # NEXT(加入資安實務導師培訓制度學習更多技術)
 
-### Windows PE/PE+執行檔分析
+### [Windows PE/PE+執行檔分析](https://en.wikipedia.org/wiki/Portable_Executable)
 
 ### radara 2技術與實戰:從reversing 到 PWN
 >* https://github.com/radare/radare2
