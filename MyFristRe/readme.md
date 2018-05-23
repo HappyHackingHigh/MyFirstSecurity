@@ -25,12 +25,31 @@ IA-32 Memory Models(32位元的記憶體管理模式)
 
 ## 讓電腦執行運算的機械指令(machine code)
 
+>* 機器語言Machine code|Instruction code
+>* 第一代程式語言
+
+一個資料移動的機械指令
+tells an x86/IA-32 processor to move an immediate 8-bit value into a register
+
+binary code(二進位機器碼)===>10110000 01100001
+
+Hexadecimal十六進位表達法===>B0 61
+
+線上反組譯服務https://www.onlinedisassembler.com/odaweb/
+
+http://sparksandflames.com/files/x86InstructionChart.html
+
+https://software.intel.com/en-us/articles/intel-sdm
+
 ## 從機械指令(machine code)到組合語言(Assembly code)
 
 # 我的第一堂組合語言
 
 ### NASM:Windows 和 Linux 皆可
 ### MASM:Windows
+
+Introduction to x86 Assembly Language
+http://www.c-jump.com/CIS77/ASM/Assembly/index.html
 
 
 # 解讀關鍵組合語言
