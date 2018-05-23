@@ -135,6 +135,10 @@ objdump -S -j .text -M intel helloCTFer --no-show-raw-insn
 
 x86 指令格式
 
+##### CTF實戰:pico-ctf-2014:reverse-engineering/basic-asm-60
+
+##### CTF實戰:angstromCTF 2016:asm-tracing-45
+
 
 ### 解讀關鍵組合語言II:Function Call and Calling conventions
 
@@ -179,8 +183,7 @@ echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 ### [Windows PE/PE+執行檔分析](https://en.wikipedia.org/wiki/Portable_Executable)
 
-### radara 2技術與實戰:從reversing 到 PWN
->* https://github.com/radare/radare2
+### [radara 2技術與實戰:從reversing 到 PWN](https://github.com/radare/radare2)
 
 ### Z3技術與實戰
 
