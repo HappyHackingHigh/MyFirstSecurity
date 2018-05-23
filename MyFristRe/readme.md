@@ -60,9 +60,9 @@ CTF實戰
 
 ### 共享函式庫開發與使用
 
-# PART2_x86(32位元)與x64(64位元)電腦的計算機結構
+# 逆向工程
 
-計算機組織與結構computer architecture
+### PART2_x86(32位元)與x64(64位元)電腦的計算機結構*computer architecture*
 
 ##### Von Neumann Architecture(1945)
 
