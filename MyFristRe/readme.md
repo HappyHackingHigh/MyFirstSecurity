@@ -60,9 +60,9 @@ CTF實戰
 
 ### 共享函式庫開發與使用
 
-# 逆向工程
+# PART2_逆向工程
 
-### PART2_x86(32位元)與x64(64位元)電腦的計算機結構*computer architecture*
+### x86(32位元)與x64(64位元)電腦的計算機結構*computer architecture*
 
 ##### Von Neumann Architecture(1945)
 
@@ -75,7 +75,6 @@ X86-32 internal architecture
 暫存器名稱的第一個字母 E 代表 Extended，原先從 16 位元延伸到現在的 32 位元架構暫存器，故名稱上也都加上字母 E 以示別
 
 區段暫存器 Segment registers
-
 
 ##### 暫存器的用途
 
@@ -108,8 +107,7 @@ https://software.intel.com/en-us/articles/intel-sdm
 ### NASM:Windows 和 Linux 皆可
 ### MASM:Windows
 
-Introduction to x86 Assembly Language
-http://www.c-jump.com/CIS77/ASM/Assembly/index.html
+[Introduction to x86 Assembly Language](http://www.c-jump.com/CIS77/ASM/Assembly/index.html)
 
 
 # 解讀關鍵組合語言
