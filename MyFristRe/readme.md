@@ -165,10 +165,11 @@ function epilogues函數尾
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 ```
+##### 編輯PEDA設定檔
+
 ##### 使用PEDA
 
-### 強化你的gdb之pwndbg[略]
->* [pwndbg](https://github.com/pwndbg/pwndbg)
+### 強化你的gdb之pwndbg[PWN課程教] (https://github.com/pwndbg/pwndbg)
 
 # IDA pro技術與實戰CTF
 
