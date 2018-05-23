@@ -1,6 +1,56 @@
+# PART1_程式編譯組譯與逆向(反編譯)
+
+## c語言程式編譯與組譯
+產生組語
+
+產生AT&T語法格式的組語(gcc預設使用的格式)
+
+gcc -S -masm=att XXXXX.c -o XXXXX_att.s
+
+產生Intel語法格式的組語(微軟預設使用的格式)
+
+gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
+
+要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
+
+gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
 
 
-# x86(32位元)與x64(64位元)電腦的計算機結構
+組譯過程
+
+>* 將組合語言程式碼轉成機器可以執行的指令(instructions)
+>* 每一個組語語句都對應一機器指令。
+>* 組譯器的組譯過程相對於編譯器來講比較簡單
+>* 沒有複雜的語法，也沒有語意，也不需要做指令最佳化，只是根據組語指令和機器指令的對照表一一翻譯就可以
+
+連結過程
+
+
+## JAVA程式的編譯與逆向(反編譯)
+
+CTF實戰
+
+## Python程式的編譯與逆向(反編譯)
+
+## Linux 執行檔(ELF)分析
+
+## 高階程式開發技術之函式庫(Library):靜態鏈結 vs動態鏈結
+
+### 函式庫(Library):重用(reuse)的觀念
+
+### 函式庫(Library)類型:Static vs Shared vs
+
+### Linux 的 C 標準函式庫
+>* https://en.wikipedia.org/wiki/C_standard_library
+>* https://zh.wikipedia.org/wiki/Stdio.h
+
+查看你linux所使用的C函式庫版本
+
+### 靜態函式庫開發與使用
+
+### 共享函式庫開發與使用
+
+# PART2_x86(32位元)與x64(64位元)電腦的計算機結構
 
 計算機組織與結構computer architecture
 
