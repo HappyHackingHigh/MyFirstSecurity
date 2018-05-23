@@ -137,6 +137,26 @@ https://en.wikipedia.org/wiki/Function_prologue
 
 function epilogues函數尾
 
+# gdb技術技術與實戰
+
+### gdb技術
+
+# IDA pro技術與實戰
+
+
+# NEXT(加入資安實務導師培訓制度學習更多技術)
+
+### Windows PE/PE+執行檔分析
+
+### radara 2技術與實戰:從reversing 到 PWN
+>* https://github.com/radare/radare2
+
+### Z3技術與實戰
+
+### Angr技術與實戰
+
+
+
 
 
 
