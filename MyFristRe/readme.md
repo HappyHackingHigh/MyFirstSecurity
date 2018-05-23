@@ -32,7 +32,17 @@ CTF實戰
 
 ## Python程式的編譯與逆向(反編譯)
 
+>* uncompyle6 
+
+##### CTF實戰:alexctf-2017/reverse-engineering/re4-unvm-me-250
+
 ## Linux 執行檔(ELF)分析
+>* file
+>* strings
+>* readelf
+>* objdump
+
+##### CTF實戰:alexctf-2017/reverse-engineering/re1-gifted-50
 
 #### More Linux Binary Tools
 >* objcopy
@@ -40,9 +50,7 @@ CTF實戰
 >* addr2line:
 >* strip
 >* Runtime Analysis Tools:strace 
->* 
->* 
->* 
+
 
 ## 高階程式開發技術之函式庫(Library):靜態鏈結 vs動態鏈結[線上課程2018年底上線]
 
@@ -137,6 +145,8 @@ x86 指令格式
 
 ##### CTF實戰:angstromCTF 2016:asm-tracing-45
 
+##### CTF實戰:picoCTF 2017 : programmers-assemble-75
+
 
 ### 解讀關鍵組合語言II:Function Call and Calling conventions
 
@@ -149,6 +159,9 @@ Function prologues函數頭
 https://en.wikipedia.org/wiki/Function_prologue
 
 function epilogues函數尾
+
+##### CTF實戰:picoCTF 2017 : a-thing-called-the-stack-60
+
 
 # gdb技術與實戰CTF
 
