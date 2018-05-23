@@ -4,17 +4,17 @@
 產生組語
 
 產生AT&T語法格式的組語(gcc預設使用的格式)
-
+```
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
-
+```
 產生Intel語法格式的組語(微軟預設使用的格式)
-
+```
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
-
+```
 要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
-
+```
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
-
+```
 
 組譯過程
 
@@ -105,14 +105,15 @@ http://www.c-jump.com/CIS77/ASM/Assembly/index.html
 # 解讀關鍵組合語言
 
 ### objdump 使用技術
-
+```
 objdump -S -M intel helloCTFer
-
+```
 去掉機器碼 --no-show-raw-insn  
-
+```
 objdump -S -j .text -M intel helloCTFer --no-show-raw-insn  
- 
+```
 
+##### CTF實戰:Pico CTF 2014 : Function Address
 
 ### 解讀關鍵組合語言I
 
@@ -137,11 +138,31 @@ https://en.wikipedia.org/wiki/Function_prologue
 
 function epilogues函數尾
 
-# gdb技術技術與實戰
+# gdb技術與實戰CTF
 
-### gdb技術
+### 強化你的gdb之PEDA
+>* [PEDA - Python Exploit Development Assistance for GDB](https://github.com/longld/peda)
+>* 為GDB設計的一個強大的外掛程式
+>* 提供了很多人性化的功能，比如高亮顯示反彙編代碼、寄存器、記憶體資訊，提高了debug的效率。
+>* PEDA還為GDB添加了一些實用新的命令，比如checksec可以查看程式開啟了哪些安全機制等等
 
-# IDA pro技術與實戰
+##### 安裝PEDA
+```
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+```
+##### 使用PEDA
+
+### 強化你的gdb之pwndbg[略]
+>* [pwndbg](https://github.com/pwndbg/pwndbg)
+
+# IDA pro技術與實戰CTF
+
+# 逆向工程
+>* http://reversing.kr/
+>* https://beginners.re/
+>* https://github.com/dennis714/RE-for-beginners
+>* https://challenges.re/
 
 
 # NEXT(加入資安實務導師培訓制度學習更多技術)
