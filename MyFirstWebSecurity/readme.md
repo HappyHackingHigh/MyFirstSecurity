@@ -55,15 +55,18 @@ https://zh.wikipedia.org/wiki/Robots.txt
 
 # B.1.HTTP協定(1): Http request and response
 
-```
-Hypertext Transfer Protocol (HTTP) https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
+>* Hypertext Transfer Protocol (HTTP) https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+```
 客戶端送出Http request給伺服器
 client ====> Http request  =====> server
 
 伺服器回應Http responses給客戶端
 client <==== Http responses <===== server
 
+```
+```
 資料傳送的狀態碼:HTTP status codes
 https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
