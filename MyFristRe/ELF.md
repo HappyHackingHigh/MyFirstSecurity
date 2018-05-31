@@ -1,10 +1,19 @@
-# 
+
+
+
+# internal structure of object and executable files
+
 
 -Each ELF file is made up of one ELF header, followed by file data. 
+
 -The file data can include
-      1.Program header table, describing zero or more segments.
-     2.Section header table, describing zero or more sections.
+
+1.Program header table, describing zero or more segments.
+
+2.Section header table, describing zero or more sections.
+
 -The segments contain information that is necessary for runtime execution of the file.
+
 -The sections contain important data for linking and relocation.
 
 
