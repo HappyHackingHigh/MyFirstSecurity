@@ -57,6 +57,8 @@ gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
 
 ##### CTF實戰:ABCTF 2016 : js-pls-80
 
+## Linux 執行檔(ELF)
+
 ## Linux 執行檔(ELF)分析
 >* file
 >* strings
