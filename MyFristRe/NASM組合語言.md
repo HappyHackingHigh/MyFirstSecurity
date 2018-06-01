@@ -6,11 +6,20 @@
 >* 一種組合語言專用於某種電腦系統結構
 >* 
 >* 組譯過程:使用組合語言編寫的原始碼，然後通過相應的組譯程式(assembler)將它們轉換成可執行的機器碼。
-
-組合語言使用助憶碼（Mnemonics）來代替和表示特定低階機器語言的操作。特定的組譯目標指令集可能會包括特定的運算元。
-
+>* 組合語言使用助憶碼（Mnemonics）來代替和表示特定低階機器語言的操作。
+>* 特定的組譯目標指令集可能會包括特定的運算元。
 >* http://www.duntemann.com/assembly.html
 
+### ARM Instruction Set
+>* [ARM架構](https://zh.wikipedia.org/wiki/ARM%E6%9E%B6%E6%A7%8B)
+>* a family of reduced instruction set computing (RISC) architectures for computer processors,
+>* 
+>* 
+>* Raspberry Pi 3 Model B ARMv8（含1GB RAM）
+>* ARM體系結構與編程(第2版) ARM体系结构与编程(第2版) 杜春雷 清華大學出版社 出版日期:2015-08-01
+
+### x86/amd64組譯指令的兩大風格
+>* complex instruction set computing (CISC)
 
 ### 指令(instruction)
 
