@@ -2,9 +2,9 @@
 
 >* ELF是 object file 的檔案格式，其主要結構是以 section（節區）為主
 >* Object file 主要有 3 種類別：
--1. relocatable file(副檔名為 .o )
--2. executable file(a.out 檔案等)
--3. shared object file(副檔名為 *.so（shared libraries）)
+>** 1. relocatable file(副檔名為 .o )
+>** 2. executable file(a.out 檔案等)
+>** 3. shared object file(副檔名為 *.so（shared libraries）)
 
 
 # internal structure of object and executable files
