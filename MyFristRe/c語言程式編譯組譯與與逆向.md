@@ -132,7 +132,7 @@ main:
 	.section	.note.GNU-stack,"",@progbits
 ```
 
-![組合語言](pic/a.png)
+![組合語言](pic/b.png)
 
 #### 要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
 ```
