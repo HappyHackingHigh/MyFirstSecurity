@@ -132,6 +132,8 @@ main:
 	.section	.note.GNU-stack,"",@progbits
 ```
 
+![組合語言](/pic/a.png)
+
 #### 要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
 ```
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
