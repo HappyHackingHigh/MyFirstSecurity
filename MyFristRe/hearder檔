@@ -1,0 +1,34 @@
+/usr/inlcude底下定義的hearder檔
+
+aio.h             fnmatch.h       mqueue.h    regex.h        tgmath.h
+aliases.h         fstab.h         mtd         regexp.h       thread_db.h
+alloca.h          fts.h           net         reglib         time.h
+argp.h            ftw.h           netash      resolv.h       ttyent.h
+argz.h            _G_config.h     netatalk    rpc            uapi
+ar.h              gconv.h         netax25     rpcsvc         uchar.h
+arpa              getopt.h        netdb.h     sched.h        ucontext.h
+asm-generic       gettext-po.h    neteconet   scsi           ulimit.h
+assert.h          glob.h          netinet     search.h       unistd.h
+autosprintf.h     gnumake.h       netipx      semaphore.h    ustat.h
+byteswap.h        gnu-versions.h  netiucv     setjmp.h       utime.h
+c++               grp.h           netpacket   sgtty.h        utmp.h
+complex.h         gshadow.h       netrom      shadow.h       utmpx.h
+cpio.h            iconv.h         netrose     signal.h       uv-errno.h
+crypt.h           ifaddrs.h       nfs         sound          uv.h
+ctype.h           inttypes.h      nl_types.h  spawn.h        uv-linux.h
+dirent.h          langinfo.h      nodejs      stab.h         uv-threadpool.h
+dlfcn.h           lastlog.h       nss.h       stdc-predef.h  uv-unix.h
+drm               libgen.h        numpy       stdint.h       uv-version.h
+elf.h             libintl.h       obstack.h   stdio_ext.h    values.h
+endian.h          libio.h         openssl     stdio.h        video
+envz.h            limits.h        paths.h     stdlib.h       wait.h
+err.h             link.h          poll.h      string.h       wchar.h
+errno.h           linux           printf.h    strings.h      wctype.h
+error.h           locale.h        protocols   stropts.h      wordexp.h
+execinfo.h        malloc.h        pthread.h   sudo_plugin.h  X11
+expat_external.h  math.h          pty.h       syscall.h      x86_64-linux-gnu
+expat.h           mcheck.h        pwd.h       sysexits.h     xen
+fcntl.h           memory.h        python2.7   syslog.h       xlocale.h
+features.h        misc            python3.5m  tar.h          xorg
+fenv.h            mntent.h        rdma        termio.h       zconf.h
+fmtmsg.h          monetary.h      re_comp.h   termios.h      zlib.h
