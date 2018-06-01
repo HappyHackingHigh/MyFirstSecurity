@@ -6,8 +6,16 @@ http://www.duntemann.com/assembly.html
 
 ![指令(instruction)](pic/instruction.png)
 
-### 組合語言與組譯器(https://en.wikipedia.org/wiki/Comparison_of_assemblers)
+### Intel x86 組合語言與組譯器(https://en.wikipedia.org/wiki/Comparison_of_assemblers)
 
+>* MASM(Microsoft Macro Assembler)
+>* [NASM(Netwide Assembler)](https://en.wikipedia.org/wiki/Netwide_Assembler)
+>* Flat Assembler (FASM) 
+>* GNU Assembler (GAS) 
+>* High Level Assembly (HLA) 
+>* Turbo Assembler (TASM) 
+>* Open Watcom Assembler (WASM) 
+>* [Yasm](https://en.wikipedia.org/wiki/Yasm)
 
 ### Id常用指令
 
