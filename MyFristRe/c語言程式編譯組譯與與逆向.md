@@ -198,6 +198,7 @@ gcc  XXX.o –o XXX.exe
 gcc  XXX.o –o XXX.jpg
 ```
 
+看看不同階段產生的檔案大小:
 ```
 -rw-rw-r-- 1 ksu ksu    76  六   1 08:27 hello.c
 -rw-rw-r-- 1 ksu ksu 17106  六   1 08:27 hello.i
