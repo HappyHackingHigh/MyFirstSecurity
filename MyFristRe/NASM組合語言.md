@@ -6,6 +6,9 @@ http://www.duntemann.com/assembly.html
 
 ![指令(instruction)](pic/instruction.png)
 
+### 組合語言與組譯器(https://en.wikipedia.org/wiki/Comparison_of_assemblers)
+
+
 ### Id常用指令
 
 ### NASM組合語言程式範例
