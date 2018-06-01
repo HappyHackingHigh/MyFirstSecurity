@@ -69,22 +69,94 @@ main:
 ```
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
 ```
-
 ```
-
+	.file	"hello.c"
+	.section	.rodata
+.LC0:
+	.string	"Hello CTFer"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$.LC0, %edi
+	call	puts
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+	.section	.note.GNU-stack,"",@progbits
 ```
-
 #### 產生Intel語法格式的組語(微軟預設使用的格式)
 ```
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
 ```
 
+```
+	.file	"hello.c"
+	.intel_syntax noprefix
+	.section	.rodata
+.LC0:
+	.string	"Hello CTFer"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register 6
+	mov	edi, OFFSET FLAT:.LC0
+	call	puts
+	mov	eax, 0
+	pop	rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+	.section	.note.GNU-stack,"",@progbits
+```
 
 #### 要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
 ```
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
 ```
-
+```
+	.file	"hello.c"
+	.intel_syntax noprefix
+	.section	.rodata
+.LC0:
+	.string	"Hello CTFer"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+	push	rbp
+	mov	rbp, rsp
+	mov	edi, OFFSET FLAT:.LC0
+	call	puts
+	mov	eax, 0
+	pop	rbp
+	ret
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+	.section	.note.GNU-stack,"",@progbits
+```
 ## 組譯過程
 
 >* 將組合語言程式碼轉成機器可以執行的指令(instructions)
