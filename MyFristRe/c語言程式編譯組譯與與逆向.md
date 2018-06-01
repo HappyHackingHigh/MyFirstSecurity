@@ -168,7 +168,7 @@ main:
 ```
 gcc –c XXX.s –o XXX.o
 ```
-使用xxd看看onject file的內容==>xxd hello.o
+使用xxd看看object file的內容==>xxd hello.o
 ```
 00000000: 7f45 4c46 0201 0100 0000 0000 0000 0000  .ELF............
 00000010: 0100 3e00 0100 0000 0000 0000 0000 0000  ..>.............
@@ -208,8 +208,18 @@ gcc  XXX.o –o XXX.jpg
 -rw-rw-r-- 1 ksu ksu  1504  六   1 09:00 hello.o
 -rw-rw-r-- 1 ksu ksu   455  六   1 08:50 hello.s
 ```
+
+
 # c程式執行檔逆向==>逆向成組合語言
 
 # c程式執行檔逆向==>逆向成C語言
+
+# 作業
+
+把上述的作業練習在Raspberry Pi 3在做一次
+
+Raspberry Pi 3上安裝Ubuntu MATE作業系統
+
+ARM 的組合語言和x86/x64的組合語言不同
 
 
