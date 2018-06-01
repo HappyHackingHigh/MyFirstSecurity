@@ -1,12 +1,22 @@
+# [組合語言(Assembly language)](https://en.wikipedia.org/wiki/Assembly_language)
 
-http://www.duntemann.com/assembly.html
+維基百科
+>* 低階語言
+>* 在不同的裝置中，組合語言對應著不同的[機器語言指令集(machine instruction set)](https://en.wikipedia.org/wiki/Instruction_set_architecture)。
+>* 一種組合語言專用於某種電腦系統結構
+>* 
+>* 組譯過程:使用組合語言編寫的原始碼，然後通過相應的組譯程式(assembler)將它們轉換成可執行的機器碼。
+
+組合語言使用助憶碼（Mnemonics）來代替和表示特定低階機器語言的操作。特定的組譯目標指令集可能會包括特定的運算元。
+
+>* http://www.duntemann.com/assembly.html
 
 
 ### 指令(instruction)
 
 ![指令(instruction)](pic/instruction.png)
 
-### Intel x86 組合語言與組譯器(https://en.wikipedia.org/wiki/Comparison_of_assemblers)
+### [Intel x86 組合語言與組譯器(assembler)](https://en.wikipedia.org/wiki/Comparison_of_assemblers)
 
 >* MASM(Microsoft Macro Assembler)
 >* [NASM(Netwide Assembler)](https://en.wikipedia.org/wiki/Netwide_Assembler)
