@@ -15,6 +15,7 @@
 
 [Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
 
+
 # file/media Forensics
 
 >* http://www.sleuthkit.org/
@@ -25,6 +26,15 @@
 
 >* http://www.megabeets.net/csaw-2016-clams-dont-dance-writeup/
 
+http://s0ngsari.tistory.com/entry/CSAW-2016-Clams-Dont-Dance
+
+http://blog.indonesiancoder.com/write-up-csaw-ctf-qualification-round-2016
+
+https://github.com/ctfs/write-ups-2016/tree/master/csaw-ctf-2016-quals/forensics/clams-dont-dance-100
+
+https://github.com/krx/CTF-Writeups/tree/master/CSAW%2016%20Quals/for100%20-%20Clams%20Dont%20Dance
+
+https://github.com/73696e65/ctf-notes/blob/master/2016-ctf.csaw.io/forensics-100-clams_dont_dance.md
 
 # Network Forensics
 
