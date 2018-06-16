@@ -26,15 +26,43 @@
 
 ## Memory Forensics:　Tools
 
->* Volatility
->* [Rekall Framework](http://www.rekall-forensic.com/docs/Manual/overview.html)
+>* http://www.forensicswiki.org/wiki/Tools:Memory_Analysis
 
-#### The Volatility Framework
+#### DumpIt 
 
-#### Rekall Framework
+DumpIt provides a convenient way of obtaining a memory image of a Windows system even if the investigator is not physically sitting in front of the target computer. It’s so easy to use, even a naive user can do it. It’s not appropriate for all scenarios, but it will definitely make memory acquisition easier in many situations.
+
+#### Volatility
+
+>* https://github.com/volatilityfoundation/volatility
+>* BOOKS:The Art of Memory Forensics
+>* 測試範例:有些已經失效
+
+https://www.memoryanalysis.net/amf
+
+https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples
+
+
+####  [Rekall Framework](http://www.rekall-forensic.com/docs/Manual/overview.html)
+
+>* https://github.com/google/rekall
+>* www.rekall-forensic.com
+>* http://www.rekall-forensic.com/docs/Manual/tutorial.html
+
 >* The Rekall Framework is a completely open collection of tools, implemented in Python under the GNU General Public License, for the extraction of digital artifacts from volatile memory (RAM) samples. 
 >* The extraction techniques are performed completely independent of the system being investigated but offer visibilty into the runtime state of the system. 
 >* The framework is intended to introduce people to the techniques and complexities associated with extracting digital artifacts from volatile memory samples and provide a platform for further work into this exciting area of research.
+
+#### Redline
+
+>* https://www.fireeye.com/services/freeware/redline-download-confirmation.html
+>* [Memory Analysis Using Redline](http://resources.infosecinstitute.com/memory-analysis-using-redline/#gref)
+
+https://www.fireeye.com/services/freeware/redline-download-confirmation.html
+
+[Top 20 Free Digital Forensic Investigation Tools for SysAdmins](https://techtalk.gfi.com/top-20-free-digital-forensic-investigation-tools-for-sysadmins/)
+
+
 
 ## 實務演練(1): Volatility memory forensics
 
