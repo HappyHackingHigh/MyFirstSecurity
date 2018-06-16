@@ -15,6 +15,17 @@
 
 [Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
 
+# file/media Forensics
+
+>* http://www.sleuthkit.org/
+>* http://www.sleuthkit.org/autopsy/
+>* https://github.com/sleuthkit/autopsy
+
+
+
+>* http://www.megabeets.net/csaw-2016-clams-dont-dance-writeup/
+
+
 # Network Forensics
 
 
