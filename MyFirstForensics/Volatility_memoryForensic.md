@@ -15,6 +15,8 @@ $ python vol.py [plugin] -f [image] --profile=[profile]
 
 $ python volatility.py [plugin] -f [image] --profile=[profile] 
 
+![Volatility指令格式](pic/Volatility-Usage.png)
+
 常用指令
 
 看看支援那些 profiles ==> $ python vol.py –info
