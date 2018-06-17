@@ -42,7 +42,7 @@ IRM (Incident Response Methodologies)
 
 ### Forensics Platform
 
->* Linux Live CD for Forensics[https://techtalk.gfi.com/top-20-free-digital-forensic-investigation-tools-for-sysadmins/)
+>* [Linux Live CD for Forensics](https://techtalk.gfi.com/top-20-free-digital-forensic-investigation-tools-for-sysadmins/)
 >* [Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
 
 
