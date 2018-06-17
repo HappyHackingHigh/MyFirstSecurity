@@ -1,4 +1,33 @@
+# 資安情境 ==> 你是CSO要如何處理??
+
+[1]你管理的Linux被不肖客當作C&C server
+>* [2017-04-25國際刑警組織：東南亞窩藏超過8800台的C&C惡意伺服器](https://www.ithome.com.tw/news/113695)
+>* [2017-05-08新殭屍大軍Bondnet控制手法再升級，不只發動DDoS攻擊，還派去採礦大賺數位貨幣](https://www.ithome.com.tw/news/113951)
+
+[2]你是金控業者雇用的網管人員,你要如何報告這些可能面對的事件(特別是資安管理法已經通過三讀2018/6/17)
+
+>* [2016一銀ATM遭駭事件大剖析](https://www.ithome.com.tw/article/107291)
+>* [2017【遠銀遭駭追追追】](https://www.ithome.com.tw/article/117399)
+
+[2018.5資安法立院三讀通過](https://www.ithome.com.tw/article/123364)
+
+[2018歐盟最嚴格個資規範GDPR正式上路](https://www.ithome.com.tw/article/123464)
+
+[3]你被賦予任務要組電腦安全事件回應小組CSIRT(Computer Security Incident Response Team),如何做?
+
+>* [企業資安急先鋒CSIRT](https://www.ithome.com.tw/article/115714)
+>* [NIST 800-61:Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
+>* [CMU::Computer	Security	Incident	Response	Plan](https://www.cmu.edu/iso/governance/procedures/docs/incidentresponseplan1.0.pdf)
+
+IRM (Incident Response Methodologies)
+
+>* https://github.com/certsocietegenerale/IRM#irm-incident-response-methodologies
+
+
+
 # Forensics
+
+
 
 # Forensics領域
 >* 
@@ -13,7 +42,8 @@
 
 ### Forensics Platform
 
-[Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
+>* Linux Live CD for Forensics[https://techtalk.gfi.com/top-20-free-digital-forensic-investigation-tools-for-sysadmins/)
+>* [Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
 
 
 # file/media Forensics
