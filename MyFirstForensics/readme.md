@@ -38,12 +38,18 @@ IRM (Incident Response Methodologies)
 >* Android Forensics
 >* iOS Forensics
 
-# Forensics Tools
+# Forensics Tools and Platform
 
 ### Forensics Platform
 
 >* [Linux Live CD for Forensics](https://techtalk.gfi.com/top-20-free-digital-forensic-investigation-tools-for-sysadmins/)
 >* [Running REMnux-Provided Images](https://remnux.org/docs/containers/run-apps/)
+
+### Forensics Tools
+>* [digital forensics tools](https://forensiccontrol.com/resources/free-software/)
+
+### Learning materials:
+>* [歐盟enisa技術培訓內容](https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/technical-operational)
 
 
 # file/media Forensics
