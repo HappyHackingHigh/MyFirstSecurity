@@ -36,6 +36,11 @@ https://github.com/krx/CTF-Writeups/tree/master/CSAW%2016%20Quals/for100%20-%20C
 
 https://github.com/73696e65/ctf-notes/blob/master/2016-ctf.csaw.io/forensics-100-clams_dont_dance.md
 
+
+### file/media Forensics:Autospy
+
+[Forensics with Autopsy](https://www.youtube.com/watch?v=Z8p3IMxLMTI)
+
 # Network Forensics
 
 
