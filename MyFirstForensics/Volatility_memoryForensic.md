@@ -212,6 +212,10 @@ linux_malfind              - Looks for suspicious process mappings
 linux_memmap               - Dumps the memory map for linux tasks
 linux_moddump              - Extract loaded kernel modules
 ```
+## Youtube教學影片:
+
+[Hacks Weekly #6: Memory Dump Analysis – extracting juicy data](https://www.youtube.com/watch?v=-8f8avZ2V7s)
+
 ## 實務演練環境:
 
 #### 實務演練環境1:使用kali linux內附的
