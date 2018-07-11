@@ -35,6 +35,8 @@
 >* Audio steganography(聲音隱寫術)
 >* Video steganography(影片隱寫術)
 
+延伸學習:鼓勵學生參加HackingWeekend研習營--Advanced Steganography:From audio to Video課程
+
 ## 第四週	加密/解密與破密
 課程目標:上完這課程模組後,學生要會
 >* 熟悉古典密碼學的凱薩加密與解密
@@ -43,6 +45,7 @@
 >* 熟悉古典密碼學的密碼棒之加密與解密
 >* 完成crypto-CTF題目解題
 
+延伸學習:鼓勵學生參加Breakall CTF練習
 
 ## 第五週	使用Python進行加解密與破密(1)
 
