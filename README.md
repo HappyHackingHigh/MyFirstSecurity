@@ -21,12 +21,10 @@
 
 ## 問卷調查
 
-# [上午場問卷]===>https://tinyurl.com/y9uorafg
+[上午場問卷]===>https://tinyurl.com/y9uorafg
 
 [下午場問卷]===> https://tinyurl.com/y8zocwzj
 
-
-##### 相關活動公告:[高中職生資安研習營](https://zh-tw.facebook.com/%E9%AB%98%E4%B8%AD%E8%81%B7%E7%94%9F%E8%B3%87%E5%AE%89%E7%A0%94%E7%BF%92%E7%87%9F-455550404836569/)
 
 # [提升資安專業技術 為人生贏取幸福]相關新聞
 
