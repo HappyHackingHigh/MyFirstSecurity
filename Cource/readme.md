@@ -68,7 +68,9 @@
 >* 使用標準函式庫hashlib進行MD/SHA1/SHA2562雜湊的應用
 >* 安裝第三方函式庫
 >* 使用第三方函式庫進行質因數分解
->* 使用python程式完成Crypto-CTF題目
+>* 使用第三方函式庫完成Crypto-CTF題目
+
+延伸學習:鼓勵學生參加HackingWeekend研習營--Python程式設計與PPC課程
 
 ## 第七週	現代密碼加解密與破密(初體驗)
 
@@ -80,10 +82,10 @@
 >* 熟悉使用openssl進行MD/SHA1/SHA2562雜湊的應用
 
 進階主題: 基礎RSA破密分析[選擇性]
->* 
->* 
->* 
->* 
+>* Twin Prime的RSA破密分析
+>* common factor attack
+>* 加密指數攻擊:Hastad’s Broadcast Attack
+>* 模數攻擊:common modulus attack
 
 延伸學習:鼓勵學生參加HackingWeekend研習營--破密分析課程
 
