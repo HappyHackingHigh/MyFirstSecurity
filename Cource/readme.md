@@ -49,17 +49,19 @@
 >* Python資料型態與運算
 >* 迴圈與選擇結構
 >* 函數開發技術
->* 使用內建函式解決問題
+>* 使用python程式完成凱薩密碼的解密
+
+進階主題: Python物件導向技術
 
 ## 第六週	使用Python進行加解密與破密(2)
 
 課程目標:上完這課程模組後,學生要會
+>* 使用內建函式解決一般問題
+>* 使用python程式完成Crypto-CTF題目
 >* 使用標準函式庫hashlib進行MD/SHA1/SHA2562雜湊的應用
 >* 
->* 
->* 
->* 
->* 
+>* 安裝第三方函式庫
+>* 使用第三方函式庫進行質因數分解
 
 ## 第七週	現代密碼加解密與破密(初體驗)
 
@@ -69,6 +71,14 @@
 >* 熟悉使用openssl進行RSA非對稱式密碼的加密與解密
 >* 熟悉使用Python進行RSA非對稱式密碼的破密[選擇性]
 >* 熟悉使用openssl進行MD/SHA1/SHA2562雜湊的應用
+
+進階主題: 基礎RSA破密分析[選擇性]
+>* 
+>* 
+>* 
+>* 
+
+延伸學習:鼓勵學生參加HackingWeekend研習營--破密分析課程
 
 ## [第八週	編碼與解碼](https://github.com/HappyHackingHigh/MyFirstSecurity/blob/master/Cource/Topics/week_8.md)
 
@@ -129,6 +139,9 @@
 ## 第十五週	網站漏洞分析(1)
 
 ## 第十六週	網站漏洞分析(2)
+
+
+延伸學習:鼓勵學生參加HackingWeekend研習營--WebSecurity網站安全課程
 
 ## 第十七週	網站安全防護實務:WAF
 
