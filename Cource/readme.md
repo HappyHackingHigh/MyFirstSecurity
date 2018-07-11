@@ -19,6 +19,8 @@
 >* 熟悉Linux的行程管理指令:ps
 >* 完成linux-CTF 題目練習
 
+延伸學習:完成[overTheWire/Bandit](http://overthewire.org/wargames/bandit/)練習
+
 ## 第三週	隱寫術
 課程目標:上完這課程模組後,學生要會
 >* 隱寫術的觀念
@@ -28,6 +30,10 @@
 >* 熟悉binwalk及dd的使用
 >* 完成圖片隱寫術的解題
 >* 修復圖片技術及完成圖片隱寫術的解題
+
+延伸學習:[選擇性]
+>* Audio steganography(聲音隱寫術)
+>* Video steganography(影片隱寫術)
 
 ## 第四週	加密/解密與破密
 課程目標:上完這課程模組後,學生要會
