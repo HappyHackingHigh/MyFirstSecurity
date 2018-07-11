@@ -1,18 +1,19 @@
 # 1.滲透測試Penetration Testing(PT)
-
->* https://en.wikipedia.org/wiki/Penetration_test
+### 1.1:滲透測試是什麼?
 >* http://devco.re/services/penetration-test
 ```
 滲透測試是指一個具備資安知識與經驗、技術人員受*僱主*所託，
 為僱主的網路設備、主機，模擬駭客的手法對網路或主機進行攻擊測試，
 為的是發掘系統漏洞、並提出改善方法
 ```
+>* https://en.wikipedia.org/wiki/Penetration_test
 
-### 滲透測試方法論Penetration Testing::Standard|Framework
 
-https://www.owasp.org/index.php/Penetration_testing_methodologies
+### 1.2.滲透測試方法論Penetration Testing::Standard|Framework
 
 滲透測試有許多方法論與工具,本體驗營先讓你感受到她的魅力,以後再繼續深造! 
+
+https://www.owasp.org/index.php/Penetration_testing_methodologies
 
 >* [Penetration Testing Execution Standard (PTES)](http://www.pentest-standard.org/index.php/Main_Page)
 >* PCI Penetration testing guide
@@ -24,10 +25,25 @@ https://www.owasp.org/index.php/Penetration_testing_methodologies
 >* Open Source Security Testing Methodology Manual (OSSTMM)
 >* [Offensive（Web）Testing Framework《OWTF》2012](https://github.com/7a/owtf)
 
+### 1.3.有很多地方都需要滲透測試
 
-### 滲透測試主要步驟[簡化版]
+ECSA國際高階資安證照==> Penetration Testing Methodology
 
-### 滲透測試平台與相關工具Penetration Testing Platform:Kali Linux
+>* 社交工程(Social Engineering) 
+>* 外網滲透測試(Network Penetration Testing - External)
+>* 內網滲透測試( Network Penetration Testing - Internal)
+>* 周邊設備滲透測試(Network Penetration Testing  - Perimeter Devices)
+>* 網站應用程式滲透測試(Web Application  Penetration Testing)
+>* 資料庫滲透測試(Data base Penetration  Testing)
+>* 無線網路滲透測試(Wireless Penetration Testing)
+>* 雲端滲透測試(Cloud Penetration Testing)
+>* android滲透測試(android Penetration Testing)
+>* IOS滲透測試(IOS Penetration Testing)
+>* IOT[物聯網]滲透測試(IOT Penetration Testing)
+
+### 1.4.滲透測試主要步驟[簡化版]
+
+### 1.5.滲透測試平台與相關工具Penetration Testing Platform:Kali Linux
 
 >* Kali Linux是植基於Debian的Linux發行版，被設計用於滲透測試的攻擊平台。
 >* Kali Linux預設安裝了許多滲透測試軟體[300+]，包括nmap (埠掃描器)、Wireshark (封包分析器)、John the Ripper (密碼破解),以及Aircrack-ng (無線區域網路滲透測試軟體) 。 
@@ -38,7 +54,7 @@ https://www.owasp.org/index.php/Penetration_testing_methodologies
 >* Kali Linux 2018.2 (2018.4.30)
 >* https://www.concise-courses.com/hacking-tools/top-ten/
 
-### 滲透測試平台與相關工具 Namp::Network Mapper
+#### 1.6.滲透測試平台與相關工具 Namp::Network Mapper
 
 >* https://nmap.org/
 >* NMAP是一個用於情資蒐集的網路掃描器。
@@ -74,7 +90,7 @@ nmap –script smb-vuln-ms08-067.nse  -p445     <XP IP>
 >* https://resources.infosecinstitute.com/nmap/
 >* https://resources.infosecinstitute.com/nmap-cheat-sheet
 
-### 滲透測試平台與相關工具metasploit framework
+#### 1.7.滲透測試平台與相關工具metasploit framework
 
 >* https://github.com/rapid7/metasploit-framework
 >* https://www.metasploit.com/
