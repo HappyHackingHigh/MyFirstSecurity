@@ -7,17 +7,38 @@
 >* 加密指數攻擊:Hastad’s Broadcast Attack
 >* 模數攻擊:common modulus attack
 
+# 加解密與破密
+
+## 好用的線上網站(WebSite)
+
+factordb.com (質因數分解:分解 N=p*q)
+
+## 好用的工具(Tools)
+
+>* Sage(好用的數學計算工具)
+>* Yafu(用來進行大質因數分解)
 
 
-# python 破密分析工具
+## python 破密分析工具
+
+>* pycrypto::Python Cryptography Toolkit 
+>* sympy::Python library for symbolic mathematics
+>* python-gmpy::General MultiPrecision arithmetic for Python
+>* libnum
+>* rsa
+>* RSAtool
+>* RsaCtfTool::RSA tool for ctf 
 
 #### pycrypto::Python Cryptography Toolkit 
 
 >* https://pypi.org/project/pycrypto/
 
-This is a collection of both secure hash functions (such as SHA256 and RIPEMD160), and various encryption algorithms (AES, DES, RSA, ElGamal, etc.). 
+This is a collection of both secure hash functions (such as SHA256 and RIPEMD160), 
+and various encryption algorithms (AES, DES, RSA, ElGamal, etc.). 
 
-The package is structured to make adding new modules easy. This section is essentially complete, and the software interface will almost certainly not change in an incompatible way in the future; all that remains to be done is to fix any bugs that show up. 
+The package is structured to make adding new modules easy. This section is essentially complete, 
+and the software interface will almost certainly not change in an incompatible way in the future; 
+all that remains to be done is to fix any bugs that show up. 
 
 #### sympy::Python library for symbolic mathematics
 
@@ -95,6 +116,37 @@ True
 >* Requirements: python2.7 目前libnum暫時只支持python2
 
 libnum庫是一個關於各種數學運算的函式程式庫，它包含common maths、modular、modular squre roots、primes、factorization、ECC、converting、stuff等方面的函數
+
+>* https://www.cnblogs.com/pcat/p/7225782.html
+
+##### 0x1常用的Converting
+
+數字型（不論是十六進位還是十進位）與字串之間的轉換：
+```
+import libnum
+s="flag{pcat}"
+print libnum.s2n(s)
+import libnum
+n=0x666c61677b706361747d
+print libnum.n2s(n)
+#這個轉換不用在意十六進位的位數是否為偶數
+```
+二進位與字串之間的轉換：
+```
+import libnum
+b='01110000011000110110000101110100'
+print libnum.b2s(b)
+#二進位的位元數最好是8的倍數
+import libnum
+s='pcat'
+print libnum.s2b(s)
+```
+
+##### 0x2 質數&因數分解
+```
+生成質數：print libnum.generate_prime(1024)
+因數分解：print libnum.factorize(1024)
+```
 
 #### rsa
 >* https://stuvel.eu/rsa   有許多說明文件
