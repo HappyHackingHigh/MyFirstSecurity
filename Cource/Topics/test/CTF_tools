@@ -1,0 +1,115 @@
+工具使用2017年04月27日 09:22:48
+https://blog.csdn.net/xuqi7/article/details/70839588
+一些工具的记录
+
+CoagulaLight
+功能： 可以将图片转为音频 
+用法： 把编辑好的图片拖进去, 或者直接在里面新建图片，然后点击第二个齿轮按钮（Render image without blue/noise）（第一个齿轮按钮也可以，第二个效果好一些），另存为即得到隐写图片的音频文件 
+官网（含下载地址）
+
+audacity
+功能： 可以分析音频文件，看波形图、频谱图 
+用法： 打开音频文件，点击文件名右边的下三角，选择波形、频谱图选项即可 
+官网及下载
+
+binwalk
+功能： 分析提取隐藏文件 
+用法： binwalk -eM 文件名
+
+foremost
+功能： 分析提取隐藏文件 
+用法： foremost 文件名
+
+strings
+功能： 列出文件中字符串 
+用法： strings -n 字符串长度 文件名
+
+Steganography
+github上的一个大神写的，支持4种方法图片隐写：尾部追加、LSB替换、LSB-PM1、LSB水印，可惜没找到我一直想找的图层隐藏二维码的方法 
+我下载的少一张背景图片，自己根据提示随便加一张就可以了 
+github项目链接
+
+everything
+功能： 搜索电脑上的所有文件，比windows自己的文件搜索快多了 
+官网及下载
+
+Snipaste
+功能： 截图、贴图软件，神器 
+快捷键: F1→截图，F2→贴图，文字转图片→全选后复制，F2即可贴图 
+官网及下载
+
+Winhex
+功能： 一个十六进制编辑器，可以以16进制或者文本方式进行搜索编辑 
+快捷键： F7→切换只显示16进制还是文本 
+官网及下载
+
+Stegsolve
+功能： 图层隐写查看，分析图片信息，LSB隐写分析工具 
+下载地址
+
+MP3Stego
+功能： MP3隐写工具 
+encode -E data.txt -P pass sound.wav sound.mp3 
+decode -X -P pass sound.mp3 
+官网及下载
+
+john
+功能： 密码hash破解软件，有彩虹表就很强大，根据/etc/shadow此文件的信息，可以破解出原密码 
+John -worlist=doc.txt shadow (字典自己找) 
+john –show shadow 查看破解的密码
+
+alternatestreamview
+功能： ntfs流文件读取工具，检测可能存在流文件的文件夹即可
+
+yafu
+功能： 可以用来分解RSA算法中的n 
+用法： factor(n) 
+下载地址
+
+openssl
+功能： 加密解密工具，可以用来生成RSA公钥私钥，加解密文件 
+使用方法见此链接
+
+PentestBox
+功能： 传说中的windows下的kali 
+安装使用方法见此链接
+
+libre office
+功能： 跨平台，开源免费的类似office套件的软件集合，用起来卡，只建议在linux平台下使用…… 
+官网
+
+Rolan
+一个轻量级的启动器，很方便，很适合做工具包，打开略卡 
+官网
+
+dnSpy
+.net调试和反编译工具 
+Github地址
+
+jadx
+Android反编译工具 
+Github地址
+
+OllyDbg
+pe动态调试工具 
+官网
+
+nc
+被誉为网络安全界的瑞士军刀 
+windows版本下载网址
+
+IceChat
+一款windows系统下IRC聊天客户端 
+官网
+
+QOwnNotes
+markdown格式的笔记本，很好用 
+官网
+
+EagleGet
+清爽简洁的下载工具 
+官网
+
+Bandizip
+轻巧快速的压缩软件，自动解压功能很方便 
+官网
