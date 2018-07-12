@@ -7,9 +7,9 @@
 >* 加密指數攻擊:Hastad’s Broadcast Attack
 >* 模數攻擊:common modulus attack
 
-# python第三方工具安裝
 
-## python 破密分析工具
+
+# python 破密分析工具
 
 #### pycrypto::Python Cryptography Toolkit 
 
@@ -48,7 +48,6 @@ log(x)
 
 ```
 
-
 #### python-gmpy::General MultiPrecision arithmetic for Python
 
 GMP（GNU Multiple Precision Arithmetic Library，即GNU高精度算數運算庫），它是一個開源的高精度運算庫，
@@ -71,7 +70,6 @@ gmpy2 adds support for correctly rounded multiple-precision real arithmetic
 
 >* 說明文件 https://gmpy2.readthedocs.io/en/latest/
 
-
 找一百以內的質數
 ```
 import gmpy2
@@ -90,6 +88,13 @@ mpz(9)
 >>> gmpy2.is_prime(17)
 True
 ```
+
+#### libnum
+
+>* https://github.com/hellman/libnum
+>* Requirements: python2.7 目前libnum暫時只支持python2
+
+libnum庫是一個關於各種數學運算的函式程式庫，它包含common maths、modular、modular squre roots、primes、factorization、ECC、converting、stuff等方面的函數
 
 #### rsa
 >* https://stuvel.eu/rsa   有許多說明文件
@@ -157,9 +162,30 @@ rsa.pkcs1.DecryptionError: Decryption failed
 >* RSAtool是一個非常方便實用的小工具，可以用來計算RSA中的幾個參數、生成金鑰、加解密，一些不太複雜的破解工作也可以用它。
 >* https://github.com/ius/rsatool
 
-#### libnum
->* https://github.com/hellman/libnum
->* Requirements: python2.7
+
+#### RsaCtfTool::RSA tool for ctf 
+
+uncipher data from weak public key and try to recover private key Automatic selection of best attack for the given public key
+
+Attacks :
+```
+Weak public key factorization
+Wiener's attack
+Hastad's attack (Small public exponent attack)
+Small q (q < 100,000)
+Common factor between ciphertext and modulus attack
+Fermat's factorisation for close p and q
+Gimmicky Primes method
+Past CTF Primes method
+Self-Initializing Quadratic Sieve (SIQS) using Yafu
+Common factor attacks across multiple keys
+Small fractions method when p/q is close to a small fraction
+Boneh Durfee Method when the private exponent d is too small compared to the modulus (i.e d < n^0.292)
+Elliptic Curve Method
+Pollards p-1 for relatively smooth numbers
+Mersenne primes factorization
+```
+# python第三方工具安裝
 
 # 運作在Python 2環境的工具
 
@@ -216,11 +242,12 @@ A Python implementation of the Wiener attack on RSA public-key encryption scheme
 
 It uses some results about continued fractions approximations to infer the private key from public key 
 in the cases the encryption exponent is too small or too large.
+
 ```
 git clone https://github.com/pablocelayes/rsa-wiener-attack
 cd rsa-wiener-attack
-
 ```
+
 ### 安裝yafu
 
 >* https://github.com/DarkenCode/yafu
