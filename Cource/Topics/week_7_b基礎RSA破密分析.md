@@ -51,6 +51,11 @@ log(x)
 
 #### python-gmpy::General MultiPrecision arithmetic for Python
 
+GMP（GNU Multiple Precision Arithmetic Library，即GNU高精度算數運算庫），它是一個開源的高精度運算庫，
+其中不但有普通的整數、實數、浮點數的高精度運算，還有亂數產生，
+尤其是提供了非常完備的數論中的運算介面，比如Miller-Rabin素數測試演算法、大素數生成、歐幾裡德演算法、求域中元素的逆、Jacobi符號、legendre符號等。
+gmpy2是Python的一個擴展庫，是對GMP的封裝，它的前身是gmpy，經過其作者的調整和封裝，使得gmpy2的使用大大簡化。
+
 gmpy is a C-coded Python extension module that provides access to the GMP (or MPIR) multiple-precision arithmetic library.
 
 GMPY allows creation of multiprecision integer (mpz), float (mpf),and rational (mpq) numbers, 
@@ -65,6 +70,15 @@ gmpy2 adds support for correctly rounded multiple-precision real arithmetic
 (using the MPFR library) and complex arithmetic (using the MPC library).
 
 >* 說明文件 https://gmpy2.readthedocs.io/en/latest/
+
+
+找一百以內的質數
+```
+import gmpy2
+for i in xrange(100+1):
+    if gmpy2.is_prime(i):
+        print i
+```
 
 ```
 >>> import gmpy2
