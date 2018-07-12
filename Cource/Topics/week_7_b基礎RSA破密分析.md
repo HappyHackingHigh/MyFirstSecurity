@@ -2,10 +2,10 @@
 
 進階主題: 基礎RSA破密分析[選擇性]
 
-Twin Prime的RSA破密分析
-common factor attack
-加密指數攻擊:Hastad’s Broadcast Attack
-模數攻擊:common modulus attack
+>* Twin Prime的RSA破密分析
+>* common factor attack
+>* 加密指數攻擊:Hastad’s Broadcast Attack
+>* 模數攻擊:common modulus attack
 
 # python第三方工具安裝
 
