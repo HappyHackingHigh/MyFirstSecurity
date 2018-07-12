@@ -164,6 +164,7 @@ rsa.pkcs1.DecryptionError: Decryption failed
 
 
 #### RsaCtfTool::RSA tool for ctf 
+>* https://github.com/Ganapati/RsaCtfTool
 
 uncipher data from weak public key and try to recover private key Automatic selection of best attack for the given public key
 
@@ -185,6 +186,15 @@ Elliptic Curve Method
 Pollards p-1 for relatively smooth numbers
 Mersenne primes factorization
 ```
+### 雜湊長度擴展攻擊(hash length extension attacks)
+
+雜湊長度擴展攻擊(hash length extension attacks)是指針對某些允許包含額外資訊的加密散列函數的攻擊手段。該攻擊適用於在消息與金鑰的長度已知的情形下，所有採取了 H(金鑰 ∥ 消息) 此類構造的散列函數。MD5和SHA-1等基於Merkle–Damgård構造的演算法均對此類攻擊顯示出脆弱性
+
+雜湊長度擴展攻擊的簡介以及HashPump安裝使用方法 http://www.cnblogs.com/pcat/p/5478509.html
+
+雜湊長度擴展攻擊(Hash Length Extension Attack)利用工具hexpand安裝使用方法http://www.cnblogs.com/pcat/p/7668989.html
+
+
 # python第三方工具安裝
 
 # 運作在Python 2環境的工具
