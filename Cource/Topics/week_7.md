@@ -189,7 +189,7 @@ openssl des -in infile -out infile.des
 不管鍵盤輸入什麼，畫面上都不會出現任何字元。輸入完成後，按下鍵盤上的 "Enter" 鍵即可。
 
 OpenSSL 會再一次要求使用者輸入一次相同的密碼
-加密的檔案將以 file.des 的名稱存在於磁碟中。
+加密的檔案將以 infile.des 的名稱存在於磁碟中。
 ```
 ksu@ksu-VirtualBox:~$ cat infile
 
@@ -234,6 +234,7 @@ openssl des3 -d -in file.des3 -out HIfile
 ### 三重DES(Triple-DES)
 
 >* https://zh.wikipedia.org/wiki/三重資料加密演算法
+
 
 
 #### [實作3] 使用 RSA 加密與解密
