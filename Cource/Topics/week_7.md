@@ -77,6 +77,7 @@ seed              seed-cbc          seed-cfb          seed-ecb
 seed-ofb          
 ``` 
 #### [動手作2]列出 OpenSSL 提供的資訊摘要(Message Digest)和數位簽章(Digital Signature)
+
 openssl dgst --help
 ```
 unknown option '--help'
@@ -235,7 +236,101 @@ openssl des3 -d -in file.des3 -out HIfile
 >* https://zh.wikipedia.org/wiki/三重資料加密演算法
 
 
-#### [實作3] 使用 3DES 加密與解密
+#### [實作3] 使用 RSA 加密與解密
+
+##### 產生私鑰genrsa
+
+openssl genrsa -out private.pem
+```
+Generating RSA private key, 2048 bit long modulus
+...................+++
+...........................+++
+e is 65537 (0x10001)
+```
+##### 看看私鑰長甚麼樣子?
+
+cat private.pem 
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA1R9rH4C1RngrV1kEu/xSc/rdYTeokT90TZEX+0PHrOCETMjd
+xoWoLAFUJ+oyTPpQY8v64r+o5AIh6jKVr3rIno+nI1aScl51L8ikVgXuWSEsdSO9
+3+dVMDG6jpddqc19rK05ghB07c2pIdG0lTxEZ2bxrqZ9CYTiMSyFXOPgazWtom8G
+TyrHZV1ISQLROeVnlO09T/AMvbKG3/AygBnmIRJ9ERcoEuMCvP2jEczQFY/YUw0F
+qTRZET7/DfklE03MSQzykr2IyMXKeUsDjOD5f7YX71H6r8npGAxlOG0NW6s1DEcJ
+rs9MnR2wqZlEzIUNp/E6UlM6Kg/oeEyISczHFQIDAQABAoIBAEmK8PVK/cLWfuZC
+Yp7YAD/jZndAtJuCkQifM+5RwlqGk0DH47e4sYKV5strRnZHvmvhnK6YQpiDn95o
+HD0UmpwUqDFKk3iB3eBiVUsV+tyo1OWLMt9LvZrG3kCMPRb2QRLQJ9MZCLBy0pVH
+/w+sX1JrNKT28JjTURZ07YRTYkK7/rJcY582ciaB6UPloiWTfEyl7smIJmiBfLvA
+BGhJQaE7Nq6H7oGtW8mU4vrDkraqtXPhnRLAkXbzli7uhHRHA5km/XEurHVwoBoY
+ZyB8bgRaK7Bev4HuNKw6UmbHgFhhkuV0HWuwF4wYqZYVKDSKg3yi6J1nQFQvruwb
+tGlaM+ECgYEA+BCjoPmNMyoziSATghm7ul19JzlT69A02ZPB0G48mGBt7kILcNdg
+BQxyzHNHijHNgrAydim5/SUhXZQ/Yumgr/ZFEal9KtOHTj6vS9CjyUHKUnlNMly+
+nYGswOXFmAvroU5SbwyecgdeGr+dfEuwPy+Tz9rh4JhSVrczeLu/c7kCgYEA2/Ck
+pd+x9kvNewnuQX58CrHnyh11iilc+JKGp29QcIh5ojmvDOrY8v4zX9ITmrIgt/oY
+eyP+ksLu7FnUWDXuLc+NuK2d5XHgHcRx+okREatTbWiWm2wB/qnjougfm0HZMOKE
+yYuojEtUL4/p8JRFUJ0VDl06M8dImXFgPAqh1D0CgYEA9FYvVdd4JPVkXaSiknsW
+VbLQG1p0NsmVxNmtBcgPF2ej4BJdgoAhq9dfG9JQnOYBLsCuc4UWFSoFe08SQDMu
+eyNvVL5E83H2zDMiJuMS8KFEz4d7aie/+RRJPJcV0XWsWe3zdD5Rsq9fGamzTUKg
+Dxyl0w4dfkOKlq9Mm5cSNMECgYEAiWZmlbGPzdxBPDJSA9xuxYeq1FtfCLcae7ee
+I4+o4wR/aFc9AobcjcE8ewoUcToCsqytCpDMAweAl2ru+0SFzVyynsLnt2VSq4YD
+5o4mebFcZydFn0b0YBHmQeldhXK3qpB4gCidXTfaGfSAI2mde+UGOHkJWTuQITvw
+8NF7k8kCgYA1hs/88q6mc3+OQcc0+0ZOLgel0UOFAdWRk8YlJ/wE0zHnsBr5cA0l
+sqizYQWlftkGnqAzszycOK0bjYCZiBAFzCh3ZYXWrSvP1Arv6QUBw7sY8+63zVRS
+KIFa++1hskCfFfJ28DLC64sFsKqkdoxoKCQ4ymZWkt5s0DPj6CqNyw==
+-----END RSA PRIVATE KEY-----
+```
+
+>* 愈長的私鑰被破解的機率愈低
+>* 但使用加密與解密的時間也會愈長
+
+##### 產生1024 bits 私鑰genrsa
+
+openssl genrsa 1024 -out private.pem
+
+openssl genrsa 1024 > private.pem
+```
+Generating RSA private key, 1024 bit long modulus
+...............++++++
+..........................................................................++++++
+e is 65537 (0x10001)
+```
+cat private.pem
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQDHtk3Pnu3Txu/koFAd6+sEGv3gK/nWDES8/aW8A7bFLAzeFA2j
+otPk2HTbML3cG/hH0Tkduc2taGHQERX/KYab3OoNwZb3RNGfB2VG3yLijMvK5D3D
+tR5daHF7QM9SSmsMuGGWpghN9Fxlkb4aAqH6/tAxVq1Kcd007ADMiHOxCwIDAQAB
+AoGAHNx0rD98gTFrs6+TRG+2m/ZGoCHazhshx+okDGLBBAeUqHdfbTl3w8egQ5js
+pyWHoOFUjr4uQhQmpooBkslugVBIoVcW/yyi8gNUHbNAvDSAzYiAaTNzPuh/jOLi
+4emUQGFaVX+/EM5HjsjHUmCBqlTh1lc58fgfLEn0nG0OXoECQQDzbJGLGfBGiSoI
+aIWQ/oACf0MvazY2wWP7R/VXAKtCcnb3BOZpK1qU+56yE+c5ft42tvKCzluP95PP
+yTge6AHBAkEA0geeOVgtrtbHYC7r+bdOlfLYDtVfMfb0MIWTlCD2wb4zl+7XzqyN
+YSb1TUuQBDJA5+GVuhqHWy0cvc3vyEONywJBAO4Nn6v0GukwHJ4KcYyhhthqUm7e
+Hy+fIsLL1V9XNSSPQk5CSX5SOox2IfUux7KPoorJkRJg8mQxjyjmNG7tH0ECQQCT
+vTAbfl+EISjWC6uKWNs6tzwsEwOHjgNvLkcFZ7qrxjNcqHG9u7snn9Plr0V67i6h
+7hj4dDjKdg1FplsJMBvJAkAYP0xdCYyhvZWP0XftU1n3c0gqjRorm6yoRcsBrE1Q
+wdj55ugyKs4eoyCtl64/LbQFWH27CFfme9mdYuyZNQc3
+-----END RSA PRIVATE KEY-----
+```
+執行第二次的genrsa私鑰會不同
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQDCCJbI9mMcMd/OW4EiNhd+umd4Z7qKqNlUtZXra7zvM7WExQRk
+v2afF2QS85HFYlTg7tANgbRdoKBQWcOPlmvLreqJJBRYLnOWpHP7vTQgdEtCKtfy
+C+2a4KY56N033uCwpSHbKWi1PP7ToyZMm9SIJiIvYVGtk4zIxftCIu8aPQIDAQAB
+AoGBAKFo77ZhcHUl8B4D9Np20Pi1LBn3gDCU4aYcIIjk6Ri7lUbLdioxJrc1iCRT
+xnHCqQUs5Jo3yckRNAtjgNFTunsTWT7uchyYKUy9rEoUY1gOrcwEqxAoZACFVYdd
+MsLr54D6NTiv1TlQtifeutVZG95j6DmWVHlJG+zc7ZpOEszpAkEA8M3eB3ypQsOt
+TiuOieV9gGk4P0ckk57RlsxRBGIbXMMVCJEyYQeSvt8Xj5xFi8I39bWDljc/ySzQ
+UHNYFGDGewJBAM5HJ1x8lZAHFAHIoTAgToO45EvLTp96f7qTbI5yHSTM/1SsS0Ie
+2EqkkFYhV2M8as4wCICqsR6QI54xhsXG4KcCQQC6DKUOLc/syJi++8I+YrQroaAW
+q9XjxGJ021mBRHeVnRhELUK6WwqTNHTUvU2yZJWt3tdTGU7MFTbB4cxcukS/AkAG
+4JZuXfT6lVHUcWT2Xs1fVOW/pSqc5I+nn8ypvyI7nN4Sa6AitzaM3om1ZW0tcNE6
+yJ0v9QDsvO+DEbGlnGjXAkAanrxs81VyGrNykrRkdodPjaf+L64NzA8OMCG45IaJ
+YgtZGOVQu2xn7zAWzU0F/OThe8oV54e1SAKcmJuDM0n5
+-----END RSA PRIVATE KEY-----
+```
+
 
 #### [實作3] 使用 sha1對檔案進行hash[特徵|指紋]
 openssl dgst -sha1 infile
