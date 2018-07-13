@@ -239,6 +239,35 @@ openssl des3 -d -in file.des3 -out HIfile
 
 #### [實作3] 使用 RSA 加密與解密
 
+##### 看看rsa有什麼參數可用?
+
+openssl rsa -h
+```
+unknown option -h
+rsa [options] <infile >outfile
+where options are
+ -inform arg     input format - one of DER NET PEM
+ -outform arg    output format - one of DER NET PEM
+ -in arg         input file
+ -sgckey         Use IIS SGC key format
+ -passin arg     input file pass phrase source
+ -out arg        output file
+ -passout arg    output file pass phrase source
+ -des            encrypt PEM output with cbc des
+ -des3           encrypt PEM output with ede cbc des using 168 bit key
+ -seed           encrypt PEM output with cbc seed
+ -aes128, -aes192, -aes256
+                 encrypt PEM output with cbc aes
+ -camellia128, -camellia192, -camellia256
+                 encrypt PEM output with cbc camellia
+ -text           print the key in text
+ -noout          don't print key out
+ -modulus        print the RSA key modulus
+ -check          verify key consistency
+ -pubin          expect a public key in input file
+ -pubout         output a public key
+ -engine e       use engine e, possibly a hardware device.
+```
 ##### 產生私鑰genrsa
 
 openssl genrsa -out private.pem
@@ -331,6 +360,43 @@ yJ0v9QDsvO+DEbGlnGjXAkAanrxs81VyGrNykrRkdodPjaf+L64NzA8OMCG45IaJ
 YgtZGOVQu2xn7zAWzU0F/OThe8oV54e1SAKcmJuDM0n5
 -----END RSA PRIVATE KEY-----
 ```
+##### 使用 RSA 私鑰去產生相對應的公鑰
+
+[錯誤的指令]:openssl rsa -in private.pem -out public.pem -outform PEM 
+```
+-out" 參數指定產生的公鑰檔案名稱
+"-outform" 參數指定公鑰的輸出格式==>只可以下列三種:DER/NET/PEM
+openssl 預設輸入輸出的格式都是PEM
+Certificate 和 key 可以存成多種格式, 常見的有 DER,PEM,PFX
+不同格式轉換請參見:
+http://jianiau.blogspot.com/2015/07/openssl-generating-rsa-key.html
+"-pubout" 參數結尾
+執行後，OpenSSL 會產生 public.pem 的檔案在磁碟中
+```
+cat public.pem==>答案是錯的
+
+[正確的指令]:openssl rsa -in private.pem -out public.pem -pubout
+
+cat public.pem 
+```
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqxBOhxtVgh0xahzTRa3A
+ifJFLtBZk3LuQvWxGIE4iMdfpHF1DteyrGVhsCVOpAaFawrj1n1gWThv/BLHSYka
+aJy3EzSfjAJBkqLmuncVgc4zkKPzmG/NXieT8yHEVwUDsu5/e6EgPXU52Q7sHf/L
+xUfvBk5ovqVhiOxeCCH4uc39QmRVWwMBjUajTzTFvizN4fq7rctDvHjr2LWksc/K
+NmlOsasGqvMyxHJSEQdOk9uTmN3EH93BIH9ZA8AE5kdUH8tUoiSbxQcv8iD2Tib1
+Z4lk9dYOGjiRjkdHXYkSXZjWWvTO2hZLu82u+LaICoognEfMO42HQlVf1H8eAezf
+MQIDAQAB
+-----END PUBLIC KEY-----
+```
+
+[證明給我看看]使用相同的私鑰再次產生出來的金鑰還是一樣的
+
+```
+mv public.pem public2.pem
+openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+```
+
 
 
 #### [實作3] 使用 sha1對檔案進行hash[特徵|指紋]
