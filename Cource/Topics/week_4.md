@@ -23,17 +23,31 @@ Substitution cipher置換式密碼
 #### 簡易替換密碼（simple substitution cipher）或「單表加密」（monoalphabetic cipher）單字母替換加密
 
 如果每一個字母為一單元（或稱元素）進行加密操作
-凱薩密碼
-豬圈密碼（Pigpen cipher)亦稱共濟會密碼（masonic cipher）或共濟會員密碼（英語：Freemason's cipher）
+
+>* Caesar cipher凱薩密碼 https://zh.wikipedia.org/wiki/凱薩密碼
+>* 豬圈密碼（Pigpen cipher)亦稱共濟會密碼（masonic cipher）或共濟會員密碼（英語：Freemason's cipher）
+https://en.wikipedia.org/wiki/Pigpen_cipher
+
+#### 範例練習:Caesar cipher凱薩密碼
 
 #### 多表加密（polyalphabetic cipher）或「表格式加密」（polygraphic）
 以數個字母為一單元
 
-凱薩密碼
+
 Polyalphabetic substitution
 
 
+頻率分析
+
+
+
 ## B.替換式密碼
+
+>* rail fence:籬笆式位移密碼
+>*
+
+
+#### 範例練習
 
 明文:'WE ARE DISCOVERED. FLEE AT ONCE'
 
