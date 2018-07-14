@@ -45,19 +45,24 @@ Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
 #### 多表加密（polyalphabetic cipher）或「表格式加密」（polygraphic）
 以數個字母為一單元
 
-
-Polyalphabetic substitution
-
-
-頻率分析
+>* Vigenère cipher維吉尼亞密碼 https://zh.wikipedia.org/wiki/維吉尼亞密碼
+>* autokey cipher https://en.wikipedia.org/wiki/Autokey_cipher
+>* Beale ciphers
 
 
+Frequency analysis頻率分析
 
-## B.替換式密碼
+https://en.wikipedia.org/wiki/Frequency_analysis
+
+https://zh.wikipedia.org/wiki/頻率分析
+
+
+## B.替換式密碼Transposition cipher
 
 >* rail fence:籬笆式位移密碼
->*
-
+>* Route cipher
+>* Scytale密碼棒 https://en.wikipedia.org/wiki/Scytale
+https://zh.wikipedia.org/wiki/密碼棒
 
 #### 範例練習
 
