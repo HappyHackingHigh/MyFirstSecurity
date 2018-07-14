@@ -31,11 +31,10 @@ https://en.wikipedia.org/wiki/Pigpen_cipher
 #### 範例練習:Caesar cipher凱薩密碼
 
 加密規則:針對英文字母,移位3格
-
+```
 Plain 明文:   ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
 Cipher密文:   XYZABCDEFGHIJKLMNOPQRSTUVW
-
+```
 (1)請問底下明文加密後的密文為何?
 
 Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
