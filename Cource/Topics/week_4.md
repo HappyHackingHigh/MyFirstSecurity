@@ -30,6 +30,18 @@ https://en.wikipedia.org/wiki/Pigpen_cipher
 
 #### 範例練習:Caesar cipher凱薩密碼
 
+加密規則:針對英文字母,移位3格
+
+Plain 明文:   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher密文:   XYZABCDEFGHIJKLMNOPQRSTUVW
+
+(1)請問底下明文加密後的密文為何?
+Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+
+(2)請你破解底下的密文!他的明文為何?
+
+Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+
 #### 多表加密（polyalphabetic cipher）或「表格式加密」（polygraphic）
 以數個字母為一單元
 
