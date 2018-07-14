@@ -33,9 +33,11 @@ https://en.wikipedia.org/wiki/Pigpen_cipher
 加密規則:針對英文字母,移位3格
 
 Plain 明文:   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
 Cipher密文:   XYZABCDEFGHIJKLMNOPQRSTUVW
 
 (1)請問底下明文加密後的密文為何?
+
 Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 
 (2)請你破解底下的密文!他的明文為何?
@@ -73,10 +75,13 @@ https://zh.wikipedia.org/wiki/密碼棒
 加密方法:
 
 (1)使用三格
+
 (2)由上到下,再下到上將字串
+```
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . E . R . D . S . O . E . E . F . E . A . O . C .
 . . A . . . I . . . V . . . D . . . E . . . N . .
+```
 (3)一層一層讀,第一層開始由左到右讀
 
 ==>密文: WECRL TEERD SOEEF EAOCA IVDEN
@@ -84,11 +89,11 @@ W . . . E . . . C . . . R . . . L . . . T . . . E
 [2]Route cipher
 In a route cipher, the plaintext is first written out in a grid of given dimensions, 
 then read off in a pattern given in the key
-
+```
 W R I O R F E O E 
 E E S V E L A N J 
 A D C E D E T C X 
-
+```
 加密方法:The key might specify "spiral inwards, clockwise, starting from the top right". 
 
 ==>密文: EJXCTEDECDAEWRIORFEONALEVSE
