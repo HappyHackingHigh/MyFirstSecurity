@@ -13,7 +13,7 @@
 
 Substitution cipher置換式密碼
 
-## Substitution cipher置換式密碼
+## A.Substitution cipher置換式密碼
 
 >* https://en.wikipedia.org/wiki/Substitution_cipher
 >* https://zh.wikipedia.org/wiki/替換式密碼
@@ -33,26 +33,31 @@ Substitution cipher置換式密碼
 Polyalphabetic substitution
 
 
-## 替換式密碼
+## B.替換式密碼
 
 明文:'WE ARE DISCOVERED. FLEE AT ONCE'
 
+[1]rail fence:籬笆式位移密碼
+
+加密方法:
+
+(1)使用三格
+(2)由上到下,再下到上將字串
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . E . R . D . S . O . E . E . F . E . A . O . C .
 . . A . . . I . . . V . . . D . . . E . . . N . .
+(3)一層一層讀,第一層開始由左到右讀
 
-密文: WECRL TEERD SOEEF EAOCA IVDEN
+==>密文: WECRL TEERD SOEEF EAOCA IVDEN
 
-Route cipher
+[2]Route cipher
 In a route cipher, the plaintext is first written out in a grid of given dimensions, 
 then read off in a pattern given in the key
-
-rail fence:
 
 W R I O R F E O E 
 E E S V E L A N J 
 A D C E D E T C X 
 
-The key might specify "spiral inwards, clockwise, starting from the top right". 
+加密方法:The key might specify "spiral inwards, clockwise, starting from the top right". 
 
-EJXCTEDECDAEWRIORFEONALEVSE
+==>密文: EJXCTEDECDAEWRIORFEONALEVSE
