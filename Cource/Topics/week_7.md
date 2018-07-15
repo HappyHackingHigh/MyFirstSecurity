@@ -235,7 +235,7 @@ cat okfile
 
 
 
-### [實作] 使用openssl進行 RSA 加密與解密
+### [實作3] 使用openssl進行 RSA 加密與解密
 
 ##### 看看rsa有什麼參數可用?
 
@@ -400,7 +400,8 @@ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
 0x02 生成RSA私密金鑰檔
 0x03 使用openssl解密RSA密文
 ```
-#### [實作3] 使用 sha1對檔案進行hash[特徵|指紋]
+### [實作4]使用 sha1對檔案進行hash[特徵|指紋]
+
 ```
 openssl dgst -sha1 infile
 SHA1(infile)= 4e1243bd22c66e76c2ba9eddc1f91394e57f9f83
