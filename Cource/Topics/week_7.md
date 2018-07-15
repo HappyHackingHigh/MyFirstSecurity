@@ -428,6 +428,24 @@ ksu@ksu-VirtualBox:~$ openssl dgst -sha1 infile2
 SHA1(infile2)= 54d592241066bb789b069a89203eae92bf76fa74
 ```
 
+```
+用SHA1演算法計算檔file.txt的HASH值，輸出到stdout： # openssl dgst -sha1 file.txt
+
+用SHA1演算法計算檔file.txt的HASH值，輸出到檔digest.txt：# openssl sha1 -out digest.txt file.txt
+
+用DSS1(SHA1)演算法為檔file.txt簽名，輸出到檔dsasign.bin。簽名的private key必須為DSA演算法產生的，保存在檔dsakey.pem中。
+# openssl dgst -dss1 -sign dsakey.pem -out dsasign.bin file.txt
+
+用dss1演算法驗證file.txt的數位簽章dsasign.bin，驗證的private key為DSA演算法產生的檔dsakey.pem。
+# openssl dgst -dss1 -prverify dsakey.pem -signature dsasign.bin file.txt
+
+用sha1演算法為檔file.txt簽名,輸出到檔rsasign.bin，簽名的private key為RSA演算法產生的檔rsaprivate.pem。
+# openssl sha1 -sign rsaprivate.pem -out rsasign.bin file.txt
+
+# 用sha1演算法驗證file.txt的數位簽章rsasign.bin，驗證的public key為RSA演算法生成的rsapublic.pem。
+# openssl sha1 -verify rsapublic.pem -signature rsasign.bin file.txt
+```
+
 ## B.使用Python加密與解密
 
 ###  1.使用Python進行HASH-ing
