@@ -8,7 +8,9 @@
 >* 熟悉使用openssl進行MD/SHA1/SHA2562雜湊的應用
 >* 熟悉使用Python進行RSA非對稱式密碼的加密與解密[選擇性]
 
-# openssl
+# A.使用openssl進行加密與解密
+
+## openssl
 >* https://zh.wikipedia.org/wiki/OpenSSL
 >* OpenSSL是一個開放原始碼的軟體函式庫套件
 >* 應用程式可以使用這個套件來進行安全通訊，避免竊聽，同時確認另一端連線者的身分。
@@ -213,26 +215,18 @@ cat okfile
 
 >* 加密用的密碼和解密的密碼用的都是同一個<====>對稱式密碼
 
-#### [實作3] 使用 3DES 加密與解密
+#### [練習] 使用 3DES 加密與解密
 
 >* 只要把上述的des改成des3
+```
+使用 Triple DES加密 ==> openssl des3 -in myfile -out file.des3
+使用 Triple DES解密 ==> openssl des3 -d -in file.des3 -out HIfile
+```
+##### 參考資料
 
-##### 使用 Triple DES加密
-```
-openssl des3 -in myfile -out file.des3
-```
-##### 使用 Triple DES解密
-```
-openssl des3 -d -in file.des3 -out HIfile
-```
-
-### 資料加密標準DES::Data Encryption Standard
-
+>* 資料加密標準DES::Data Encryption Standard
 >* https://zh.wikipedia.org/wiki/資料加密標準
-
-
-### 三重DES(Triple-DES)
-
+>* 三重DES(Triple-DES)
 >* https://zh.wikipedia.org/wiki/三重資料加密演算法
 
 
@@ -397,9 +391,13 @@ mv public.pem public2.pem
 openssl rsa -in private.pem -out public.pem -outform PEM -pubout
 ```
 
-
-
+```
+0x01  猜解RSA私密金鑰和素因數
+0x02 生成RSA私密金鑰檔
+0x03 使用openssl解密RSA密文
+```
 #### [實作3] 使用 sha1對檔案進行hash[特徵|指紋]
+```
 openssl dgst -sha1 infile
 SHA1(infile)= 4e1243bd22c66e76c2ba9eddc1f91394e57f9f83
 ksu@ksu-VirtualBox:~$ cat infile
@@ -407,8 +405,9 @@ test
 ksu@ksu-VirtualBox:~$ echo tesT > infile2
 ksu@ksu-VirtualBox:~$ openssl dgst -sha1 infile2
 SHA1(infile2)= 54d592241066bb789b069a89203eae92bf76fa74
+```
 
-# 使用Python加密與解密
+## B.使用Python加密與解密
 
 ###  熟悉使用Python進行RSA非對稱式密碼加密與解密==>使用rsa模組
 
