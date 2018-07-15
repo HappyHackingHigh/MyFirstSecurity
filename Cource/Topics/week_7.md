@@ -176,7 +176,7 @@ Cipher Types
 -rc4-hmac-md5              -seed                      -seed-cbc                 
 -seed-cfb                  -seed-ecb                  -seed-ofb                 
 ```
-#### [實作2] 使用 DES 加密與解密
+### [實作2] 使用openssl進行 DES 加密與解密
 
 ##### 使用 DES 加密
 
@@ -231,7 +231,7 @@ cat okfile
 
 
 
-#### [實作3] 使用 RSA 加密與解密
+### [實作] 使用openssl進行 RSA 加密與解密
 
 ##### 看看rsa有什麼參數可用?
 
