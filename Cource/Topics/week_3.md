@@ -33,11 +33,11 @@ google搜尋jpg metadata linux
 >* http://libre-software.net/edit-image-metadata-on-linux/
 
 ```
-sudo apt-get install exiftool
+sudo apt-get update
+sudo apt-get install libimage-exiftool-perl
 ```
 
 解題步驟4:查看檔案並讀出答案
-
 
 ```
 exiftool img.jpg
