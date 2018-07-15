@@ -4,6 +4,14 @@ https://en.wikipedia.org/wiki/Steganography
 
 https://en.wikipedia.org/wiki/Steganography_tools
 
+隱寫術(Steganography)是一種訊息隱藏的技術，所謂訊息隱藏指的是不讓接收者之外的任何人看到隱藏訊息的內容。
+
+有各種類型的隱寫術:
+>* Document Stegonagraphy:各種文件類型的隱寫術[本題示範文件類型的隱藏術]
+>* Image Stegonagraphy:隱藏在圖片的機密
+>* Audio Stegonagraphy:隱藏在聲音的機密
+>* Video Stegonagraphy:隱藏在影片的機密
+
 # Steg-100_文件隱寫術
 
 # Steg-101
