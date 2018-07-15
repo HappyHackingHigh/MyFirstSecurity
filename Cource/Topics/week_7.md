@@ -414,7 +414,98 @@ SHA1(infile2)= 54d592241066bb789b069a89203eae92bf76fa74
 
 ## B.使用Python加密與解密
 
-###  熟悉使用Python進行RSA非對稱式密碼加密與解密==>使用rsa模組
+###  1.使用Python進行HASH-ing
+
+### Python standard library
+>* Python有許多內建的函式庫(可以寫成幾本書)
+>* 不需安裝即可使用(第三方套件需要安裝==>Tensorflow/PyTorch)
+>* 使用時請import載入相關函式庫即可
+
+#### hashlib函式庫/套件/模組
+>* hashlib是python專門提供hash演算法的函式庫，包括md5, sha1, sha224, sha256, sha384, sha512等演算法
+
+```
+>>> import hashlib
+>>> m = hashlib.md5()
+>>> m.update(b"Nobody inspects")
+>>> m.update(b" the spammish repetition")
+>>> m.digest()
+    b'\\xbbd\\x9c\\x83\\xdd\\x1e\\xa5\\xc9\\xd9\\xde\\xc9\\xa1\\x8d\\xf0\\xff\\xe9'
+
+More condensed:
+>>> hashlib.sha224(b"Nobody inspects the spammish repetition").hexdigest()
+```
+
+##### Python2的範例==>作業:改成Python3
+```
+import hashlib
+
+data = "I am your greatteacher"
+print hashlib.md5(data).hexdigest()
+print hashlib.sha1(data).hexdigest()
+print hashlib.sha224(data).hexdigest()
+print hashlib.sha256(data).hexdigest()
+print hashlib.sha384(data).hexdigest()
+print hashlib.sha512(data).hexdigest()
+```
+
+```
+#!/usr/bin/python3
+import hashlib
+m = hashlib.md5()
+data = "I am your greatteacher"
+
+# 先將資料編碼，再更新 MD5 雜湊值
+m.update(data.encode("utf-8"))
+
+h = m.hexdigest()
+print(h)
+```
+
+##### 只是小改變==>答案就會不一樣
+```
+import hashlib
+
+a = "I am your greatteacher"
+print hashlib.md5(a).hexdigest()
+
+b = "I am your ggreatteacher"
+print hashlib.md5(b).hexdigest()
+
+c = "I am your Greatteacher"
+print hashlib.md5(c).hexdigest()
+```
+
+##### 把你的機密檔案Hash
+```
+#!/usr/bin/env python
+
+import hashlib
+import sys
+
+def main():
+    if len(sys.argv) != 2:
+        sys.exit('Usage: %s file' % sys.argv[0])
+
+    filename = sys.argv[1]
+    m = hashlib.md5()
+    with open(filename, 'rb') as fp:
+        while True:
+            blk = fp.read(4096) # 4KB per block
+            if not blk: break
+            m.update(blk)
+    print(m.hexdigest(), filename)
+
+if __name__ == '__main__':
+    main()
+```
+執行看看:
+
+python3 test4.py
+
+python3 test4.py test1.py
+
+###  2.使用Python進行RSA非對稱式密碼加密與解密==>使用rsa模組
 
 >* https://www.cnblogs.com/hhh5460/p/5243410.html
 ```
@@ -458,9 +549,10 @@ signature = rsa.sign(message.encode(), privkey, 'SHA-1')
 rsa.verify(message.encode(), signature, pubkey)
 
 ```
+###  3.使用Python進行對稱式密碼加密與解密==>使用pycrypto模組
 
 
-### 利用 Python 實作簡易 RSA 非對稱式加密法
+#### TOPICS_1:利用 Python 實作簡易 RSA 非對稱式加密法
 
 >* https://gist.github.com/jeremy5189/8916602
 
