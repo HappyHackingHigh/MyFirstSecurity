@@ -10,6 +10,10 @@
 
 # A.使用openssl進行加密與解密
 
+>* 熟悉使用openssl進行DES對稱式密碼的加密與解密
+>* 熟悉使用openssl進行RSA非對稱式密碼的加密與解密
+>* 熟悉使用openssl進行MD/SHA1/SHA2562雜湊的應用
+
 ## openssl
 >* https://zh.wikipedia.org/wiki/OpenSSL
 >* OpenSSL是一個開放原始碼的軟體函式庫套件
