@@ -237,6 +237,22 @@ cat okfile
 
 ### [實作3] 使用openssl進行 RSA 加密與解密
 
+```
+Step1:生成一個私鑰： openssl genrsa -out test.key 1024
+這裡-out指定生成檔的。需要注意的是這個檔包含了公開金鑰和金鑰兩部分，也就是說這個檔即可用來加密也可以用來解密。1024是生成金鑰的長度。
+
+Step2:openssl將檔案中的公開金鑰提取出來： openssl rsa -in test.key -pubout -out test_pub.key
+-in指定輸入檔，-out指定提取生成公開金鑰的檔案名。
+
+
+Step3:在目錄中創建一個hello的文字檔: echo happyhacking > hello
+
+Step4:利用生成的公開金鑰加密檔案：openssl rsautl -encrypt -in hello -inkey test_pub.key -pubin -out hello.en 
+-in指定要加密的檔，-inkey指定金鑰，-pubin表明是用純公開金鑰檔加密，-out為加密後的檔。
+
+Step5:解密文件：openssl rsautl -decrypt -in hello.en -inkey test.key -out hello.de
+-in指定被加密的檔，-inkey指定私密金鑰檔，-out為解密後的檔。
+```
 ##### 看看rsa有什麼參數可用?
 
 openssl rsa -h
