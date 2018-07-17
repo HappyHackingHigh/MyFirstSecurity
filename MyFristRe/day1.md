@@ -1,5 +1,11 @@
 https://github.com/ss8651twtw/CTF/tree/master/site/csie.ctf.tw/practice
 
+# tmux
+
+sudo apt install tmux
+
+tmux
+
 # week_1
 
 Topic_1_Basic tools
@@ -10,6 +16,7 @@ Topic_3_gdb
 
 
 # 1.Basic tools
+
 >* file and strings
 >* lstrace and strace
 >* objdump
