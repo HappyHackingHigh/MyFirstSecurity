@@ -1,0 +1,42 @@
+# 軟體保護與破解
+
+>* 
+>* 加殼(packing)
+>* 代碼混淆(Obfuscation)
+
+加殼(packing):在原本的程式外加一層保護，用來防止修改或反編譯
+
+類型:
+>* 壓縮殼:UPX
+>* 加密殼:ARMADILLO、ASProtect
+>* 自己實作的殼
+
+
+# UPX
+
+https://zh.wikipedia.org/wiki/UPX
+
+# 安裝 UPX
+
+https://github.com/upx/upx
+
+https://github.com/upx/upx/releases/tag/v3.94
+
+xz -d upx-3.94-amd64_linux.tar.xz
+
+tar xf upx-3.94-amd64_linux.tar
+
+# 使用 UPX-- 範例練習
+
+執行UPX ===> ./upx
+
+./upx -9 -o  search
+
+./search_upx
+
+./search
+
+根據strings
+
+strings ./search | less
+strings ./search_upx | less
