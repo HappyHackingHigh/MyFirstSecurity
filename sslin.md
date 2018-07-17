@@ -2,6 +2,9 @@
 
 https://github.com/mohamedaymenkarmous/CTF/tree/master/EasyCTF_IV
 
+
+https://medium.com/@alloygoh/easyctf-iv-2018-writeup-179328f4ee5c
+
 ##  basic
 
 Easy
