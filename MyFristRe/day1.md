@@ -180,8 +180,8 @@ git clone https://github.com/ss8651twtw/asm-practice.git
 $ file 查看題目檔案類型
 $ strings 找出一些可視字串
 如果是執行檔就執行看看
-分析執行檔---objdump 反組譯看組合語言
-分析執行檔---oIDA pro 分析
+靜態分析執行檔---objdump 反組譯看組合語言
+動態分析執行檔---GDB/IDA pro 分析
 ```
 
 分析執行檔---objdump 反組譯看組合語言
@@ -211,6 +211,21 @@ cmp eas 0x539
 
 # 3.GDB 
 
+## gdb
+
+## gdb套件安裝
+
+peda 安裝 https://github.com/longld/peda
+
+Pwngdb 安裝 https://github.com/scwuaptx/Pwngdb
+
+## gdb使用技術
+
 https://henrybear327.gitbooks.io/gitbook_tutorial/content/Linux/GDB/index.html
+
+## 範例練習:EasyCTF IV_adder|動態分析執行檔---GDB/IDA pro 分析
+
+設定斷點與執行
+
 
 ## 範例練習: EasyCTF 2017 LuckyGuess
