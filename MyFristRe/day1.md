@@ -45,6 +45,7 @@ chmod +x strace
 strace ./strace
 strace -s 40 ./strace
 ```
+## Basic tools---
 
 # 2.Assembly Language
 
