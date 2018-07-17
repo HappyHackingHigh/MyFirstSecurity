@@ -267,5 +267,20 @@ https://henrybear327.gitbooks.io/gitbook_tutorial/content/Linux/GDB/index.html
 
 設定斷點與執行
 
+方法一:先將成是執行到cmp比較之前再使用下列指令修改register的值
+
+set $eax=0x539
+print $eax
+
+繼續執行下去就可以得到答案
+
+
+x <memory address>
+
+x/d $rbp-0xc
+
+方法三:先將成是執行到cmp比較之前再直接使用jmp到成功之後的地方繼續執行
+
+
 
 ## 範例練習: EasyCTF 2017 LuckyGuess
