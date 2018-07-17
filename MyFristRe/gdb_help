@@ -1,0 +1,59 @@
+[goldencat@goldencat gdb]$ gdb -q
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help" followed by command name for full documentation.
+Command name abbreviations are allowed if unambiguous.
+(gdb) help breakpoints
+Making program stop at certain points.
+
+List of commands:
+
+awatch -- Set a watchpoint for an expression
+break -- Set breakpoint at specified line or function
+catch -- Set catchpoints to catch events
+clear -- Clear breakpoint at specified line or function
+commands -- Set commands to be executed when a breakpoint is hit
+condition -- Specify breakpoint number N to break only if COND is true
+delete -- Delete some breakpoints or auto-display expressions
+disable -- Disable some breakpoints
+enable -- Enable some breakpoints
+hbreak -- Set a hardware assisted  breakpoint
+ignore -- Set ignore-count of breakpoint number N to COUNT
+rbreak -- Set a breakpoint for all functions matching REGEXP
+rwatch -- Set a read watchpoint for an expression
+tbreak -- Set a temporary breakpoint
+tcatch -- Set temporary catchpoints to catch events
+thbreak -- Set a temporary hardware assisted breakpoint
+txbreak -- Set temporary breakpoint at procedure exit
+watch -- Set a watchpoint for an expression
+xbreak -- Set breakpoint at procedure exit
+
+Type "help" followed by command name for full documentation.
+Command name abbreviations are allowed if unambiguous.
+(gdb) help clear
+Clear breakpoint at specified line or function.
+Argument may be line number, function name, or "*" and an address.
+If line number is specified, all breakpoints in that line are cleared.
+If function is specified, breakpoints at beginning of function are cleared.
+If an address is specified, breakpoints at that address are cleared.
+
+With no argument, clears all breakpoints in the line that the selected frame
+is executing in.
+
+See also the "delete" command which clears breakpoints by number.
+(gdb) q
