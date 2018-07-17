@@ -2,6 +2,7 @@
 
 https://github.com/mohamedaymenkarmous/CTF/tree/master/EasyCTF_IV
 
+https://0x23b.github.io/posts/ctfs/2017-03-14-easyctf_writeups/#Hexable
 
 https://medium.com/@alloygoh/easyctf-iv-2018-writeup-179328f4ee5c
 
