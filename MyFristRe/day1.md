@@ -1,5 +1,9 @@
 https://github.com/ss8651twtw/CTF/tree/master/site/csie.ctf.tw/practice
 
+
+https://tlk.io/reverse
+
+
 # tmux
 
 sudo apt install tmux
@@ -45,8 +49,16 @@ chmod +x strace
 strace ./strace
 strace -s 40 ./strace
 ```
-## Basic tools---
+## Basic tools---objdump
 
+## 範例練習:
+```
+objdump -M intel -d ./search | grep -A 2 'mov BYTE PTR [rip+0x.*],0x4d' | grep 0x79
+
+取出關鍵欄位 ==> cat out | awk '{print $8}'
+
+hex to string ==> http://www.convertstring.com/zh_TW/EncodeDecode/HexDecode
+```
 # 2.Assembly Language
 
 ## 範例練習:picoCTF 2017_A Thing Called the Stack
