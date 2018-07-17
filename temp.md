@@ -11,15 +11,8 @@ Easy
 
 Programmers Assemble
 
-
-
 Medium
 
-EasyCTF IV_adder
-
-add three number = 1337
-
-https://github.com/mohamedaymenkarmous/CTF/blob/master/EasyCTF_IV/resources/reverse_engineering-80-adder
 
 liar
 
