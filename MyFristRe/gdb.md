@@ -10,6 +10,9 @@ attach <pid>
 ```
 # gdb 常用指令--範例示範
 
+http://www.study-area.org/goldencat/debug.htm
+
+
 # gdb 演練
 
 # gdb 常用指令--參考資料
