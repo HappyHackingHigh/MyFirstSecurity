@@ -138,7 +138,7 @@ else {
 
 ## 範例練習:picoCTF 2017_A Thing Called the Stack
 
-## 開發組合語言(一):NASM
+## 開發組合語言:NASM
 
 ## 範例練習:Reverse CTF_run-asm
 ```
@@ -171,6 +171,40 @@ $ nasm -f elf64 solve.asm
 $ ld -m elf_x86_64 -o solve solve.o
 $ ./solve
 ```
+## 範例練習:組合語言練習
+
+git clone https://github.com/ss8651twtw/asm-practice.git
+
+## 範例練習:EasyCTF IV_adder
+```
+$ file 查看題目檔案類型
+$ strings 找出一些可視字串
+如果是執行檔就執行看看
+分析執行檔---objdump 反組譯看組合語言
+分析執行檔---oIDA pro 分析
+```
+
+分析執行檔---objdump 反組譯看組合語言
+
+objdump -M intel ./adder
+
+找main
+
+找 add 指令附近的組合語言
+
+找 cmp指令附近的組合語言
+
+cmp eas 0x539
+0x539==?
+使用python快速解
+
+
+
+## 範例練習:EasyCTF IV_liar
+
+## 範例練習:EasyCTF IV_ezreverse
+
+
 
 ## 從高階語言到組合語言| FromHIGHtoLOW |從C語言到組合語言
 
