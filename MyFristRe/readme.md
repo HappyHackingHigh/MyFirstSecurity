@@ -10,7 +10,7 @@
 
 ### 400題庫--Python使用技術
 
-### 500題庫--advnced使用技術
+### 500題庫--windows使用技術(reversing.kr)
 
 
 # Reversing-CTF平台
