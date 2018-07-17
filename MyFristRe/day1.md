@@ -130,7 +130,7 @@ else {
 
 ## 範例練習: Reverse CTF_read-asm
 
-## 解讀關鍵組合語言(一)
+## 解讀關鍵組合語言(二)
 
 >* push、pop
 
@@ -138,7 +138,18 @@ else {
 
 ## 範例練習:picoCTF 2017_A Thing Called the Stack
 
+## 開發組合語言(一):NASM
 
+## 範例練習:Reverse CTF_run-asm
+
+```
+下載原始組合語言solve.asm
+$ nasm -f elf64 solve.asm
+$ ld -m elf_x86_64 -o solve solve.o
+$ ./solve
+```
+
+## 開發組合語言(二):NASM
 
 # 3.GDB 
 
