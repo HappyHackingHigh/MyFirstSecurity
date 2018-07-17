@@ -4,40 +4,14 @@ https://github.com/mohamedaymenkarmous/CTF/tree/master/EasyCTF_IV
 
 ##  basic
 
-Easy
-
-EasyCTF IV_hexedit
-
-strings
-
-https://github.com/mohamedaymenkarmous/CTF/blob/master/EasyCTF_IV/resources/reverse_engineering-50-hexedit
-
-EasyCTF 2017_Hexable
-
-strings
-
-https://github.com/easyctf/easyctf-2017-problems/blob/master/hexable-autogen/description.md
-
-CSIE 2017_strace
-
-https://github.com/ss8651twtw/CTF/tree/master/site/csie.ctf.tw/practice/strace
-
 
 language: C / C++
 
 Easy
 
-picoCTF 2017_A Thing Called the Stack
-
-stack and return address
-
-https://2017game.picoctf.com/game/level-2/challenge/A-Thing-Called-the-Stack
-
 Programmers Assemble
 
-basic asm
 
-https://2017game.picoctf.com/game/level-2/challenge/Programmers-Assemble
 
 Medium
 
