@@ -14,7 +14,7 @@
 
 ### 600題庫-Angr/Z3使用技術
 
-### 100題庫--windows使用技術(reversing.kr)
+### windows題庫--windows使用技術(reversing.kr)
 
 
 # Reversing-CTF平台
