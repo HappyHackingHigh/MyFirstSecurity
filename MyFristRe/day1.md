@@ -61,6 +61,18 @@ hex to string ==> http://www.convertstring.com/zh_TW/EncodeDecode/HexDecode
 ```
 # 2.Assembly Language
 
+解讀關鍵組合語言(一)
+>* mov
+>* add、sub、imul、idiv、and、or、xor
+>* inc、dec、neg、not
+
+>* cmp
+>* jmp
+>* ja、jb、jna、jbe、je、jne、jz
+
+http://www.felixcloutier.com/x86/Jcc.html
+
+
 ## 範例練習:組合語言的解讀
 
 ```
@@ -111,8 +123,6 @@ else {
 }
 
 ```
-## 範例練習:picoCTF 2017_A Thing Called the Stack
-
 ## 範例練習: picoCTF 2017Programmers Assemble
 題目為 AT&T 格式
 
@@ -120,6 +130,18 @@ else {
 
 ## 範例練習: Reverse CTF_read-asm
 
+## 解讀關鍵組合語言(一)
+
+>* push、pop
+
+
+
+## 範例練習:picoCTF 2017_A Thing Called the Stack
+
+
+
 # 3.GDB 
+
+https://henrybear327.gitbooks.io/gitbook_tutorial/content/Linux/GDB/index.html
 
 ## 範例練習: EasyCTF 2017 LuckyGuess
