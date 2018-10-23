@@ -24,7 +24,11 @@ print(tf.__version__)
 ```
 https://colab.research.google.com/drive/1RoaIFrJqi093d56xC5-Ui53mW2LPDOwG#scrollTo=QzZCwuzXtVh4
 ```
+持續學習:
+```
+https://www.tensorflow.org/tutorials/
 
+```
 安裝自己想要的套件
 
 ```
