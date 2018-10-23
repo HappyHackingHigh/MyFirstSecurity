@@ -1,6 +1,7 @@
-# Google Col
+# Google免費的線上服務Google Colaboratory
 ```
 
+https://www.pixpo.net/technology/0IIeOUNH.html
 ```
 ```
 https://www.tensorflow.org/tutorials/
@@ -18,7 +19,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 print(tf.__version__)
+```
 
+安裝自己想要的套件
+
+```
+!pip install <your-package>
 ```
 # 參考書
 ```
