@@ -25,12 +25,11 @@ It is also a general-purpose cryptography library.
 
 
 
-## 對稱式密碼 symmetric key algorithms  Private-key cryptogra
+## 對稱式密碼 symmetric key algorithms  Private-key cryptography
 
 ### DES
 ```
 https://zh.wikipedia.org/wiki/資料加密標準
-
 ```
 ```
 DES是一種對稱密鑰加密塊密碼(Block cipher)演算法
@@ -49,11 +48,10 @@ elliptic curve techniques
 ## RSA
 ```
 RSA加密演算法- 维基百科
-
 https://www.slideshare.net/shafaan/public-key-cryptography-and-rsa
-
 ```
-### 簡單範例:
+
+### 簡單範例:請使用python完成底下的實測
 
 步驟一:Key generation(產生key pair)
 ```
