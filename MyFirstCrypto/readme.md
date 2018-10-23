@@ -47,8 +47,14 @@ elliptic curve techniques
 ```
 ## RSA
 ```
-RSA加密演算法- 维基百科
+维基百科  https://zh.wikipedia.org/wiki/RSA加密演算法
 https://www.slideshare.net/shafaan/public-key-cryptography-and-rsa
+```
+```
+RSA加密演算法- 维基百科
+RSA加密演算法是一種非對稱加密演算法。在公開金鑰加密和電子商業中RSA被廣泛使用。
+RSA是1977年由羅納德·李維斯特（Ron Rivest）、阿迪·薩莫爾（Adi Shamir）和倫納德·阿德曼（Leonard Adleman）一起提出的。
+當時他們三人都在麻省理工學院工作。RSA就是他們三人姓氏開頭字母拼在一起組成的。
 ```
 
 ### 簡單範例:請使用python完成底下的實測
@@ -76,5 +82,21 @@ https://www.slideshare.net/shafaan/public-key-cryptography-and-rsa
 M=11^23 mod 187=88
 ```
 
+### RSA的安全基礎==>要花很多時間才可完成的大質因數分解
+
+```
+好用的線上網站(WebSite)==>factordb.com (質因數分解:分解 N=p*q)
+
+好用的工具(Tools)
+Sage(好用的數學計算工具)
+Yafu(用來進行大質因數分解)
+```
 
 # 主題三:現代密碼之破密分析[請參加HackingWeekend]
+
+### 基礎RSA破密分析[選擇性]
+
+>* Twin Prime的RSA破密分析
+>* common factor attack
+>* 加密指數攻擊:Hastad’s Broadcast Attack
+>* 模數攻擊:common modulus attack
