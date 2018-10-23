@@ -81,7 +81,10 @@ RSA是1977年由羅納德·李維斯特（Ron Rivest）、阿迪·薩莫爾（Ad
 解密Decrypt   C=11: 11^23mod 187
 M=11^23 mod 187=88
 ```
-
+### 在google colab的實測
+```
+https://colab.research.google.com/drive/15rQcJzej3VOr3KlisBcyPoCY6XovqObb#scrollTo=4kP9L_iR4Oge
+```
 ### RSA的安全基礎==>要花很多時間才可完成的大質因數分解
 
 ```
