@@ -3,12 +3,19 @@
 
 # 主題二:現代密碼  快速入門篇
 
->* 本課程將主要以openssl來示範現代密碼的加解密
->* OpenSSLhttps://zh.wikipedia.org/wiki/OpenSSL
->* https://www.openssl.org/
->* https://github.com/openssl/openssl
+>* 本課程模組將分享現代密碼加解密的基本觀念與實測
+>* 本課程將以簡單觀念介紹為主,相關演算法細節則請上大學修密碼學課程
+>* 本課程將主要以openssl來示範操作現代密碼的加解密
 
 ## openssl
+
+```
+OpenSSLhttps://zh.wikipedia.org/wiki/OpenSSL
+https://www.openssl.org/
+https://github.com/openssl/openssl
+
+```
+
 ```
 OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) 
 and Secure Sockets Layer (SSL) protocols. 
