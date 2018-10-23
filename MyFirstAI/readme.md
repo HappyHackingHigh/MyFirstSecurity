@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 
 print(tf.__version__)
 ```
+作業一:
 ```
 https://colab.research.google.com/drive/1RoaIFrJqi093d56xC5-Ui53mW2LPDOwG#scrollTo=QzZCwuzXtVh4
 ```
