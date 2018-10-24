@@ -42,7 +42,12 @@ os.listdir("../bin")
 ```
 ! ls
 ```
-
+```
+! ping localhost
+```
+```
+Myfirstcolab.ipynb
+```
 
 
 ```
