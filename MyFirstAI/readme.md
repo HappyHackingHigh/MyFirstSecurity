@@ -4,6 +4,48 @@
 https://www.pixpo.net/technology/0IIeOUNH.html
 ```
 ```
+# -*- coding: UTF-8 -*-
+ 
+# Filename : test.py
+# author by : www.runoob.com
+ 
+# 用户输入数字
+num1 = input('输入第一个数字：')
+num2 = input('输入第二个数字：')
+ 
+# 求和
+sum = float(num1) + float(num2)
+ 
+# 显示计算结果
+print('数字 {0} 和 {1} 相加结果为： {2}'.format(num1, num2, sum))
+
+```
+```
+import os
+
+os.listdir(".")
+```
+```
+import os
+
+os.listdir("..")
+```
+
+
+```
+import os
+
+os.listdir("../bin")
+```
+
+# 執行外部指令
+```
+! ls
+```
+
+
+
+```
 https://www.tensorflow.org/tutorials/
 
 執行程式
