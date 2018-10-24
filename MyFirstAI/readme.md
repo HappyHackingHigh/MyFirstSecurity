@@ -7,6 +7,7 @@ https://www.pixpo.net/technology/0IIeOUNH.html
 https://www.tensorflow.org/tutorials/
 
 執行程式
+https://colab.research.google.com/drive/1LaM4tqrwuAhzNM8lH_VeHYpdwiyRTcNU#scrollTo=Wx8HNcw8nhwz
 https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/_index.ipynb
 ```
 
