@@ -6,8 +6,8 @@
 HTML5 Security Vulnerabilities and Language Overview
 https://www.checkmarx.com/sast-supported-languages/html5-security-vulnerabilities-language-overview/
 
-
-
+All You Wanted To Know About HTML5 Security
+https://www.checkmarx.com/2016/02/15/wanted-know-html5-security-2/
 ```
 
 
