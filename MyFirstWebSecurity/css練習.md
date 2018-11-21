@@ -37,8 +37,36 @@ h1 {color:red; font-family:"標楷體"}
 ```
 
 ```
-
+### 2.9 圖片浮水印
 ```
+<html>
+ <head>
+  <meta charset="UTF-8">
+<style type="text/css">
+div.shui{							/*浮水印*/
+border:1px solid ;
+opacity:0.5;						/*透明度設置*/
+right:0;							/*浮水印居右*/
+bottom:0;							/*浮水印居下*/
+position:absolute;					/*一定要這樣設置*/
+}
+div.img{
+border:1px solid ;					/*透明度設置*/
+position:relative;					/*一定要這樣設置*/
+display:inline-block;				/*div 寬度自我調整圖片寬度*/
+}
+img.big{							/*縮小一下圖片*/
+width:250px;
+height:150px;
+}
+</style>
+
+</head>
+<body>
+<div class="img"><img src="4.jpg" class="big" /><div class="shui"><img src="google.jpg" /></div></div>
+<div class="img"><img src="4.jpg" class="big" /><div class="shui">jianzhiunique原創作品</div></div>
+</body>
+</html>
 
 ```
 
