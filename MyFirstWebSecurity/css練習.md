@@ -69,8 +69,189 @@ height:150px;
 </html>
 
 ```
-
+### 2.14 幻燈片
 ```
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>幻燈片</title>
+  <style type="text/css">
+  *{margin:0;padding:0;list-style:none;}
+  .powerpoint{
+  position:absolute;
+  width:100%; height:460px;
+  background:black;
+  overflow:hidden;
+  }
+  .powerpoint_big_pic>ul>li{
+  position:absolute;top:0;left:-200px;/*  圖偏寬度大於螢幕寬度，大圖居中*/
+  width:100%;height:100%;
+  opacity:0;
+  }
+  .powerpoint_textlist{
+  position:absolute;top:78%;left:10%;
+  width:20%;height:15%;
+  background:#7A7A7A;
+  font-size:20px;
+  color:#FFFFFF;
+  }
+  .powerpoint_textlist>ul>li{
+  position:absolute;
+  opacity:0;/*  文字的原理同大圖的原理*/
+  }
+  .powerpoint_small_pic{
+  position:relative;top:78%;left:35%;
+  width:51%;height:15%;
+  background:#7A7A7A;
+  overflow:hidden;
+  }
+  .powerpoint_small_pic>ul{
+  position:relative;
+  width:1500px;/*  設為大數以便li排成一排*/
+  }
+  .powerpoint_small_pic>ul>li{
+  margin:5px;
+  float:left;/*  左浮動*/
+  }
+  .powerpoint_pre,.powerpoint_next{
+  position:absolute;top:81%;
+  width:37px;height:38px;
+  background:#303030;
+  font-size:40px;
+  color:#FFFFFF;
+  border-radius:20px;
+  cursor:pointer;
+  }
+  .powerpoint_pre{left:31%;}
+  .powerpoint_next{left:87%;}
+  </style>
+  <script type="text/javascript" src="js/jq.js"></script>
+  <script type="text/javascript">
+  $(function(){
+   var p=$(".powerpoint");//獲取整體，自動播放與暫停播放用到
+   var pspu=$(".powerpoint_small_pic>ul");//獲取小圖ul
+   var psp=$(".powerpoint_small_pic>ul>li");//獲取小圖li
+   var  pbp=$(".powerpoint_big_pic>ul>li");//獲取大圖li
+   var  ptl=$(".powerpoint_textlist>ul>li");//獲取文字說明li
+   var  pre=$(".powerpoint_pre");//獲取上一個按鈕
+   var  next=$(".powerpoint_next");//獲取下一個按鈕
+   var now=0;//記錄當前被啟動元素的變數，作為參數傳入展示函數
+   showpic(0);//頁面載入完成播放第一張
+   var t=setInterval(function (){play()},4000);//自動播放
+   p.hover(function (){clearInterval(t)},//滑鼠懸停清空計時器，暫停
+				 function (){t=setInterval(function (){play()},4000)});//滑鼠移開繼續播放
+   for (var i=0;i<psp.length ;i++ )//為每個小圖寫入點擊事件
+   {
+	   psp.eq(i).click(function (){
+	   now=$(this).index();//將當前元素的索引存入變數
+       showpic(now);
+	   });
+   }
+   pre.click(function(){//前一個按鈕被點擊
+	   if(0==now){
+	   now=psp.length;//範圍限制
+	   }
+	   now=now-1;
+	   showpic(now);
+	   })
+   next.click(function(){//前一個按鈕被點擊
+	   if(psp.length-1==now){
+	   now=-1;//範圍限制
+	   }
+	   now=now+1;
+	   showpic(now);
+	   })
+	function play()//自動播放函數
+	  {
+		  showpic(now);
+		  now++;
+		  if(pbp.length==now)
+		  {
+			  now=0;
+		  }
+	  }
+     function showpic(inow){//展示圖片函數
+  	   for (var j=0;j<pbp.length ;j++ )//去除所有元素的可見性
+	   {
+		   pbp.eq(j).stop(true,false).animate({opacity:"0"},"normal");
+		   ptl.eq(j).css("opacity","0");
+		   psp.eq(j).css("border","0");
+	   }
+	   if(inow<6)//範圍限制
+	   left=psp.eq(inow).offset().left-psp.eq(0).offset().left;//計算小圖示的左偏移值
+	   else
+	   left=psp.eq(6).offset().left-psp.eq(0).offset().left;//計算小圖示的左偏移值
+	   pbp.eq(inow).stop(true,false).animate({opacity:"1"},"normal");//使編號為now元素可見
+	   ptl.eq(inow).css("opacity","1");
+	   psp.eq(inow).css("border","2px solid #FF7F00");
+	   pspu.stop(true,false).animate({left:-left},"normal");//小圖滾動（left值改變）
+  }
+  });
+  </script>
+ </head>
+ <body>
+  <div class="powerpoint">
+  <div class="powerpoint_big_pic">
+   <ul>
+   	<li><img src="img/b1.jpg" alt="" /></li>
+   	<li><img src="img/b2.jpg" alt="" /></li>
+   	<li><img src="img/b3.jpg" alt="" /></li>
+   	<li><img src="img/b4.jpg" alt="" /></li>
+   	<li><img src="img/b5.jpg" alt="" /></li>
+   	<li><img src="img/b6.jpg" alt="" /></li>
+   	<li><img src="img/b7.jpg" alt="" /></li>
+   	<li><img src="img/b8.jpg" alt="" /></li>
+	<li><img src="img/b9.jpg" alt="" /></li>
+	<li><img src="img/b10.jpg" alt="" /></li>
+	<li><img src="img/b11.jpg" alt="" /></li>
+	<li><img src="img/b12.jpg" alt="" /></li>
+	<li><img src="img/b13.jpg" alt="" /></li>
+   </ul>
+  </div>
+  <div class="powerpoint_textlist">
+  <ul>
+  <li>《員警故事2013》 硬漢成龍演繹柔情父親</li>
+  <li>《中國好歌曲》第四期 史上最美歌詞獲盛讚</li>
+  <li>2014環球春晚 19：40直播 傑克遜經典重現</li>
+  <li>2014新春觀劇指南 趙本山宋丹丹蔡明誰能打趴誰？</li>
+  <li>天龍八部（至23集） 虛竹接任逍遙派掌門</li>
+  <li>《與狼共舞2》主演做客 “特種兵”夫妻檔再續前緣</li>
+  <li>《與狼共舞2》(至24集) 三人組陷四角戀</li>
+  <li>《週末宅影院》 2013那些“雷瘋”的電影</li>
+  <li>《中國達人秀》 終極考核戰虐心來襲</li>
+  <li>《男媒婆》（至26集） 張庭女兒逼父母重婚</li>
+  <li>《喋血孤島》（至30集） 紅葉被誣陷殺害芙蓉</li>
+  <li>【英劇】神探默多克第七季 （至12集）塵封8年謀殺舊案終告破</li>
+  <li>【美劇】軍旅軼事（至03集） 美國大兵展露純爺們兒氣質</li>
+  </ul>
+  </div>
+  <div class="powerpoint_pre"><</div>
+   <div class="powerpoint_small_pic">
+   <ul>
+   <li><img src="img/s1.jpg" alt="" /></li>
+   <li><img src="img/s2.jpg" alt="" /></li>
+   <li><img src="img/s3.jpg" alt="" /></li>
+   <li><img src="img/s4.jpg" alt="" /></li>
+   <li><img src="img/s5.jpg" alt="" /></li>
+   <li><img src="img/s6.jpg" alt="" /></li>
+   <li><img src="img/s7.jpg" alt="" /></li>
+   <li><img src="img/s8.jpg" alt="" /></li>
+   <li><img src="img/s9.jpg" alt="" /></li>
+   <li><img src="img/s10.jpg" alt="" /></li>
+   <li><img src="img/s11.jpg" alt="" /></li>
+   <li><img src="img/s12.jpg" alt="" /></li>
+   <li><img src="img/s13.jpg" alt="" /></li>
+   </ul>
+   </div>
+   <div class="powerpoint_next">></div>
+  </div>
+ </body>
+</html>
 
 ```
 
