@@ -2,6 +2,8 @@
 ```
 http://www.w3.org/Style/CSS/current-work.en.html
 ```
+### CSS 
+
 
 ### CSS 基本語法
 
@@ -33,11 +35,178 @@ h1 {color:red; font-family:"標楷體"}
   </body>
 </html>
 ```
-### 文字特效
+### 使用CSS 樣式表:四種方法
+
+方法1:在 <head> 元素裡面嵌入樣式表
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+	<style>
+	  body {color:white; background:purple}
+	</style>
+  </head>
+  <body>
+    <h1>歡迎光臨！</h1>
+  </body>
+</html>	
+```
+
+方法2:使用HTML 元素的style 屬性指定樣式表
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>	
+  </head>
+  <body style="color:white; background:purple">
+    <h1>歡迎光臨！</h1>
+  </body>
+</html>
+```
+
+方法3:將外部的樣式表匯入HTML 文件[推薦]
+
+body.css
+```
+body {color:white; background:purple}
 ```
 
 ```
-### 2.9 圖片浮水印
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+    <style>
+      @import url("body.css");
+    </style>	
+  </head>
+  <body>
+    <h1>歡迎光臨！</h1>
+  </body>
+</html>
+```
+方法:將外部的樣式表連結至HTML 文件
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+    <link rel="stylesheet" href="body.css" type="text/css">	
+  </head>
+  <body>
+    <h1>歡迎光臨！</h1>
+  </body>
+</html>
+```
+### 使用類別選擇器定義樣式規則
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>唐詩欣賞</title>
+	<style>
+      .heading {font-family:華康粗黑體; font-size:30px ; color:maroon}
+      .content {font-family:標楷體; font-size:25px; color:olive}
+    </style>
+  </head>
+  <body> 
+    <h1>唐詩欣賞</h1>  
+    <p class="heading">春曉</p>
+    <p class="content">春眠不覺曉，處處聞啼鳥。夜來風雨聲，花落知多少？</p>
+    <p class="heading">竹里館</p>
+    <p class="content">獨坐幽篁裡，彈琴復長嘯。深林人不知，明月來相照。</p> 
+  </body>
+</html>
+```
+### 使用ID 選擇器定義樣式規則
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+	<style>
+      #button1 {font-size:30px; color:red}
+      #button2 {font-size:30px; color:green}      
+    </style>
+  </head>
+  <body> 
+    <h1>意見調查單</h1>
+    <form>
+      <input type="submit" value="提交" id="button1">
+      <input type="reset" value="重新輸入" id="button2">
+    </form>
+  </body>
+</html>
+```
+
+### 使用屬性選擇器定義樣式規則
+```
+
+
+```
+
+
+
+
+
+CSS 提供了數個虛擬類別選擇器，如下：
+連結虛擬類別 (link pseudo-classes)：包括 :link 和 :visited。
+使用者動作虛擬類別 (user action pseudo-classes)：包括 :hover、:focus 和 :active。
+語言虛擬類別 (language pseudo-class)：包括 :lang。
+目標虛擬類別 (target pseudo-class)      ：包括 :target。
+UI 元素狀態虛擬類別 (UI element states pseudo-classes)      ：包括 :enabled、:disabled、:checked、:indeterminate。
+結構化虛擬類別 (structural pseudo-classes)       ：包括 :root、:nth-child()、:nth-last-child()、:nth-of-type()、:nth-last-of-type()、:ﬁrst-child、:last-child、:ﬁrst-of-type、:last-of-type、:only-child、:only-of-type、:empty。
+否定虛擬類別 (negation pseudo-class)      ：包括 :not()
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+	<style>
+      input#button1 {font-size:30px; color:red}
+      input#button2 {font-size:30px; color:green}      
+    </style>
+  </head>
+  <body> 
+    <h1 id="button1">意見調查單</h1>
+    <form>
+      <input type="submit" value="提交" id="button1">
+      <input type="reset" value="重新輸入" id="button2">
+    </form>
+  </body>
+</html>
+```
+
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新網頁1</title>
+	<style>
+      #button1 {font-size:30px; color:red}
+      #button2 {font-size:30px; color:green}      
+    </style>
+  </head>
+  <body> 
+    <h1 id="button1">意見調查單</h1>
+    <form>
+      <input type="submit" value="提交" id="button1">
+      <input type="reset" value="重新輸入" id="button2">
+    </form>
+  </body>
+</html>
+```
+### 圖片特效===2.9 圖片浮水印
 ```
 <html>
  <head>
@@ -69,7 +238,7 @@ height:150px;
 </html>
 
 ```
-### 2.14 幻燈片
+### 圖片特效===2.14 幻燈片
 ```
 <!doctype html>
 <html lang="en">
