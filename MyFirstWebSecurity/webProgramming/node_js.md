@@ -22,6 +22,26 @@ $ node program.js
 run inline JavaScript/Node.js—for example, $ node -e "console.log(new Date());".
 ```
 
+
+### most popular text editors and IDEs used in web development:
+```
+•	 TextMate (http://macromates.com/): Mac OS X version only, free 30-day trial for v1.5, dubbed
+The Missing Editor for Mac OS X
+
+•	 Sublime Text (http://www.sublimetext.com/): Mac OS X and Windows versions are available,
+an even better alternative to TextMate, with an unlimited evaluation period
+
+•	 Coda (http://panic.com/coda/): an all-in-one editor with an FTP browser and preview, has
+support for development with an iPad
+
+•	 Aptana Studio (http://aptana.com/): a full-size IDE with a built-in terminal and many other tools
+
+•	 Notepad ++ (http://notepad-plus-plus.org/): a free, Windows-only lightweight text editor
+with the support of many languages
+
+•	 WebStorm IDE (http://www.jetbrains.com/webstorm/): a feature-rich IDE that allows for
+Node.js debugging, developed by JetBrains and marketed as “the smartest JavaScript IDE” 
+```
 ### 
 ```
 var http = require('http');
