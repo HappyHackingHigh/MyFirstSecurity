@@ -34,6 +34,7 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 
 ```
+```
 http.createServer(function (req, res) {}).listen(1337, '127.0.0.1');
 
 
@@ -42,6 +43,10 @@ function (req, res) {
  res.end('Hello World\n');
 }
 ```
+```
+node server.js
+```
+
 
 # Node.js Core Modules核心模組
 ```
