@@ -21,8 +21,26 @@ $ node program.js
 
 run inline JavaScript/Node.js—for example, $ node -e "console.log(new Date());".
 ```
-```
 
+### 
+```
+var http = require('http');
+
+http.createServer(function (req, res) {
+ res.writeHead(200, {'Content-Type': 'text/plain'});
+ res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:1337/');
+
+```
+http.createServer(function (req, res) {}).listen(1337, '127.0.0.1');
+
+
+function (req, res) {
+ res.writeHead(200, {'Content-Type': 'text/plain'});
+ res.end('Hello World\n');
+}
 ```
 
 # Node.js Core Modules核心模組
