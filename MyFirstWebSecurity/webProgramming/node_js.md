@@ -1,5 +1,8 @@
-# Practical Node.js
+# Practical Node.js[2018第二版]
 ```
+
+http://file.allitebooks.com/20181106/Practical%20Node.js,%202nd%20Edition.pdf
+
 http://file.allitebooks.com/20151129/Practical%20Nodejs.pdf
 https://github.com/azat-co/practicalnode
 
@@ -67,6 +70,47 @@ function (req, res) {
 node server.js
 ```
 
+
+```
+var http = require('http')
+debugger
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'})
+  debugger
+  res.end('Hello World\n')
+}).listen(1337, '127.0.0.1')
+console.log('Server running at http://127.0.0.1:1337/')
+```
+
+class.js
+```
+class baseModel {
+  constructor(options = {}, data = []) { // class constructor
+    this.name = 'Base'
+    this.url = 'http://azat.co/api'
+    this.data = data
+    this.options = options
+  }
+  getName() { // class method
+    console.log(`Class name: ${this.name}`)
+  }
+}
+class AccountModel extends baseModel {
+  constructor(options, data) {
+    super({private: true}, ['32113123123', '524214691']) //call the parent method with super
+    this.name = 'Account Model'
+    this.url +='/accounts/'
+  }
+  get accountsData() { //calculated attribute getter
+    // ... make XHR
+    return this.data
+  }
+}
+
+let accounts = new AccountModel(5)
+accounts.getName()
+console.log('Data is %s', accounts.accountsData)
+```
 
 # Node.js Core Modules核心模組
 ```
