@@ -38,6 +38,12 @@ Web网站安全测试（Penetration Testing）- 从初学到精通
 建立者： Yan Gao  上次更新 8/2018  Simplified Chinese
 https://www.udemy.com/security-testing-china/
 ```
+```
+Website Hacking in Practice: Hands-on Course 101
+This Ethical Hacking training is dedicated to programmers and website administrators. Website security unleashed.
+4.8 (208 個評等)  6719 名學生註冊  建立者： Hacking School, IT Security Academy  上次更新 11/2018
+https://www.udemy.com/website-hacking-in-practice/
+```
 
 ```
 Security: Manage Network Security With pfSense Firewall
@@ -47,9 +53,38 @@ https://www.udemy.com/cyber-security-manage-network-security-with-pfsense-firewa
 ```
 
 ```
+Build a Plug & Play Hacking Box in 3 Hours: 100% Practical
+Build Your Ethical Hacking Box. Control it from AWS. Install Python & Scapy. Tunnel tools and attacks!
+最新熱門  4.8 (2 個評等)  126 名學生註冊  建立者： Hussam Khrais  上次更新 11/2018
+https://www.udemy.com/build-a-plug-play-hacking-box-in-3-hours-100-practical/
+```
+
+
+```
+Hacking in Practice: Certified Ethical Hacking MEGA Course
+Practical Ethical Hacking Techniques. The most extensive ethical hacking on-line course. Over 27+ HOURS OF VIDEO
+4.7 (2064 個評等)  22697 名學生註冊  建立者： IT Security Academy, Hacking School  上次更新 11/2018
+https://www.udemy.com/it-security-beginner-certified-hacking-training/
+```
+
+```
+Network Penetration Testing (Ethical Hacking) From Scratch
+Learn ethical hacking from scratch from a networking based perspective
+4.4 (109 個評等)  947 名學生註冊  建立者： TWR Internet Solutions Ltd  上次更新 5/2017
+https://www.udemy.com/network-penetration-testing-ethical-hacking-from-scratch/
+```
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
 ```
 [待買]How to Create Animated Videos with Powerpoint
 Learn an easy way to create video animation with PowerPoint for business, marketing, online courses, YouTube and more
@@ -73,7 +108,9 @@ https://www.udemy.com/javascriptblockchain/
 ```
 
 ```
-
+[待買]Building a Single Page Application with JavaScript [Video]
+Anto Aravinth Friday, June 29, 2018
+https://www.packtpub.com/web-development/building-single-page-application-javascript-video
 ```
 
 
@@ -87,7 +124,10 @@ https://www.udemy.com/spotify-clone/
 ```
 
 ```
-
+Make a YouTube Clone from Scratch: JavaScript PHP and MySQL
+Learn JavaScript, PHP and MySQL by making the ultimate YouTube clone website completely from scratch!
+最高評等  5.0 (32 個評等)  546 名學生註冊  建立者： Reece Kenney  上次更新 11/2018
+https://www.udemy.com/youtube-clone/
 ```
 
 
@@ -95,10 +135,6 @@ https://www.udemy.com/spotify-clone/
 
 ```
 
-
-```
-
-```
 
 
 ```
@@ -106,6 +142,14 @@ https://www.udemy.com/spotify-clone/
 Build a Complete & Secure PHP Login and Registration System with PHP and MySQL - Email Activation and lots more
 4.2 (361 個評等)  2430 名學生註冊  建立者： Terry Ogbemudia Osayawe  上次更新 5/2018
 https://www.udemy.com/user-authentication-code-a-simple-login-system-with-php/
+```
+
+```
+The Complete ECommerce Course with WordPress and Woocommerce
+Build Impeccable Ecommerce websites using WordPress, Woocommerce, PayPal and Stripe. 
+Master Woocommerce & WordPress
+4.1 (495 個評等)  7774 名學生註冊  建立者： Arun Nagarathanam  上次更新 4/2018
+https://www.udemy.com/ecommerce-wordpress/
 ```
 
 
@@ -165,11 +209,14 @@ https://www.udemy.com/moodle-tutorial-advanced/
 ```
 
 
-#
+# Python
+```
+Python完整課程 - 透過實作6個APP快速入門
+透過實作6個 Terminal APP，您不單能夠學習到原理，又能夠馬上實作！
+4.4 (145 個評等)  632 名學生註冊  建立者： Ray Chung, Kevin He, Dev School Online  上次更新 9/2017
+ Traditional Chinese
 
-###
-
-
+https://www.udemy.com/python-6app/
 ```
 
 ```
@@ -180,28 +227,91 @@ https://www.udemy.com/moodle-tutorial-advanced/
 
 ```
 
-```
-
-#
-
-###
-```
-
+# PyTorch
 
 ```
+Deep Learning Adventures with PyTorch [Video]
+Jakub Konczyk Wednesday, October 31, 2018
+https://www.packtpub.com/big-data-and-business-intelligence/deep-learning-adventures-pytorch-video
+https://github.com/PacktPublishing/Deep-Learning-Adventures-with-PyTorch
 
-```
-
-```
-
-```
-
+FIRST STOP: A QUICK INTRODUCTION TO PYTORCH
+SLEEPING UNDER THE STARS: IT'S A BIRD...IT'S A PLANE...IT’S A CNN?
+GOING ABROAD: LANGUAGE DETECTION FOR FUN AND PROFIT WITH RNN
+MAKING FRIENDS: LOST IN TRANSLATION WITH LSTM
+GETTING SOME CULTURE: BECOMING A DEEP NEURAL PICASSO WITH DNN
 ```
 
 ```
+Deep Learning with PyTorch [Video]
+Anand Sahan Monday, April 30, 2018
+https://www.packtpub.com/big-data-and-business-intelligence/deep-learning-pytorch-video
 
+GETTING STARTED WITH PYTORCH
+TRAINING YOUR FIRST NEURAL NETWORK
+COMPUTER VISION – CNN FOR DIGITS RECOGNITION
+SEQUENCE MODELS – RNN FOR TEXT GENERATION
+AUTOENCODER - DENOISING IMAGES
+REINFORCEMENT LEARNING – BALANCE CARTPOLE USING DQN
 ```
 
+```
+Deep Learning Projects with PyTorch [Video]
+AshishSingh Bhatia Wednesday, June 27, 2018
+https://www.packtpub.com/application-development/deep-learning-projects-pytorch-video
+
+GETTING READY WITH PYTORCH
+CONVOLUTIONAL NEURAL NETWORK
+UNDERSTANDING RNN AND LSTM
+USING AUTOENCODERS FOR FRAUD DETECTION
+RECOMMENDING A MOVIE WITH BOLTZMANN MACHINES
+MOVIE RATING USING A AUTOENCODERS
+MAKING MODEL FOR OBJECT RECOGNITION
+```
+
+
+```
+Hands-On Intelligent Agents with OpenAI Gym
+Praveen Palanisamy July 2018
+https://www.packtpub.com/big-data-and-business-intelligence/hands-intelligent-agents-openai-gym
+https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym
+
+1: INTRODUCTION TO INTELLIGENT AGENTS AND LEARNING ENVIRONMENTS
+2: REINFORCEMENT LEARNING AND DEEP REINFORCEMENT LEARNING
+3: GETTING STARTED WITH OPENAI GYM AND DEEP REINFORCEMENT LEARNING
+4: EXPLORING THE GYM AND ITS FEATURES
+5: IMPLEMENTING YOUR FIRST LEARNING AGENT - SOLVING THE MOUNTAIN CAR PROBLEM
+6: IMPLEMENTING AN INTELLIGENT AGENT FOR OPTIMAL CONTROL USING DEEP Q-LEARNING
+7: CREATING CUSTOM OPENAI GYM ENVIRONMENTS - CARLA DRIVING SIMULATOR
+8: IMPLEMENTING AN INTELLIGENT - AUTONOMOUS CAR DRIVING AGENT USING DEEP ACTOR-CRITIC ALGORITHM
+9: EXPLORING THE LEARNING ENVIRONMENT LANDSCAPE - ROBOSCHOOL, GYM-RETRO, STARCRAFT-II, DEEPMINDLAB
+10: EXPLORING THE LEARNING ALGORITHM LANDSCAPE - DDPG (ACTOR-CRITIC), PPO (POLICY-GRADIENT), RAINBOW (VALUE-BASED)
+```
+
+```
+安裝pip ==> sudo easy_install pip
+
+安裝virtualenv ==> pip install virtualenv
+
+建立openai-gym虛擬環境 ==> virtualenv openai-gym
+
+啟動openai-gym虛擬環境 ==> source openai-gym/bin/activate
+
+安裝gym ==> pip install -U gym
+      
+         或sudo -H pip install -U gym[all]
+           sudo chmod -R o+rw ~/openai-gym
+           
+測試gym 安裝是否成功==> $python -c 'import gym; gym.make("CartPole-v0");'
+```
+
+第一個案例:
+```
+>>import gym
+>>env = gym.make('CartPole-v0')
+>>env.reset()
+env.render()
+```
 #
 
 ###
